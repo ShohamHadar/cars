@@ -18,7 +18,7 @@ CREATE TABLE VEHICLE
   VehicleType VARCHAR(20) NOT NULL,
   Capacity INT NOT NULL,
   Manufacturer VARCHAR(20) NOT NULL,
-  Model NUMERIC(5,2) NOT NULL,
+  Model INT NOT NULL,
   Year INT NOT NULL,
   PRIMARY KEY (VehicleID),
   UNIQUE (LicensePlate)
