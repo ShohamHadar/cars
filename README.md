@@ -11,7 +11,7 @@
 ### תוכן עניינים
 1. [שער](#שער)
 2. [מבוא](#מבוא)
-3. [מסכי ai](#מסכי-ai)
+3. [מסכי ai studio](#מסכי-ai-studio_)
 4. [קישור לאתר ai studio](#קישור-לאתר-ai-studio)
 5. [תרשים ERD](#תרשים-erd)
 6. [תרשים DSD](#תרשים-dsd)
@@ -97,7 +97,7 @@ Cost: מספר עשרוני (NUMERIC)
 Notes: מחרוזת (VARCHAR)
 VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
 
-## מסכי ai :
+## מסכי ai studio:
 
 <img width="990" height="646" alt="image" src="https://github.com/user-attachments/assets/f76f0ae7-79c7-4d46-bf2e-71c14ed9377c" />
 <img width="984" height="515" alt="image" src="https://github.com/user-attachments/assets/1969d311-54b2-4f11-92b6-375f6632810b" />
