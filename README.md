@@ -9,19 +9,9 @@
 ---
 
 ### תוכן עניינים
-1. [שער](#שער)
-2. [מבוא](#מבוא)
-3. [מסכי המערכת (AI)](#מסכי-המערכת-ai)
-4. [קישור לאתר ב-AI Studio](#קישור-לאתר-ב-ai-studio)
-5. [תרשימי ERD ו-DSD](#תרשימי-erd-ו-dsd)
-6. [החלטות עיצוב ונימוקים](#החלטות-עיצוב-ונימוקים)
-7. [שיטות הכנסת נתונים](#שיטות-הכנסת-נתונים)
-8. [גיבוי ושחזור נתונים](#גיבוי-ושחזור-נתונים)
 
----
 
 ## מבוא
-1:
 מערכת זו נועדה לניהול כולל ואפקטיבי של צי רכבים במסגרת חברת הסעות.
 מטרת המערכת היא לספק מעקב מקיף, תפעולי ופיננסי אחר כלל המשאבים המרכזיים של החברה – רכבים ונהגים – במטרה לאפשר תכנון נסיעות יעיל,
 להבטיח את תקינות המלאי, ולבצע בקרת עלויות מדויקת. המערכת תהווה את בסיס הנתונים המרכזי לקבלת החלטות ניהוליות ותפעוליות בזמן אמת.
@@ -91,6 +81,18 @@ Cost: מספר עשרוני (NUMERIC)
 Notes: מחרוזת (VARCHAR)
 VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
 
+## מסכי ai :
+
+<img width="990" height="646" alt="image" src="https://github.com/user-attachments/assets/f76f0ae7-79c7-4d46-bf2e-71c14ed9377c" />
+<img width="984" height="515" alt="image" src="https://github.com/user-attachments/assets/1969d311-54b2-4f11-92b6-375f6632810b" />
+<img width="963" height="476" alt="image" src="https://github.com/user-attachments/assets/cd2ffe7a-5100-4002-a4fe-4ba9b8fd54d9" />
+<img width="976" height="460" alt="image" src="https://github.com/user-attachments/assets/fba31c55-21d6-4316-a6e6-910a03fb30bf" />
+<img width="971" height="470" alt="image" src="https://github.com/user-attachments/assets/5d890271-f164-4ce2-b21e-8a4baa22b75d" />
+<img width="980" height="452" alt="image" src="https://github.com/user-attachments/assets/d09351be-84cd-4a0c-a4dd-86defb4aa914" />
+<img width="970" height="477" alt="image" src="https://github.com/user-attachments/assets/f1e74819-4474-4b8b-89e0-ceabf5800a08" />
+
+## קישור לאתר ai studio:
+https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 ## תרשים ERD:
 <img width="4314" height="1938" alt="image" src="https://github.com/user-attachments/assets/3c61db40-6cf8-4d0b-8a8d-a3512f0b0f03" />
@@ -252,7 +254,10 @@ SELECT * FROM FUELLOG;
 
 SELECT * FROM MAINTENANCE;
 
-## הערה:  insertTablsהוא קובץ ארוך ולכן הוא מצורף אבל לא מצוטט פה.
+
+
+
+## הערה: insertTables הוא קובץ ארוך ולכן הוא מצורף אבל לא מצוטט פה.
 
 הטבלאות:
 נהג:
@@ -291,7 +296,7 @@ SELECT * FROM MAINTENANCE;
 
 <img width="1136" height="631" alt="צילום מסך 2026-03-30 222406" src="https://github.com/user-attachments/assets/6798c058-4d81-4178-b885-797333fe391f" />
 
-## באמצעות קובץ csv:
+## באמצעות קובץ csv שיוצר על ידי chatGPT:
 <img width="1558" height="667" alt="צילום מסך 2026-03-30 222422" src="https://github.com/user-attachments/assets/d95dcd29-6cb4-44cb-8847-cd29f9e7712f" />
 
 
@@ -299,8 +304,15 @@ SELECT * FROM MAINTENANCE;
 
 <img width="1547" height="689" alt="צילום מסך 2026-03-30 222433" src="https://github.com/user-attachments/assets/ef735b57-3d52-4b99-86f4-88860aad8dc9" />
 
+## באמצעות אתר mockaroo:
 
+<img width="1280" height="532" alt="image" src="https://github.com/user-attachments/assets/867a6f64-22e9-44ea-b6d9-35354d3c5688" />
 
+## גיבוי נתונים:
+<img width="1280" height="611" alt="image" src="https://github.com/user-attachments/assets/52217f9c-7c50-4e27-9e80-6cbb1bba87e6" />
+
+## שחזור נתונים:
+<img width="1241" height="609" alt="image" src="https://github.com/user-attachments/assets/f22c0d09-5ff4-424d-a0ad-6d7986c8c304" />
 
 
 
