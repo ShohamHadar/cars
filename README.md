@@ -162,7 +162,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 ## ניצור create table: 
 - Create Tables Script  
-  [View create_tables.sql](./create_tables.sql)
+  [View create_tables.sql](./createtTables.sql)
 
 CREATE TABLE DRIVER
 (
