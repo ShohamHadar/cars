@@ -164,16 +164,15 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 - Create Tables Script  
 📃 [View createTables.sql](./DBProject_8728_2194/שלב%20א/createTables.sql)
 
+- Insert Data Script
+📃 [View insertTables.sql](./DBProject_8728_2194/שלב%20א/insertTables.sql)
+
 - Drop Tables Script  
 📃 [View dropTables.sql](./DBProject_8728_2194/שלב%20א/dropTables.sql)
 
-- Select all data from all tables
+- Select All Data Script
 📃 [View selectTables.sql](./DBProject_8728_2194/שלב%20א/selectTables.sql)
 
-
-
-
-## הערה: insertTables הוא קובץ ארוך ולכן הוא מצורף אבל לא מצוטט פה.
 
 הטבלאות:
 נהג:
