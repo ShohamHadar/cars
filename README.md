@@ -159,6 +159,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 * **הסבר:** הנהג הוא זה שמדווח על התדלוק ומבצע אותו בפועל. נהג אחד יכול לבצע תדלוקים רבים עבור רכבים שונים עליהם נסע.
 * **חובה/רשות:** **רשות** - מציין שייתכן נהג שטרם ביצע תדלוק המדווח במערכת.
 
+## סקריפטים של SQL:
 
 ## ניצור create table: 
 - Create Tables Script  
@@ -169,7 +170,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 📃 [View dropTables.sql](./DBProject_8728_2194/שלב%20א/dropTables.sql)
 
 ## ניצור select all: 
--- Select all data from all tables
+- Select all data from all tables
 📃 [View selectTables.sql](./DBProject_8728_2194/שלב%20א/selectTables.sql)
 
 
