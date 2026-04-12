@@ -23,7 +23,7 @@ notes_options = [
     "Urgent repair"
 ]
 
-start_maintenance_id = 521
+start_maintenance_id = 921
 num_rows = 100
 
 vehicle_ids = list(range(1, 621))
