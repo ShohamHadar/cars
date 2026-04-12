@@ -1,45 +1,66 @@
-import csv
-import random
+from db import engine
+from sqlalchemy import text
 from datetime import datetime, timedelta
-
-NUM_TRIPS = 20000
-START_ID = 521   # כי יש כבר עד 520
-
-MAX_DRIVER_ID = 520
-MAX_VEHICLE_ID = 520
+import random
 
 locations = [
-    "Jerusalem","Tel Aviv","Haifa","Ashdod","Beer Sheva",
-    "Netanya","Holon","Raanana","Tiberias","Safed",
-    "Nazareth","Eilat","Ashkelon","Herzliya","Bat Yam"
+    "Tel Aviv", "Jerusalem", "Haifa", "Ramat Gan", "Netanya",
+    "Lod", "Petah Tikva", "Beer Sheva", "Eilat", "Ashdod"
 ]
 
-start_time = datetime(2024, 2, 1, 6, 0, 0)
+start_trip_id = 521
+num_rows = 20000
 
-with open("trip_20000.csv", "w", newline="", encoding="utf-8") as f:
-    writer = csv.writer(f)
+# לפי מה שבנית קודם:
+driver_ids = list(range(1, 621))   # 100 drivers
+vehicle_ids = list(range(1, 621))  # 100 vehicles
 
-    writer.writerow([
-        "TripID","DepartureLocation","Destination",
-        "DepartureTime","Status","DriverID","VehicleID"
-    ])
+trips = []
 
-    for i in range(NUM_TRIPS):
-        trip_id = START_ID + i
+base_time = datetime(2024, 1, 1, 6, 0, 0)
 
-        dep = random.choice(locations)
-        dest = random.choice([x for x in locations if x != dep])
+for i in range(num_rows):
+    trip_id = start_trip_id + i
 
-        time = start_time + timedelta(minutes=i*30)
+    departure = random.choice(locations)
+    destination = random.choice(locations)
 
-        writer.writerow([
-            trip_id,
-            dep,
-            dest,
-            time.strftime("%Y-%m-%d %H:%M:%S"),
-            random.choice(["true","false"]),
-            random.randint(1, MAX_DRIVER_ID),
-            random.randint(1, MAX_VEHICLE_ID)
-        ])
+    # לוודא שלא יוצא אותו יעד ומוצא
+    while destination == departure:
+        destination = random.choice(locations)
 
-print("trip_20000.csv created")
+    departure_time = base_time + timedelta(minutes=random.randint(0, 60 * 24 * 365))
+
+    status = random.choice([True, False])
+
+    driver_id = random.choice(driver_ids)
+    vehicle_id = random.choice(vehicle_ids)
+
+    trips.append({
+        "TripID": trip_id,
+        "DepartureLocation": departure,
+        "Destination": destination,
+        "DepartureTime": departure_time,
+        "Status": status,
+        "DriverID": driver_id,
+        "VehicleID": vehicle_id
+    })
+
+# INSERT לביצוע בכמויות (יותר יעיל ל-20K)
+batch_size = 1000
+
+with engine.begin() as connection:
+    for i in range(0, num_rows, batch_size):
+        batch = trips[i:i + batch_size]
+
+        connection.execute(
+            text("""
+                INSERT INTO TRIP
+                (TripID, DepartureLocation, Destination, DepartureTime, Status, DriverID, VehicleID)
+                VALUES
+                (:TripID, :DepartureLocation, :Destination, :DepartureTime, :Status, :DriverID, :VehicleID)
+            """),
+            batch
+        )
+
+print("20,000 TRIP rows inserted successfully!")
