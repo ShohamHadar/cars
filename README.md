@@ -162,112 +162,15 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 ## ניצור create table: 
 - Create Tables Script  
-[View createTables.sql](./DBProject_8728_2194/שלב%20א/createTables.sql)
-
-CREATE TABLE DRIVER
-(
-  DriverID INT NOT NULL,
-  FirstName VARCHAR(20) NOT NULL,
-  LastName VARCHAR(20) NOT NULL,
-  Phone VARCHAR(11) NOT NULL,
-  LicenseNumber INT NOT NULL,
-  LicenseType VARCHAR(5) NOT NULL,
-  HireDate DATE NOT NULL,
-  PRIMARY KEY (DriverID),
-  UNIQUE (LicenseNumber)
-);
-
-CREATE TABLE VEHICLE
-(
-  VehicleID INT NOT NULL,
-  LicensePlate INT NOT NULL,
-  VehicleType VARCHAR(20) NOT NULL,
-  Capacity INT NOT NULL,
-  Manufacturer VARCHAR(20) NOT NULL,
-  Model INT NOT NULL,
-  Year INT NOT NULL,
-  PRIMARY KEY (VehicleID),
-  UNIQUE (LicensePlate)
-);
-
-CREATE TABLE TRIP
-(
-  TripID INT NOT NULL,
-  DepartureLocation VARCHAR(20) NOT NULL,
-  Destination VARCHAR(20) NOT NULL,
-  DepartureTime TIMESTAMP NOT NULL,
-  Status BOOLEAN NOT NULL,
-  DriverID INT NOT NULL,
-  VehicleID INT NOT NULL,
-  PRIMARY KEY (TripID),
-  FOREIGN KEY (DriverID) REFERENCES DRIVER(DriverID),
-  FOREIGN KEY (VehicleID) REFERENCES VEHICLE(VehicleID)
-);
-
-CREATE TABLE INSURANCE
-(
-  InsuranceID INT NOT NULL,
-  InsuranceCompany VARCHAR(15) NOT NULL,
-  PolicyNumber INT NOT NULL,
-  StartDate DATE NOT NULL,
-  EndDate DATE NOT NULL,
-  Cost NUMERIC(10,2) NOT NULL,
-  VehicleID INT NOT NULL,
-  PRIMARY KEY (InsuranceID),
-  FOREIGN KEY (VehicleID) REFERENCES VEHICLE(VehicleID),
-  UNIQUE (PolicyNumber)
-);
-
-CREATE TABLE FUELLOG
-(
-  FuelLogID INT NOT NULL,
-  FuelLogDate DATE NOT NULL,
-  FuelAmount NUMERIC(5,2) NOT NULL,
-  FuelCost NUMERIC(10,2) NOT NULL,
-  FuelStation VARCHAR(20) NOT NULL,
-  VehicleID INT NOT NULL,
-  DriverID INT NOT NULL,
-  PRIMARY KEY (FuelLogID),
-  FOREIGN KEY (VehicleID) REFERENCES VEHICLE(VehicleID),
-  FOREIGN KEY (DriverID) REFERENCES DRIVER(DriverID)
-);
-
-CREATE TABLE MAINTENANCE
-(
-  MaintenanceID INT NOT NULL,
-  MaintenanceDate DATE NOT NULL,
-  MaintenanceType VARCHAR(20) NOT NULL,
-  Cost NUMERIC(10,2) NOT NULL,
-  Notes VARCHAR(30) NOT NULL,
-  VehicleID INT NOT NULL,
-  PRIMARY KEY (MaintenanceID),
-  FOREIGN KEY (VehicleID) REFERENCES VEHICLE(VehicleID)
-);
+📃 [View createTables.sql](./DBProject_8728_2194/שלב%20א/createTables.sql)
 
 ## ניצור drop table:
-
-DROP TABLE IF EXISTS FUELLOG CASCADE;
-DROP TABLE IF EXISTS MAINTENANCE CASCADE;
-DROP TABLE IF EXISTS INSURANCE CASCADE;
-DROP TABLE IF EXISTS TRIP CASCADE;
-DROP TABLE IF EXISTS DRIVER CASCADE;
-DROP TABLE IF EXISTS VEHICLE CASCADE;
+- Drop Tables Script  
+📃 [View dropTables.sql](./DBProject_8728_2194/שלב%20א/dropTables.sql)
 
 ## ניצור select all: 
-
 -- Select all data from all tables
-
-SELECT * FROM DRIVER;
-
-SELECT * FROM VEHICLE;
-
-SELECT * FROM TRIP;
-
-SELECT * FROM INSURANCE;
-
-SELECT * FROM FUELLOG;
-
-SELECT * FROM MAINTENANCE;
+📃 [View selectTables.sql](./DBProject_8728_2194/שלב%20א/selectTables.sql)
 
 
 
