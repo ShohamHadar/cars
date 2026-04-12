@@ -161,15 +161,12 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 ## סקריפטים של SQL:
 
-## ניצור create table: 
 - Create Tables Script  
 📃 [View createTables.sql](./DBProject_8728_2194/שלב%20א/createTables.sql)
 
-## ניצור drop table:
 - Drop Tables Script  
 📃 [View dropTables.sql](./DBProject_8728_2194/שלב%20א/dropTables.sql)
 
-## ניצור select all: 
 - Select all data from all tables
 📃 [View selectTables.sql](./DBProject_8728_2194/שלב%20א/selectTables.sql)
 
