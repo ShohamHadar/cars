@@ -208,21 +208,17 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 ## שיטות להכנסת נתונים:
 
 ## 1: באמצעות פקודות insert: 
-<img width="710" height="59" alt="image" src="https://github.com/user-attachments/assets/11c4c648-83a1-4f16-bef0-655ede3845b3" />
-<img width="691" height="49" alt="image" src="https://github.com/user-attachments/assets/ed0d5f8e-26cb-44bc-b7ee-ada5aee397e3" />
-<img width="690" height="44" alt="image" src="https://github.com/user-attachments/assets/fec08c19-2c75-433e-a791-91589d41a17a" />
-<img width="716" height="62" alt="image" src="https://github.com/user-attachments/assets/3b0ee008-fa01-462e-b7ca-3fb11aa570a8" />
-<img width="765" height="57" alt="image" src="https://github.com/user-attachments/assets/46f4f2ab-ab93-4973-81e9-25bdd2d95e9f" />
+- Insert Data Script
+📃 [View insertTables.sql](./DBProject_8728_2194/שלב%20א/insertTables.sql)
 
 
 ## באמצעות קובץ csv שיוצר על ידי chatGPT:
-<img width="741" height="598" alt="image" src="https://github.com/user-attachments/assets/dbee5356-f7b3-4250-a528-de3b962d64c4" />
-<img width="668" height="447" alt="image" src="https://github.com/user-attachments/assets/ceed3a1c-bae5-4321-b2b2-624e84ea63e6" />
-<img width="673" height="526" alt="image" src="https://github.com/user-attachments/assets/18aaee37-16b3-428e-874f-d1926db6b350" />
-
-
-
-
+📃 [View driver.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/driver.csv)
+📃 [View fuellog.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/fuellog.csv)
+📃 [View insurance.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/insurance.csv)
+📃 [View maintenance.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/maintenance.csv)
+📃 [View trip.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/trip.csv)
+📃 [View vehicle.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/vehicle.csv)
 ## באמצעות סקריפטים בפייתון:
 ## חיבור למסד הנתונים:
 <img width="556" height="174" alt="image" src="https://github.com/user-attachments/assets/9ce3bda9-f5d3-44a8-a342-8e1168c88403" />
