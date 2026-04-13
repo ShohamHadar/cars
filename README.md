@@ -71,7 +71,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 קישור ל  ERDplus:   https://erdplus.com/diagrams/338819
 
 
-הסבר על הקשרים המופיעים בתרשימים:
+## הסבר על הקשרים המופיעים בתרשימים:
 <img width="1627" height="182" alt="image" src="https://github.com/user-attachments/assets/61a71623-8708-471f-aff9-c61b54a1d05d" />
 
 להלן הסבר מפורט על הקשרים במערכת:
@@ -127,7 +127,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 📃 [View selectTables.sql](./DBProject_8728_2194/שלב%20א/selectTables.sql)
 
 
-הטבלאות:
+## הטבלאות:
 נהג:
 <img width="1474" height="388" alt="צילום מסך 2026-03-30 231132" src="https://github.com/user-attachments/assets/4b78a100-768b-4a37-aba4-fd78e557a0ec" />
 
