@@ -221,25 +221,19 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 📃 [View vehicle.csv](./DBProject_8728_2194/שלב%20א/DataImportFiles/vehicle.csv)
 ## באמצעות סקריפטים בפייתון:
 ## חיבור למסד הנתונים:
-<img width="556" height="174" alt="image" src="https://github.com/user-attachments/assets/9ce3bda9-f5d3-44a8-a342-8e1168c88403" />
+📃 [View db.py](./DBProject_8728_2194/שלב%20א/Programing/db.py)
 ## סקריפט לייצור נתונים עבור טבלת driver:
-<img width="729" height="767" alt="image" src="https://github.com/user-attachments/assets/4fbd8b46-46b0-4392-a529-91f756d3dea5" />
-<img width="700" height="223" alt="image" src="https://github.com/user-attachments/assets/7a1fdcb0-355f-409f-9bd5-0e8bca9bdaeb" />
+📃 [View generate_driver.py](./DBProject_8728_2194/שלב%20א/Programing/generate_driver.py)
 ## סקריפט לייצור נתונים עבור טבלת fuellog:
-<img width="683" height="766" alt="image" src="https://github.com/user-attachments/assets/cddd4b49-04a2-42d6-a92f-31d709b3c0ff" />
-<img width="732" height="330" alt="image" src="https://github.com/user-attachments/assets/c523d94c-cc8e-4f2a-a878-f1fd95d42bb3" />
+📃 [View generate_fuellog.py](./DBProject_8728_2194/שלב%20א/Programing/generate_fuellog.py)
 ## סקריפט לייצור נתונים עבור טבלת insurance:
-<img width="677" height="721" alt="image" src="https://github.com/user-attachments/assets/5078879f-c4c1-42c5-8030-f2a917f27d31" />
-<img width="743" height="241" alt="image" src="https://github.com/user-attachments/assets/68cdeae1-5d2e-4d7d-8cb7-3f2517f80501" />
+📃 [View generate_insurance.py](./DBProject_8728_2194/שלב%20א/Programing/generate_insurance.py)
 ## סקריפט לייצור נתונים עבור טבלת maintenance:
-<img width="642" height="735" alt="image" src="https://github.com/user-attachments/assets/d796afab-dd5c-4fc3-b0db-4aae6f89e893" />
-<img width="727" height="701" alt="image" src="https://github.com/user-attachments/assets/02ce5cd9-c721-4b7b-97f0-22ac0a8f6549" />
+📃 [View generate_maintenance.py](./DBProject_8728_2194/שלב%20א/Programing/generate_maintenance.py)
 ## סקריפט לייצור נתונים עבור טבלת trip:
-<img width="692" height="755" alt="image" src="https://github.com/user-attachments/assets/39dea141-d7df-42ce-a687-a4e6884c6992" />
-<img width="761" height="626" alt="image" src="https://github.com/user-attachments/assets/11bac1e0-5366-4674-af66-a5a82bf9ee6f" />
+📃 [View generate_trip.py](./DBProject_8728_2194/שלב%20א/Programing/generate_trip.py)
 ## סקריפט לייצור נתונים עבור טבלת vehicle:
-<img width="761" height="804" alt="image" src="https://github.com/user-attachments/assets/0a35b965-0321-4129-b974-e4cf21027c6d" />
-<img width="744" height="229" alt="image" src="https://github.com/user-attachments/assets/89ebe165-524e-48ce-8dfc-ca4a3ea56ab3" />
+📃 [View generate_vehicle.py](./DBProject_8728_2194/שלב%20א/Programing/generate_vehicle.py)
 
 
 ## באמצעות אתר mockaroo:
