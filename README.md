@@ -48,55 +48,7 @@
 5. **יומן תדלוק** - FUELLOG
 6. **תחזוקה** -MAINTENANCE
 
-1. נהג (DRIVER)
-DriverID: מספר (INT), מפתח ראשי (Primary Key).
-FirstName: מחרוזת (VARCHAR)
-LastName: מחרוזת (VARCHAR)
-Phone: מחרוזת (VARCHAR)
-LicenseNumber: מספר (INT), מפתח ייחודי (Unique Key).
-LicenseType: מחרוזת (VARCHAR)
-HireDate: תאריך (DATE)
-
-2. רכב (VEHICL)
-VehicleID: מספר (INT), מפתח ראשי (Primary Key).
-LicensePlate: מספר (INT), מפתח ייחודי (Unique Key).
-VehicleType: מחרוזת (VARCHAR)
-Capacity: מספר (INT)
-Manufacturer: מחרוזת (VARCHAR)
-Model: מספר (INT)
-Year: מספר (INT)
-3. נסיעה (TRIP)
-TripID: מספר (INT), מפתח ראשי (Primary Key).
-DepartureLocation: מחרוזת (VARCHAR)
-Destination: מחרוזת (VARCHAR)
-DepartureTime: זמן (TIMESTAMP)
-Status: בוליאני (BOOLEAN)
-DriverID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות נהג.
-VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
-4. ביטוח (INSURANC)
-InsuranceID: מספר (INT), מפתח ראשי (Primary Key).
-InsuranceCompany: מחרוזת (VARCHAR)
-PolicyNumber: מספר (INT), מפתח ייחודי (Unique Key).
-StartDate: תאריך (DATE)
-EndDate: תאריך (DATE)
-Cost: מספר עשרוני (NUMERIC)
-VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
-5. יומן תדלוק (FUELLO)
-FuelLogID: מספר (INT), מפתח ראשי (Primary Key).
-FuelLogDate: תאריך (DATE)
-FuelAmount: מספר עשרוני (NUMERIC)
-FuelCost: מספר עשרוני (NUMERIC)
-FuelStation: מחרוזת (VARCHAR)
-VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
-DriverID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות נהג.
-6. תחזוקה (MAINTENANCE)MaintenanceID: מספר (INT), מפתח ראשי (Primary Key).
-MaintenanceDate: תאריך (DATE)
-MaintenanceType: מחרוזת (VARCHAR)
-Cost: מספר עשרוני (NUMERIC)
-Notes: מחרוזת (VARCHAR)
-VehicleID: מספר (INT), מפתח זר (Foreign Key) המקשר לישות רכב.
-
-## מסכי AI Studio:
+## אפיון המערכת - מסכי AI Studio:
 
 <img width="990" height="646" alt="image" src="https://github.com/user-attachments/assets/f76f0ae7-79c7-4d46-bf2e-71c14ed9377c" />
 <img width="984" height="515" alt="image" src="https://github.com/user-attachments/assets/1969d311-54b2-4f11-92b6-375f6632810b" />
