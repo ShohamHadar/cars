@@ -194,7 +194,8 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="1280" height="532" alt="image" src="https://github.com/user-attachments/assets/867a6f64-22e9-44ea-b6d9-35354d3c5688" />
 
 ## גיבוי נתונים:
-<img width="1280" height="611" alt="image" src="https://github.com/user-attachments/assets/52217f9c-7c50-4e27-9e80-6cbb1bba87e6" />
+<img width="873" height="624" alt="image" src="https://github.com/user-attachments/assets/3d29a187-b9e0-4b73-8998-c2e78fac7109" />
 
 ## שחזור נתונים:
-<img width="1241" height="609" alt="image" src="https://github.com/user-attachments/assets/f22c0d09-5ff4-424d-a0ad-6d7986c8c304" />
+<img width="817" height="449" alt="image" src="https://github.com/user-attachments/assets/639acdf9-1a87-4490-93da-3ed0e29dca38" />
+
