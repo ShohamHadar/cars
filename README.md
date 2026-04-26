@@ -220,7 +220,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
  ## שאילתא שמחזירה רשימה של נהגים שלא ביצעו נסיעה בחודש האחרון - יותר יעילה
 
-<img width="528" height="179" alt="image" src="https://github.com/user-attachments/assets/5525573b-765d-4b3a-a8eb-cb6d3e068d4f" />
+<img width="533" height="199" alt="image" src="https://github.com/user-attachments/assets/9d3f749e-13b0-4a5d-826a-f595050417e0" />
 <img width="434" height="168" alt="image" src="https://github.com/user-attachments/assets/d90f093d-08b1-457c-97e1-95d10f2c0b17" />
 
 ##  שאילתא שמחזירה רשימה של נהגים שלא ביצעו נסיעה בחודש האחרון - פחות יעילה
@@ -236,8 +236,22 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="683" height="242" alt="image" src="https://github.com/user-attachments/assets/fd1e8083-0057-40b7-a002-929d0ce5db86" />
 <img width="361" height="163" alt="image" src="https://github.com/user-attachments/assets/7bf063e0-db67-4e42-a80f-57327fce1b2f" />
 
- ## שאילתא שמחזירה את הרכבים 
+## שאילתא המחשבת עלות ביטוח ממוצע לאוטובוסים לפי חברה בסדר יורד - יעילה 
+<img width="463" height="163" alt="image" src="https://github.com/user-attachments/assets/1d7978d6-09ff-4f57-8752-a0449173f7f6" />
+<img width="326" height="138" alt="image" src="https://github.com/user-attachments/assets/270d04e3-011c-44c6-901a-97d2a4b4df3c" />
 
+## שאילתא המחשבת עלות ביטוח ממוצע לאוטובוסים לפי חברה בסדר יורד - פחות יעילה
+<img width="467" height="225" alt="image" src="https://github.com/user-attachments/assets/4e223fb0-963c-4036-811d-0478eb9e1800" />
+<img width="314" height="137" alt="image" src="https://github.com/user-attachments/assets/da41271a-0290-4f1c-b0bc-6de22b6fd325" />
+
+## שאילתא המחשבת מי הם חמשת הנהגים שביצעו הכי הרבה נסיעות בשנה האחרונה - יעילה
+
+<img width="695" height="228" alt="image" src="https://github.com/user-attachments/assets/e8b7843b-f5ce-4705-8589-cd110383ec47" />
+<img width="523" height="168" alt="image" src="https://github.com/user-attachments/assets/c828d1e4-d73d-4d43-9af3-42b450fc86e7" />
+
+## שאילתא המחשבת מי הם חמשת הנהגים שביצעו הכי הרבה נסיעות בשנה האחרונה - פחות יעילה
+<img width="557" height="257" alt="image" src="https://github.com/user-attachments/assets/a38d3c42-89d2-4870-bf3b-0af02e7282d6" />
+<img width="523" height="166" alt="image" src="https://github.com/user-attachments/assets/f5443153-30b7-46b3-950b-613632a3008a" />
 
 
 
