@@ -199,3 +199,45 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 ## שחזור נתונים:
 <img width="817" height="449" alt="image" src="https://github.com/user-attachments/assets/639acdf9-1a87-4490-93da-3ed0e29dca38" />
 
+
+## שלב ב׳:
+## שאילתא שמחשבת ממוצע עלות תחזוקה לפי סוג רכב + יצרן + שנה: 
+<img width="551" height="221" alt="image" src="https://github.com/user-attachments/assets/d0898c23-1cac-4817-8d34-7945f92aceb3" />
+<img width="702" height="166" alt="image" src="https://github.com/user-attachments/assets/a1232ae8-8425-488c-9329-34112cf47b7a" />
+
+## שאילתא שמחזירה את רשימת הרכבים עם ביטוח לא בתוקף: 
+<img width="429" height="222" alt="image" src="https://github.com/user-attachments/assets/1f67846c-cec4-417c-ad47-c9ddc966a1c7" />
+<img width="297" height="165" alt="image" src="https://github.com/user-attachments/assets/e503995d-093c-4c18-a209-08e4951dde54" />
+
+## שאילתא שמחזירה פילוח כמות טיפולי התחזוקה לפי ימי השבוע, מוצג בסדר יורד מהיום העמוס ביותר:
+<img width="592" height="118" alt="image" src="https://github.com/user-attachments/assets/dd40ee74-5ed0-483f-8358-955b93898d71" />
+<img width="267" height="171" alt="image" src="https://github.com/user-attachments/assets/41073bbd-7aaf-4900-b9d8-cac1b868d388" />
+
+
+## שאילתא שמחזירה את רשימת הרכבים שעלות התחזוקה שלהם גבוה מהממוצע הכללי
+ <img width="604" height="492" alt="image" src="https://github.com/user-attachments/assets/3f8d7675-23de-4332-ad2e-9116f5f68ea6" />
+<img width="649" height="165" alt="image" src="https://github.com/user-attachments/assets/6a1d35e0-71d5-4301-9795-27fecd9fb13e" />
+
+ ## שאילתא שמחזירה רשימה של נהגים שלא ביצעו נסיעה בחודש האחרון - יותר יעילה
+
+<img width="528" height="179" alt="image" src="https://github.com/user-attachments/assets/5525573b-765d-4b3a-a8eb-cb6d3e068d4f" />
+<img width="434" height="168" alt="image" src="https://github.com/user-attachments/assets/d90f093d-08b1-457c-97e1-95d10f2c0b17" />
+
+##  שאילתא שמחזירה רשימה של נהגים שלא ביצעו נסיעה בחודש האחרון - פחות יעילה
+<img width="521" height="180" alt="image" src="https://github.com/user-attachments/assets/62aed3d7-d19f-4eb4-a1d8-b4037e08efff" />
+<img width="436" height="128" alt="image" src="https://github.com/user-attachments/assets/1d46250c-7415-4490-b965-0ba6ff4b662c" />
+
+
+## שאילתא שמחזירה את הרכבים שזמינים השבוע (לא משוריינים לנסיעות) - יעילה
+<img width="531" height="246" alt="image" src="https://github.com/user-attachments/assets/ed4a9580-1a53-4e28-8840-02d5777696eb" />
+<img width="365" height="166" alt="image" src="https://github.com/user-attachments/assets/eb106da5-f137-4b6b-9a5d-e28b6264151f" />
+
+## שאילתא שמחזירה את הרכבים שזמינים השבוע (לא משוריינים לנסיעות) - פחות יעילה
+<img width="683" height="242" alt="image" src="https://github.com/user-attachments/assets/fd1e8083-0057-40b7-a002-929d0ce5db86" />
+<img width="361" height="163" alt="image" src="https://github.com/user-attachments/assets/7bf063e0-db67-4e42-a80f-57327fce1b2f" />
+
+ ## שאילתא שמחזירה את הרכבים 
+
+
+
+
