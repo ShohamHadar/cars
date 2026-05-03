@@ -227,6 +227,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="521" height="180" alt="image" src="https://github.com/user-attachments/assets/62aed3d7-d19f-4eb4-a1d8-b4037e08efff" />
 <img width="436" height="128" alt="image" src="https://github.com/user-attachments/assets/1d46250c-7415-4490-b965-0ba6ff4b662c" />
 
+## השאילתה עם NOT EXISTS יעילה ובטוחה יותר, משום שהיא בודקת עבור כל נהג האם קיימת נסיעה מתאימה בחודש האחרון, ויכולה לעצור את החיפוש ברגע שנמצאה התאמה. לעומת זאת, השאילתה עם NOT IN יוצרת תחילה רשימה של כל הנהגים שביצעו נסיעות, כולל שימוש ב־DISTINCT, ורק לאחר מכן מבצעת השוואה מול טבלת הנהגים, ולכן היא פחות יעילה במיוחד כאשר טבלת הנסיעות גדולה.
 
 ## שאילתא שמחזירה את הרכבים שזמינים השבוע (לא משוריינים לנסיעות) - יעילה
 <img width="531" height="246" alt="image" src="https://github.com/user-attachments/assets/ed4a9580-1a53-4e28-8840-02d5777696eb" />
@@ -252,6 +253,33 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 ## שאילתא המחשבת מי הם חמשת הנהגים שביצעו הכי הרבה נסיעות בשנה האחרונה - פחות יעילה
 <img width="557" height="257" alt="image" src="https://github.com/user-attachments/assets/a38d3c42-89d2-4870-bf3b-0af02e7282d6" />
 <img width="523" height="166" alt="image" src="https://github.com/user-attachments/assets/f5443153-30b7-46b3-950b-613632a3008a" />
+
+
+## שאילתות delete ושימוש בrollback -
+## אילוצים בטבלת רכב -
+<img width="390" height="61" alt="image" src="https://github.com/user-attachments/assets/42944a71-480c-4b9a-9714-a531bd04b041" />
+<img width="751" height="45" alt="image" src="https://github.com/user-attachments/assets/cbae73d6-33d6-4232-8b51-92402f47d042" />
+<img width="729" height="88" alt="image" src="https://github.com/user-attachments/assets/ff144aa5-fb26-4602-9897-c3d576b94832" />
+
+<img width="488" height="63" alt="image" src="https://github.com/user-attachments/assets/5a8ae45c-39ab-4906-b19f-0b33d39b8cf7" />
+<img width="747" height="45" alt="image" src="https://github.com/user-attachments/assets/9688fb6d-701f-41b0-bb48-5fb1447bc9bf" />
+<img width="629" height="51" alt="image" src="https://github.com/user-attachments/assets/3480a6fc-6cac-497b-97b8-60d21fbd503c" />
+
+## אילוצים בטבלת נהג -
+<img width="367" height="64" alt="image" src="https://github.com/user-attachments/assets/74a05fe5-edcf-4eea-b37c-558949be1b01" />
+<img width="808" height="49" alt="image" src="https://github.com/user-attachments/assets/6458a4f5-aa75-496d-b92e-0b81e5874830" />
+<img width="671" height="49" alt="image" src="https://github.com/user-attachments/assets/6dc549dc-e6c3-426f-91f7-0aef190a9da3" />
+
+<img width="408" height="65" alt="image" src="https://github.com/user-attachments/assets/62d3297b-425c-4092-8727-c744e9f0b6e0" />
+<img width="807" height="49" alt="image" src="https://github.com/user-attachments/assets/01b77f31-b320-4748-bf11-75b66af9cab0" />
+<img width="673" height="48" alt="image" src="https://github.com/user-attachments/assets/cc71f977-a55d-4621-a405-7d50ba98c7e9" />
+
+<img width="304" height="68" alt="image" src="https://github.com/user-attachments/assets/f2ed5d05-a923-49ab-afc8-b5d76850f8e2" />
+<img width="815" height="46" alt="image" src="https://github.com/user-attachments/assets/dd96420c-46e2-42bd-99cd-385b0e1a7960" />
+<img width="649" height="46" alt="image" src="https://github.com/user-attachments/assets/c1057062-fef9-40f4-baaf-66fd15c9826b" />
+
+
+
 
 
 
