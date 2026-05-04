@@ -349,6 +349,9 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="1192" height="50" alt="image" src="https://github.com/user-attachments/assets/bf5ce1cb-ad17-4806-bfb2-f724331bcd13" />
 <img width="735" height="43" alt="image" src="https://github.com/user-attachments/assets/c58da20f-b107-4d21-bd49-b2c3dae49e1d" />
 
+<img width="602" height="64" alt="image" src="https://github.com/user-attachments/assets/db18f893-8c02-4b3c-9c80-20785e0afdd5" />
+
+
 ## אילוצים בטבלת תדלוק -
 האילוץ מוודא כי ניתן להזין לטבלת התדלוק רק כמות דלק חיובית:
 <img width="358" height="70" alt="image" src="https://github.com/user-attachments/assets/a0d33d9f-529f-45ad-aed5-754f6dbb4cac" />
@@ -411,6 +414,17 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 החזרת בסיס הנתונים לקדמותו -
 <img width="108" height="71" alt="image" src="https://github.com/user-attachments/assets/bd66b66c-2755-482a-bbe4-d6f3de73a28a" />
+
+## שימוש בcommit -
+עדכון עמודת סטטוס בנסיעה ל״הושלם״ או ב״תהליך״ -
+<img width="385" height="244" alt="image" src="https://github.com/user-attachments/assets/4c7d66f6-6ece-456f-bba1-c02da9649ed0" />
+בדיקה לפני הרצה -
+<img width="280" height="24" alt="image" src="https://github.com/user-attachments/assets/deafb3f7-5570-4e16-870d-b068c3740a7a" />
+בדיקה לאחר הרצה ולפני commit -
+<img width="296" height="168" alt="image" src="https://github.com/user-attachments/assets/e0f2f77d-4a73-4d26-955d-e29ff611c4ab" />
+בדיקה לאחר commit -
+<img width="293" height="164" alt="image" src="https://github.com/user-attachments/assets/0ebc6f89-3fc7-4209-b738-a96a9f7295c0" />
+
 
 ## שאילתות update ושימוש בcommit -
 עדכון סטטוס תחזוקה ״בתהליך״ לטיפולים שהתאריך שלהם הוא מה-30 ימים האחרונים ועד היום:
