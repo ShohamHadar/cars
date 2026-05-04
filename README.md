@@ -378,7 +378,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 
 ## אילוצים בטבלת ביטוח -
-האילוץ מוודא כי ניתן להזין לטבלת הביטוח רק תאריך סיום שקהוא מאוחר יותר מתאריך ההתחלה:
+האילוץ מוודא כי ניתן להזין לטבלת הביטוח רק תאריך סיום ביטוח שמאוחר יותר מתאריך תחילת ביטוח:
 <img width="301" height="65" alt="image" src="https://github.com/user-attachments/assets/10d82c50-d507-4c78-80ee-6b90efaa01a7" />
 <img width="886" height="52" alt="image" src="https://github.com/user-attachments/assets/037ac582-2d09-4931-941b-c41f3f0bf81f" />
 <img width="673" height="53" alt="image" src="https://github.com/user-attachments/assets/ce6e1760-d736-4068-948c-486f1c51a717" />
