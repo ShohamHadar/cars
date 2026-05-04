@@ -385,6 +385,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 האילוץ מוודא כי ניתן להזין לטבלת הביטוח רק מחיר חיובי:
 <img width="374" height="68" alt="image" src="https://github.com/user-attachments/assets/ed7e4c97-44f6-48b4-8b62-140a02a3641e" />
-<img width="890" height="42" alt="image" src="https://github.com/user-attachments/assets/a761ca6e-8014-4656-b310-31735fb02641" />
-<img width="996" height="45" alt="image" src="https://github.com/user-attachments/assets/609c1566-8c5b-489c-9213-e331170acad8" />
+<img width="903" height="46" alt="image" src="https://github.com/user-attachments/assets/2b95c7fe-e510-480c-a80a-8b919eecab5e" />
+<img width="721" height="48" alt="image" src="https://github.com/user-attachments/assets/14b2a0e6-0f33-4987-a18c-c2923761a034" />
+
 
