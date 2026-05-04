@@ -307,27 +307,65 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="751" height="45" alt="image" src="https://github.com/user-attachments/assets/cbae73d6-33d6-4232-8b51-92402f47d042" />
 <img width="729" height="88" alt="image" src="https://github.com/user-attachments/assets/ff144aa5-fb26-4602-9897-c3d576b94832" />
 
+
 <img width="488" height="63" alt="image" src="https://github.com/user-attachments/assets/5a8ae45c-39ab-4906-b19f-0b33d39b8cf7" />
 <img width="747" height="45" alt="image" src="https://github.com/user-attachments/assets/9688fb6d-701f-41b0-bb48-5fb1447bc9bf" />
 <img width="629" height="51" alt="image" src="https://github.com/user-attachments/assets/3480a6fc-6cac-497b-97b8-60d21fbd503c" />
+
 
 ## אילוצים בטבלת נהג -
 <img width="367" height="64" alt="image" src="https://github.com/user-attachments/assets/74a05fe5-edcf-4eea-b37c-558949be1b01" />
 <img width="808" height="49" alt="image" src="https://github.com/user-attachments/assets/6458a4f5-aa75-496d-b92e-0b81e5874830" />
 <img width="671" height="49" alt="image" src="https://github.com/user-attachments/assets/6dc549dc-e6c3-426f-91f7-0aef190a9da3" />
 
+
 <img width="408" height="65" alt="image" src="https://github.com/user-attachments/assets/62d3297b-425c-4092-8727-c744e9f0b6e0" />
 <img width="807" height="49" alt="image" src="https://github.com/user-attachments/assets/01b77f31-b320-4748-bf11-75b66af9cab0" />
 <img width="673" height="48" alt="image" src="https://github.com/user-attachments/assets/cc71f977-a55d-4621-a405-7d50ba98c7e9" />
+
 
 <img width="304" height="68" alt="image" src="https://github.com/user-attachments/assets/f2ed5d05-a923-49ab-afc8-b5d76850f8e2" />
 <img width="815" height="46" alt="image" src="https://github.com/user-attachments/assets/dd96420c-46e2-42bd-99cd-385b0e1a7960" />
 <img width="649" height="46" alt="image" src="https://github.com/user-attachments/assets/c1057062-fef9-40f4-baaf-66fd15c9826b" />
 
 ## אילוצים בטבלת נסיעה -
-<img width="371" height="62" alt="image" src="https://github.com/user-attachments/assets/8bc9c5a6-bf91-4410-b2f6-3919975e76eb" />
+<img width="366" height="61" alt="image" src="https://github.com/user-attachments/assets/34ead6a8-d129-4fb8-8e96-7e4ebdf24594" />
+<img width="1206" height="55" alt="image" src="https://github.com/user-attachments/assets/5a21ef71-c4e2-436a-be9a-2c60e1a70b95" />
+<img width="727" height="52" alt="image" src="https://github.com/user-attachments/assets/8d832248-2be9-4c0d-a76e-0ffb30e6e5df" />
+
+<img width="372" height="67" alt="image" src="https://github.com/user-attachments/assets/0e02f4ea-f71d-467a-8d58-b2bf11caab09" />
+<img width="1199" height="53" alt="image" src="https://github.com/user-attachments/assets/bd8bfd72-ced2-4434-aa83-01e91c71e48f" />
+<img width="730" height="40" alt="image" src="https://github.com/user-attachments/assets/70ce9a61-bc5b-4e36-817b-932a48c666a0" />
 
 
+<img width="371" height="71" alt="image" src="https://github.com/user-attachments/assets/a9ce0a72-3fab-42c0-9f1b-7da1882e09b2" />
+<img width="1192" height="50" alt="image" src="https://github.com/user-attachments/assets/bf5ce1cb-ad17-4806-bfb2-f724331bcd13" />
+<img width="735" height="43" alt="image" src="https://github.com/user-attachments/assets/c58da20f-b107-4d21-bd49-b2c3dae49e1d" />
+
+## אילוצים בטבלת תדלוק -
+<img width="358" height="70" alt="image" src="https://github.com/user-attachments/assets/a0d33d9f-529f-45ad-aed5-754f6dbb4cac" />
+<img width="846" height="43" alt="image" src="https://github.com/user-attachments/assets/c151b01e-d16c-4b8a-b2e7-0fa6e354c06e" />
+<img width="696" height="54" alt="image" src="https://github.com/user-attachments/assets/f5c72437-9a7f-492c-afc8-708887f8d21e" />
 
 
+<img width="322" height="63" alt="image" src="https://github.com/user-attachments/assets/7d96c0cc-0418-4bf1-adc5-b7be315b6fe9" />
+<img width="861" height="47" alt="image" src="https://github.com/user-attachments/assets/4c695732-3d0a-46b1-a164-e29a8a42f8f5" />
+<img width="673" height="55" alt="image" src="https://github.com/user-attachments/assets/aaf266e7-cc39-417e-80a3-4c67ebbef7cb" />
 
+## אילוצים בטבלת תחזוקה -
+<img width="419" height="62" alt="image" src="https://github.com/user-attachments/assets/fcf1062a-8c07-4356-aaeb-f7fcc4cae878" />
+<img width="817" height="43" alt="image" src="https://github.com/user-attachments/assets/e4b7a52e-6277-43a0-b6e3-70aea449bf79" />
+<img width="784" height="42" alt="image" src="https://github.com/user-attachments/assets/8a5ea5db-e817-411a-b6cb-c62c03d50a0d" />
+
+<img width="990" height="67" alt="image" src="https://github.com/user-attachments/assets/ee0e54a1-2730-4652-88e2-84eaa67724a8" />
+<img width="821" height="49" alt="image" src="https://github.com/user-attachments/assets/36375b92-98bd-485d-9759-16a4e3d47984" />
+<img width="781" height="50" alt="image" src="https://github.com/user-attachments/assets/d4592656-fc63-4fef-802a-549ca33a2f95" />
+
+## אילוצים בטבלת ביטוח -
+<img width="301" height="65" alt="image" src="https://github.com/user-attachments/assets/10d82c50-d507-4c78-80ee-6b90efaa01a7" />
+<img width="886" height="52" alt="image" src="https://github.com/user-attachments/assets/037ac582-2d09-4931-941b-c41f3f0bf81f" />
+<img width="673" height="53" alt="image" src="https://github.com/user-attachments/assets/ce6e1760-d736-4068-948c-486f1c51a717" />
+
+<img width="374" height="68" alt="image" src="https://github.com/user-attachments/assets/ed7e4c97-44f6-48b4-8b62-140a02a3641e" />
+<img width="890" height="42" alt="image" src="https://github.com/user-attachments/assets/a761ca6e-8014-4656-b310-31735fb02641" />
+<img width="724" height="43" alt="image" src="https://github.com/user-attachments/assets/e079668b-5b88-4321-b81d-a092d47b247e" />
