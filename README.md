@@ -237,6 +237,18 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="683" height="242" alt="image" src="https://github.com/user-attachments/assets/fd1e8083-0057-40b7-a002-929d0ce5db86" />
 <img width="361" height="163" alt="image" src="https://github.com/user-attachments/assets/7bf063e0-db67-4e42-a80f-57327fce1b2f" />
 
+## השוואת יעילות בין שתי שאילתות למציאת רכבים זמינים השבוע -
+
+שתי השאילתות מחזירות רכבים שאינם משוריינים לנסיעות במהלך השבוע הקרוב.
+
+השאילתא הראשונה משתמשת ב־`NOT EXISTS`, ולכן היא נחשבת יעילה ובטוחה יותר. עבור כל רכב, בסיס הנתונים בודק האם קיימת נסיעה מתאימה בטבלת `Trip` בשבוע הקרוב. ברגע שנמצאת נסיעה אחת עבור אותו רכב, אין צורך להמשיך לבדוק נסיעות נוספות עבורו, ולכן ניתן לעצור את החיפוש מוקדם.
+
+לעומת זאת, השאילתא השנייה משתמשת ב־`NOT IN` יחד עם תת־שאילתה שמחזירה את כל הרכבים שכבר משוריינים השבוע. בנוסף, נעשה שימוש ב־`DISTINCT` כדי להסיר כפילויות של `VehicleID`, פעולה שעלולה להיות יקרה יותר כאשר טבלת `Trip` גדולה. לאחר יצירת הרשימה, בסיס הנתונים צריך להשוות את כל רכבי `Vehicle` מול הרשימה שנוצרה.
+
+בנוסף, `NOT IN` רגיש לערכי `NULL`. אם תת־השאילתה מחזירה `NULL`, התוצאה עלולה להיות שגויה או ריקה, ולכן נדרש להוסיף תנאי כמו `VehicleID IS NOT NULL`. לעומת זאת, `NOT EXISTS` אינו סובל מבעיה זו באותה צורה.
+
+לכן, השאילתא עם `NOT EXISTS` עדיפה מבחינת יעילות, קריאות ובטיחות לוגית.
+
 ## שאילתא המחשבת עלות ביטוח ממוצע לאוטובוסים לפי חברה בסדר יורד - יעילה 
 <img width="463" height="163" alt="image" src="https://github.com/user-attachments/assets/1d7978d6-09ff-4f57-8752-a0449173f7f6" />
 <img width="326" height="138" alt="image" src="https://github.com/user-attachments/assets/270d04e3-011c-44c6-901a-97d2a4b4df3c" />
@@ -278,6 +290,8 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="815" height="46" alt="image" src="https://github.com/user-attachments/assets/dd96420c-46e2-42bd-99cd-385b0e1a7960" />
 <img width="649" height="46" alt="image" src="https://github.com/user-attachments/assets/c1057062-fef9-40f4-baaf-66fd15c9826b" />
 
+## אילוצים בטבלת נסיעה -
+<img width="371" height="62" alt="image" src="https://github.com/user-attachments/assets/8bc9c5a6-bf91-4410-b2f6-3919975e76eb" />
 
 
 
