@@ -447,6 +447,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="385" height="244" alt="image" src="https://github.com/user-attachments/assets/4c7d66f6-6ece-456f-bba1-c02da9649ed0" />
 בדיקה לפני הרצה -
 <img width="280" height="24" alt="image" src="https://github.com/user-attachments/assets/deafb3f7-5570-4e16-870d-b068c3740a7a" />
+<img width="517" height="400" alt="image" src="https://github.com/user-attachments/assets/888872cf-2db4-46ce-857e-969f63df3fb5" />
 בדיקה לאחר הרצה ולפני commit -
 <img width="296" height="168" alt="image" src="https://github.com/user-attachments/assets/e0f2f77d-4a73-4d26-955d-e29ff611c4ab" />
 בדיקה לאחר commit -
