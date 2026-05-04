@@ -301,7 +301,7 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 לכן, השאילתא הראשונה עדיפה מבחינת יעילות, שכן היא מבצעת אגרגציה אחת על הנתונים, בעוד שהשאילתא השנייה מבצעת חישוב חוזר עבור כל נהג בנפרד.
 
 
-## שאילתות delete ושימוש בrollback -
+## אילוצים
 ## אילוצים בטבלת רכב -
 האילוץ מוודא כי ניתן להזין לטבלת הרכבים רק רכבים עם קיבולת חיובית:
 <img width="390" height="61" alt="image" src="https://github.com/user-attachments/assets/42944a71-480c-4b9a-9714-a531bd04b041" />
@@ -388,4 +388,39 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 <img width="903" height="46" alt="image" src="https://github.com/user-attachments/assets/2b95c7fe-e510-480c-a80a-8b919eecab5e" />
 <img width="721" height="48" alt="image" src="https://github.com/user-attachments/assets/14b2a0e6-0f33-4987-a18c-c2923761a034" />
 
+## שאילתות delete ושימוש בrollback -
+מחיקת אוטובסים משנת ייצור נמוכה מ-2019 שאינן משובצות לנסיעות עתידיות וכל הפרטים המשוייכים אליהן
+<img width="772" height="459" alt="image" src="https://github.com/user-attachments/assets/40935698-26e3-41f4-bf17-81b1e84736d1" />
+טבלת רכב לאחר ההרצה -
+<img width="109" height="67" alt="image" src="https://github.com/user-attachments/assets/f4c2e764-535c-4451-9a52-a907e45d417d" />
+החזרת בסיס הנתונים לקדמותו -
+<img width="117" height="76" alt="image" src="https://github.com/user-attachments/assets/181c49ea-e29f-4ec3-9a46-a07773cd54a9" />
 
+מחיקת תדלוקים מעל שנה לרכבים שלא עברו טיפול צמיגים
+<img width="743" height="283" alt="image" src="https://github.com/user-attachments/assets/39ae6b47-870a-4f7f-9439-322c262972db" />
+טבלת תדלוק לאחר הרצה -
+<img width="113" height="74" alt="image" src="https://github.com/user-attachments/assets/87fec102-d8b4-49fe-a591-49d072d19eda" />
+
+החזרת בסיס הנתונים לקדמותו -
+<img width="112" height="70" alt="image" src="https://github.com/user-attachments/assets/763ae28c-4c55-4c76-98f0-10cd772ae0a4" />
+
+מחיקת נסיעות שמתנגשות עם לו״ז תחזוקה -
+<img width="571" height="184" alt="image" src="https://github.com/user-attachments/assets/919ed060-19e7-47c9-94d0-9707853958a5" />
+טבלת נסיעות לאחר הרצה -
+<img width="117" height="68" alt="image" src="https://github.com/user-attachments/assets/e783d273-fa59-49af-a5e3-286235d00610" />
+
+החזרת בסיס הנתונים לקדמותו -
+<img width="108" height="71" alt="image" src="https://github.com/user-attachments/assets/bd66b66c-2755-482a-bbe4-d6f3de73a28a" />
+
+## שאילתות update ושימוש בcommit -
+עדכון סטטוס תחזוקה ״בתהליך״ לטיפולים שהתאריך שלהם הוא מה-30 ימים האחרונים ועד היום:
+<img width="736" height="273" alt="image" src="https://github.com/user-attachments/assets/26c53a8c-c5e6-45f6-9736-f6fa94e9fb9a" />
+
+הכנסת נתונים לעמודת עיר בטבלת נהגים:
+<img width="1310" height="241" alt="image" src="https://github.com/user-attachments/assets/bac5e72d-4096-4374-9a81-cc4bd79df2d5" />
+
+שידוך בין ביטוח לרכב על מנת להבטיח שלכל רכב יהיה ביטוח אחד בלבד:
+<img width="744" height="434" alt="image" src="https://github.com/user-attachments/assets/00660380-51b5-468a-a8ea-eccc4e180d2f" />
+
+עדכון מחיר נסיעה לפי סוג רכב -
+<img width="859" height="401" alt="image" src="https://github.com/user-attachments/assets/d68d9f41-3005-472a-bed4-b5cda968b8af" />
