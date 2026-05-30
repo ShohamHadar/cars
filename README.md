@@ -49,6 +49,9 @@
 
 </div>
 
+### שלב ג':
+
+
 ## מבוא
 מערכת זו נועדה לניהול כולל ואפקטיבי של צי רכבים במסגרת חברת הסעות.
 מטרת המערכת היא לספק מעקב מקיף, תפעולי ופיננסי אחר כלל המשאבים המרכזיים של החברה – רכבים ונהגים – במטרה לאפשר תכנון נסיעות יעיל,
@@ -467,3 +470,34 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 
 עדכון מחיר נסיעה לפי סוג רכב -
 <img width="859" height="401" alt="image" src="https://github.com/user-attachments/assets/d68d9f41-3005-472a-bed4-b5cda968b8af" />
+
+
+## שלב ג':
+## תרשים DSD של האגף החדש-ניהול נסיעות:
+<img width="1144" height="444" alt="image" src="https://github.com/user-attachments/assets/e888d2d3-b4e3-4e07-b5c3-50b837e5fba3" />
+## תרשים ERD אגף החדש- ניהול נסיעות:
+<img width="1305" height="567" alt="image" src="https://github.com/user-attachments/assets/05932258-cac1-4457-85bb-329c54aadbea" />
+## תרשים EDR משולב:
+<img width="1359" height="519" alt="image" src="https://github.com/user-attachments/assets/2b28311d-8b43-4d91-8f9e-4d6502982390" />
+## תרשים DSD אחרי אינטגרציה:
+
+<img width="1236" height="502" alt="image" src="https://github.com/user-attachments/assets/7765207b-4ce3-47c2-90b2-458ce877bf1a" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
