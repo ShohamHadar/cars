@@ -500,12 +500,11 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 ## שלב ג':
 ## תרשים DSD של האגף החדש - ניהול נסיעות:
 <img width="1144" height="444" alt="image" src="https://github.com/user-attachments/assets/e888d2d3-b4e3-4e07-b5c3-50b837e5fba3" />
-## תרשים ERD אגף החדש - ניהול נסיעות:
+## תרשים erd של האגף החדש:
 <img width="1305" height="567" alt="image" src="https://github.com/user-attachments/assets/05932258-cac1-4457-85bb-329c54aadbea" />
-## תרשים EDR משולב:
+## תרשים erd משולב:
 <img width="1359" height="519" alt="image" src="https://github.com/user-attachments/assets/2b28311d-8b43-4d91-8f9e-4d6502982390" />
-## תרשים DSD אחרי אינטגרציה:
-
+## תרשים dsd אחרי אינטגרציה:
 <img width="1236" height="502" alt="image" src="https://github.com/user-attachments/assets/7765207b-4ce3-47c2-90b2-458ce877bf1a" />
 
 ## אלגוריתם הינדוס לאחור:
