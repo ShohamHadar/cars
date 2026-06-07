@@ -555,34 +555,31 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 מניעת כפילויות וטיוב: הוספנו פילטר WHERE NOT EXISTS כדי למנוע כפילויות הזמנה. ביצענו המרות סוגים (timestamp, integer) ושימוש ב-COALESCE לניהול ערכים ריקים, תוך קיצור מחרוזות (פונקציית LEFT) כדי להתאים את הנתונים למגבלות האורך של העמודות.
 
 ## מבטים:
-מבט לניהול נסיעות (View_Operations_Trip_Overview)
-תיאור מילולי:
+## מבט לניהול נסיעות - View_Operations_Trip_Overview:
 מבט זה משמש כמרכז בקרה תפעולי. הוא מבצע JOIN בין הנסיעות (trip), הלקוחות (customer) והרכבים (vehicle1) כדי להציג בטבלה אחת את כל המידע הרלוונטי לכל נסיעה – מהלקוח ועד לרכב המשובץ. הוא הופך את המידע המבוזר בטבלאות שונות לדו"ח קריא וברור עבור מנהלי התפעול
 SELECT * FROM View_Operations_Trip_Overview LIMIT 10;
 
 <img width="1256" height="366" alt="image" src="https://github.com/user-attachments/assets/aa03f21e-b4d8-482e-a44e-af781b68493c" />
 
-
-תיאור השאילתות:
+## תיאור השאילתות:
+## חיפוש נסיעות שהושלמו לפי לקוח:
+שאילתא זו מסננת את המבט כדי לשלוף היסטוריית נסיעות של לקוח ספציפי (בדוגמה: Stoddard Abbate) שסטטוס הנסיעה שלהן הוא 'Completed', מה שמאפשר מעקב אישי אחר שירות הלקוח.
 SELECT * FROM View_Operations_Trip_Overview WHERE customer_name = 'Stoddard Abbate' AND trip_status = 'Completed';
-
-חיפוש נסיעות שהושלמו לפי לקוח: שאילתה זו מסננת את המבט כדי לשלוף היסטוריית נסיעות של לקוח ספציפי (בדוגמה: Stoddard Abbate) שסטטוס הנסיעה שלהן הוא 'Completed', מה שמאפשר מעקב אישי אחר שירות הלקוח.
 <img width="1306" height="699" alt="image" src="https://github.com/user-attachments/assets/4f5862ed-f9bc-4c84-ad81-cd957dabfe83" />
 
 SELECT vehicle_model, COUNT(tripid) AS total_trips FROM View_Operations_Trip_Overview GROUP BY vehicle_model;
-
-תפוסה לפי רכב: שאילתה זו מבצעת אגרגציה (GROUP BY) לפי דגם הרכב וסופרת את כמות הנסיעות הכוללת לכל דגם, מה שעוזר להבין אילו דגמים בצי הם הפעילים ביותר.
+## תפוסה לפי רכב:
+שאילתה זו מבצעת אגרגציה (GROUP BY) לפי דגם הרכב וסופרת את כמות הנסיעות הכוללת לכל דגם, מה שעוזר להבין אילו דגמים בצי הם הפעילים ביותר.
 <img width="436" height="530" alt="image" src="https://github.com/user-attachments/assets/c1e6708a-24f7-487c-a3d8-5efb80668e96" />
 
-
-מבט לניהול צי ותחזוקה (View_Fleet_Maintenance_Analytics)
-תיאור המבט:
+## מבט לניהול צי ותחזוקה - View_Fleet_Maintenance_Analytics:
 מבט זה מקשר בין הרכבים (vehicle1) לבין היסטוריית התחזוקה (maintenance1) ונתוני הנסיעות (trip). הוא מספק מדדים תפעוליים לכל רכב, כגון עלויות תחזוקה, תאריכי טיפולים וספירת נסיעות שבוצעו, ומאפשר ניתוח ביצועים מקיף של כל כלי רכב בצי.
 SELECT * FROM View_Fleet_Maintenance_Analytics LIMIT 10;
 <img width="1041" height="579" alt="image" src="https://github.com/user-attachments/assets/bdb230a9-8d2a-4cc8-8d54-561adc3a41a3" />
-תיאור השאילתות:
 
-ניתוח עלויות תחזוקה לפי דגם: שאילתה זו מסכמת את כמות אירועי התחזוקה והעלות הכוללת לכל דגם רכב, וממיינת את התוצאות מהיקר ביותר לזול ביותר (ORDER BY total_spent DESC). זהו כלי ניהולי קריטי להבנת כדאיות כלכלית של דגמים ספציפיים.
+## תיאור השאילתות:
+## ניתוח עלויות תחזוקה לפי דגם:
+שאילתה זו מסכמת את כמות אירועי התחזוקה והעלות הכוללת לכל דגם רכב, וממיינת את התוצאות מהיקר ביותר לזול ביותר (ORDER BY total_spent DESC). זהו כלי ניהולי קריטי להבנת כדאיות כלכלית של דגמים ספציפיים.
 SELECT 
     model, 
     COUNT(maintenance_status) AS total_maintenance_events,
@@ -592,8 +589,8 @@ GROUP BY model
 ORDER BY total_spent DESC;
 <img width="615" height="522" alt="image" src="https://github.com/user-attachments/assets/6060236c-31ff-4175-8513-b9494c498a2a" />
 
-
-רשימת טיפולים פתוחים: שאילתה זו מסננת מהמבט רכבים שסטטוס התחזוקה שלהם אינו 'Completed', ומציגה את הדגם והעלות המיוחסת לאותו טיפול. המטרה היא להציף דחיפות תפעולית ולטפל ברכבים שעדיין דורשים התייחסות טכנית.
+## רשימת טיפולים פתוחים:
+שאילתה זו מסננת מהמבט רכבים שסטטוס התחזוקה שלהם אינו 'Completed', ומציגה את הדגם והעלות המיוחסת לאותו טיפול. המטרה היא להציף דחיפות תפעולית ולטפל ברכבים שעדיין דורשים התייחסות טכנית.
 SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maintenance_status != 'Completed';
 <img width="455" height="571" alt="image" src="https://github.com/user-attachments/assets/a06c8f30-b654-4320-bdf0-381242062ae1" />
 
