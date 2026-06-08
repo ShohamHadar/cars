@@ -1,0 +1,89 @@
+-- =========================================================
+--  בדיקת מדדי יעילות רכבים רבעונית
+-- =========================================================
+DO $$
+DECLARE
+    v_efficiency_cursor refcursor;
+    v_car_row RECORD;
+    v_counter INT := 0;
+BEGIN
+    RAISE NOTICE '=== מפעיל תוכנית ראשית 2: דוח מדדי יעילות ובריאות הצי לרבעון 1 לשנת 2026 ===';
+    
+    v_efficiency_cursor := public.fn_get_vehicle_efficiency_report(1, 2026);
+    
+    IF v_efficiency_cursor IS NULL THEN
+        RAISE NOTICE 'שגיאה: לא ניתן היה לקבל את מצביע הנתונים.';
+    ELSE
+        LOOP
+            FETCH NEXT FROM v_efficiency_cursor INTO v_car_row;
+            EXIT WHEN NOT FOUND;
+            
+            v_counter := v_counter + 1;
+            
+            RAISE NOTICE 'רכב מספר: % | עלויות רבעוניות: % ש"ח (דלק: %, טיפולים: %) | שעות עבודה: % שעות | סטטוס: [%]',
+                v_car_row.vehicleid, 
+                v_car_row.total_quarterly_expenses, 
+                v_car_row.fuel_costs, 
+                v_car_row.maintenance_costs, 
+                v_car_row.total_hours_on_road, 
+                v_car_row.efficiency_status;
+        END LOOP;
+        
+        CLOSE v_efficiency_cursor;
+        RAISE NOTICE '--- הדוח הרבעוני הסתיים. נותחו % רכבים פעילים ---', v_counter;
+    END IF;
+    
+END $$;
+
+DO $$
+BEGIN
+    RAISE NOTICE '=== מפעיל תוכנית ראשית 3: זימון פרוצדורת עדכון טיפולים ===';
+    
+    -- זימון הפרוצדורה באמצעות פקודת CALL
+    CALL public.pr_process_quarterly_maintenance(1, 2026);
+    
+END $$;
+
+
+DO $$
+BEGIN
+    RAISE NOTICE '=== מפעיל תוכנית ראשית 4: בדיקת טריגר קילומטראז שלילי ===';
+    
+    -- ניסיון לעדכן נסיעה קיימת (נניח נסיעה מספר 1) עם נתונים לא הגיוניים
+    UPDATE public.trip
+    SET start_mileage = 1500,
+        end_mileage = 1200  -- סיום קטן מההתחלה!
+    WHERE tripid = 1;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        -- תופס את השגיאה שהטריגר זרק ומדפיס אותה יפה למסך
+        RAISE NOTICE 'הטריגר חסם את העדכון בהצלחה! הודעת השגיאה: %', SQLERRM;
+END $$;
+
+
+-- =========================================================
+--  הפעלת פורצדורת שיבוץ רכב פנוי לנסיעה
+-- =========================================================
+DO $$
+DECLARE
+    v_test_trip_id INT := 1; -- מספר הנסיעה שעדכנו כרגע
+    v_assigned_vehicle INT;
+BEGIN
+    RAISE NOTICE '=== מפעיל תוכנית ראשית: שיבוץ רכב אוטומטי לנסיעה % ===', v_test_trip_id;
+
+    -- הפעלת פרוצדורת השיבוץ
+    CALL public.assign_vehicle_to_trip(v_test_trip_id);
+
+    -- שליפת מזהה הרכב ששובץ בפועל
+    SELECT vehicleid INTO v_assigned_vehicle
+    FROM public.trip
+    WHERE tripid = v_test_trip_id;
+
+    RAISE NOTICE '✅ השיבוץ הצליח! לרכב מספר % שובץ בהצלחה לנסיעה %.', 
+        v_assigned_vehicle, v_test_trip_id;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE '❌ שיבוץ הרכב נכשל! סיבה: %', SQLERRM;
+END $$;

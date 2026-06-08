@@ -1,0 +1,70 @@
+--- הוספת אירועי תדלוק לרבעון הראשון של 2026
+INSERT INTO public.fuellog (fuellogid, vehicleid, fuellogdate, fuelcost, fuelamount, fuelstation, driverid)
+WITH trip_summary AS (
+    -- 1. נרכז את שעות הנסיעה ואת הנהג (ניקח את הנהג הראשון שנסע על הרכב ברבעון זה)
+    SELECT 
+        t.vehicleid,
+        MAX(t.driverid) AS actual_driver_id, -- שיוך לנהג אמיתי מהנסיעות
+        SUM(t.durationhours) AS total_hours
+    FROM public.trip t
+    WHERE EXTRACT(QUARTER FROM t.departuretime) = 1 
+      AND EXTRACT(YEAR FROM t.departuretime) = 2026
+      AND t.status = 'Completed'
+    GROUP BY t.vehicleid
+),
+numbered_trips AS (
+    -- 2. נמספר את השורות לצורך מזהה ייחודי
+    SELECT 
+        vehicleid,
+        actual_driver_id,
+        total_hours,
+        ROW_NUMBER() OVER (ORDER BY vehicleid) AS row_num
+    FROM trip_summary
+),
+max_id AS (
+    -- 3. מציאת ה-ID המקסימלי הנוכחי ביומן הדלק
+    SELECT COALESCE(MAX(fuellogid), 0) AS current_max FROM public.fuellog
+)
+SELECT 
+    (m.current_max + n.row_num) AS fuellogid,
+    n.vehicleid,
+    '2026-03-28 17:00:00'::timestamp AS fuellogdate,
+    ROUND((n.total_hours * 140) + (n.vehicleid % 5 * 35), 2) AS fuelcost,
+    ROUND(((n.total_hours * 140) + (n.vehicleid % 5 * 35)) / 7, 2) AS fuelamount,
+    'Paz Main Station' AS fuelstation,
+    n.actual_driver_id -- פותר את אילוץ ה-driverid בהצלחה!
+FROM numbered_trips n
+CROSS JOIN max_id m;
+
+--ביטוחים
+-- הוספת ביטוחים לרכבים שנוספו בשלב האינטגרציה מהאגף השני
+INSERT INTO Insurance
+(
+    InsuranceID,
+    InsuranceCompany,
+    PolicyNumber,
+    StartDate,
+    EndDate,
+    Cost,
+    VehicleID
+)
+SELECT
+    v.VehicleID AS InsuranceID,
+    CASE 
+        WHEN v.VehicleID % 4 = 0 THEN 'Harel'
+        WHEN v.VehicleID % 4 = 1 THEN 'Phoenix'
+        WHEN v.VehicleID % 4 = 2 THEN 'Migdal'
+        ELSE 'Clal'
+    END AS InsuranceCompany,
+    200000 + v.VehicleID AS PolicyNumber,
+    DATE '2026-01-01' AS StartDate,
+    DATE '2027-01-01' AS EndDate,
+    ROUND((1000 + random() * 4000)::numeric, 2) AS Cost,
+    v.VehicleID
+FROM Vehicle v
+WHERE v.VehicleID BETWEEN 621 AND 1321
+  AND NOT EXISTS (
+      SELECT 1
+      FROM Insurance i
+      WHERE i.VehicleID = v.VehicleID
+  );

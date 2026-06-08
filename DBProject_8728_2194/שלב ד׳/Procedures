@@ -1,0 +1,107 @@
+--   פתיחת טיפולי החלפת שמן לרכבים שחרגו מהקילומטראז'
+CREATE OR REPLACE PROCEDURE public.close_month_maintenance_mileage(p_max_mileage NUMERIC)
+LANGUAGE plpgsql    
+AS $$
+DECLARE
+    r_vehicle RECORD;
+    v_total_hours NUMERIC;
+    v_calculated_mileage NUMERIC;
+    v_avg_speed INT := 60; 
+    v_next_id INT;         
+BEGIN
+    RAISE NOTICE '=== מתחיל תהליך סגירת חודש: בדיקת חריגות קילומטראז ===';
+
+    -- לולאה שעוברת רכב-רכב מטבלת הרכבים
+    FOR r_vehicle IN SELECT vehicleid FROM public.vehicle LOOP
+        
+        -- 1. סכימת כל שעות הנסיעה של הרכב הנוכחי בנסיעות שהושלמו
+        SELECT COALESCE(SUM(durationhours), 0)
+        INTO v_total_hours
+        FROM public.trip
+        WHERE vehicleid = r_vehicle.vehicleid
+          AND status = 'Completed';
+
+        -- 2. חישוב הקילומטראז המקורב
+        v_calculated_mileage := v_total_hours * v_avg_speed;
+
+        -- 3. בדיקה: האם הרכב חרג מהרף שהוגדר לפרוצדורה?
+        IF v_calculated_mileage >= p_max_mileage THEN
+            
+            -- תיקון: נבדוק שלא קיים כבר טיפול שמן בסטטוס In Progress
+            IF NOT EXISTS (
+                SELECT 1 
+                FROM public.maintenance 
+                WHERE vehicleid = r_vehicle.vehicleid 
+                  AND maintenancetype = 'Oil Change' 
+                  AND maintenance_status = 'In Progress'
+            ) THEN
+                
+                -- חישוב ה-ID הבא הפנוי בטבלה
+                SELECT COALESCE(MAX(maintenanceid), 0) + 1 
+                INTO v_next_id 
+                FROM public.maintenance;
+
+                RAISE NOTICE 'רכב מספר % חרג מהק"מ המותר (% ק"מ). פותח פקודת טיפול שמן עם מזהה %.', 
+                    r_vehicle.vehicleid, v_calculated_mileage, v_next_id;
+
+                -- 4. פתיחת רשומת תחזוקה עם סטטוס In Progress בהתאם לאילוץ ה-CHECK
+                INSERT INTO public.maintenance (
+                    maintenanceid,   
+                    vehicleid, 
+                    maintenancetype, 
+                    maintenancedate, 
+                    maintenance_status, -- תוקן ל-In Progress!
+                    cost,
+                    notes 
+                )
+                VALUES (
+                    v_next_id,       
+                    r_vehicle.vehicleid,
+                    'Oil Change',          
+                    CURRENT_DATE,         
+                    'In Progress', -- ערך חוקי שעובר את הצינור של ה-CHECK            
+                    0.00,
+                    'Auto-generated' 
+                );
+                
+            END IF;
+        END IF;
+    END LOOP;
+
+    RAISE NOTICE '=== תהליך סגירת חודש קילומטראז הסתיים בהצלחה ===';
+END;
+$$;
+
+DROP PROCEDURE IF EXISTS public.close_month_maintenance_mileage(numeric);
+
+
+-- שיבוץ רכב פנוי לנסיעה
+CREATE OR REPLACE PROCEDURE assign_vehicle_to_trip(p_trip_id INTEGER)
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_vehicle_id INTEGER;
+    v_capacity INTEGER;
+    v_passengers INTEGER;
+BEGIN
+    -- 1. קבלת מספר נוסעים מהנסיעה
+    SELECT numofpassengers INTO v_passengers FROM trip WHERE tripid = p_trip_id;
+    
+    -- 2. חיפוש רכב מתאים (זה שעובר את הבדיקה)
+    -- כאן הלוגיקה שאתה כבר עשית
+    SELECT vehicleid, capacity INTO v_vehicle_id, v_capacity
+    FROM vehicle 
+    WHERE capacity >= v_passengers 
+    AND NOT EXISTS (SELECT 1 FROM maintenance WHERE vehicleid = vehicle.vehicleid AND maintenance_status = 'In Progress')
+    LIMIT 1;
+
+    -- 3. בדיקה אם נמצא רכב
+    IF v_vehicle_id IS NULL THEN
+        -- זה יעצור את כל הפרוצדורה ויקפוץ ישר ל-EXCEPTION בתוכנית הראשית
+        RAISE EXCEPTION 'Cannot assign % passengers. No suitable vehicle available.', v_passengers;
+    END IF;
+
+    -- 4. עדכון
+    UPDATE trip SET vehicleid = v_vehicle_id WHERE tripid = p_trip_id;
+END;
+$$;
