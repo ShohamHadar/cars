@@ -631,13 +631,16 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 ## פונקציות:
 ## פונקצית חישוב שכר חודשי לנהג
 פונקציה זו משמשת לחישוב מקיף ודינמי של שכר הנהגים בצי הרכבים עבור חודש ושנה ספציפיים (המתקבלים כפרמטרים). הפונקציה סורקת את כל הנסיעות שהושלמו באותו חודש, מחשבת את שעות העבודה של כל נהג (כולל חישוב שעות נוספות במידה ועבר את רף 160 השעות), ומחזירה טבלה מפורטת עם נתוני השכר והשעות של כל נהג פעיל.
+
 <img width="785" height="692" alt="image" src="https://github.com/user-attachments/assets/2dca4782-24be-4718-80dd-37797604789f" />
 <img width="849" height="710" alt="image" src="https://github.com/user-attachments/assets/856850a7-21e1-4b0c-8802-8569a0174b64" />
 
 התוכנית הקוראת לפונקציה -
+
 <img width="817" height="473" alt="image" src="https://github.com/user-attachments/assets/ecb27c76-77bf-4bec-8a4e-97d060a3a102" />
 
 הפלט לאחר הרצת התוכנית הקוראת לפונקציה -
+
 <img width="866" height="393" alt="image" src="https://github.com/user-attachments/assets/25484435-780b-4f46-9e1d-920f39303648" />
 
 הפונקציה עושה שימוש באלמנטים המתקדמים הבאים:
