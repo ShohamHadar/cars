@@ -736,10 +736,15 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 
 ## פורדצורת שיבוץ רכב פנוי לנסיעה
 פרוצדורה זו משמשת כמנגנון שיבוץ דינמי וחכם, המקשר אוטומטית בין רכב פנוי ומתאים מתוך צי הרכבים לבין נסיעה ספציפית הממתינה במערכת ומתקבלת כפרמטר. הפרוצדורה מנתחת את דרישות הנסיעה, מסננת רכבים שאינם זמינים תפעולית או קטנים מדי, ומבצעת את השיבוץ בפועל תוך הפעלת מנגנוני הגנה קשוחים למניעת חריגות קיבולת או השבתת רכבים.
+
 <img width="1027" height="574" alt="image" src="https://github.com/user-attachments/assets/40a3b6d1-32bf-4e2f-a7e0-554696beb8bc" />
+
 תוכנית המפעילה את הפורצדורה -
+
 <img width="808" height="491" alt="image" src="https://github.com/user-attachments/assets/570d58a1-894c-47b9-9d7e-41377440edb0" />
+
 תוצאת ההרצה -
+
 <img width="527" height="67" alt="image" src="https://github.com/user-attachments/assets/9f0165d7-ae23-4afd-be56-65fe8aed44d5" />
 
 הפרוצדורה עושה שימוש באלמנטים המתקדמים הבאים:
