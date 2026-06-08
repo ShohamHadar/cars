@@ -795,9 +795,11 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 פונקציה זו פועלת כרכיב אכיפה רגולטורי ובטיחותי קריטי במערכת, המופעל אוטומטית לפני כל פעולת הוספה או עדכון של רכב או תאריך יציאה בטבלת trip. תפקידה של הפונקציה הוא למנוע שיבוץ של רכב לנסיעה מתוכננת, אלא אם קיימת עבורו פוליסת ביטוח פעילה ותקפה בטבלת insurance המכסה בדיוק את תאריך היציאה של הנסיעה המבוקשת.
 
 הפונקציה -
+
 <img width="701" height="516" alt="image" src="https://github.com/user-attachments/assets/5da3e8f2-c4b9-4387-83f8-dd574389b8db" />
 
 הטריגר -
+
 <img width="523" height="124" alt="image" src="https://github.com/user-attachments/assets/89781199-7a07-4fd3-a760-e30768cc513d" />
 
 בדיקה באמצעות פעולת update -
@@ -805,6 +807,7 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 <img width="740" height="124" alt="image" src="https://github.com/user-attachments/assets/76287d59-1f17-493a-99ea-9a959a5e2521" />
 
 תוצאת ההרצה - 
+
 <img width="682" height="49" alt="image" src="https://github.com/user-attachments/assets/30d8fc3a-e591-4a5c-b98b-62e347848309" />
 
 פונקציית הטריגר עושה שימוש באלמנטים המתקדמים הבאים:
