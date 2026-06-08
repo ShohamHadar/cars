@@ -624,11 +624,13 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 פונקציה זו משמשת לחישוב מקיף ודינמי של שכר הנהגים בצי הרכבים עבור חודש ושנה ספציפיים (המתקבלים כפרמטרים). הפונקציה סורקת את כל הנסיעות שהושלמו באותו חודש, מחשבת את שעות העבודה של כל נהג (כולל חישוב שעות נוספות במידה ועבר את רף 160 השעות), ומחזירה טבלה מפורטת עם נתוני השכר והשעות של כל נהג פעיל.
 <img width="785" height="692" alt="image" src="https://github.com/user-attachments/assets/2dca4782-24be-4718-80dd-37797604789f" />
 <img width="849" height="710" alt="image" src="https://github.com/user-attachments/assets/856850a7-21e1-4b0c-8802-8569a0174b64" />
+
 התוכנית הקוראת לפונקציה -
 <img width="817" height="473" alt="image" src="https://github.com/user-attachments/assets/ecb27c76-77bf-4bec-8a4e-97d060a3a102" />
 
 הפלט לאחר הרצת התוכנית הקוראת לפונקציה -
 <img width="866" height="393" alt="image" src="https://github.com/user-attachments/assets/25484435-780b-4f46-9e1d-920f39303648" />
+
 הפונקציה עושה שימוש באלמנטים המתקדמים הבאים:
 
 א. Cursor – implicit and explicit
@@ -651,9 +653,12 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 
 ## פונקציה לניהול מצב הרכבים לפי רבעון
 פונקציה זו משמשת להפקת דוח ניהולי פיננסי ותפעולי מקיף עבור כל רכב בצי הרכבים, לפי רבעון ושנה ספציפיים המתקבלים כפרמטרים. הפונקציה מחשבת ומסכמת עבור כל רכב את סך הוצאות הדלק, עלויות התחזוקה והטיפולים, וסך שעות הנסיעה שבוצעו בפועל במהלך הרבעון. על בסיס הנתונים הללו, הפונקציה מנתחת ומסווגת אוטומטית את סטטוס היעילות של הרכב ומחזירה מצביע לתוצאות.
+
 <img width="961" height="683" alt="image" src="https://github.com/user-attachments/assets/af00d25d-79a4-46f7-b043-1b25838801a8" />
 <img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/f96b0bf0-42bc-44d5-9c71-a25d470c5567" />
+
 התוכנית הקוראת לפונקציה -
+
 <img width="1018" height="676" alt="image" src="https://github.com/user-attachments/assets/b1079e14-1c88-4290-9925-a56d5dcd7ce1" />
 <img width="682" height="548" alt="image" src="https://github.com/user-attachments/assets/f4261692-6c7a-4546-9554-7a020e7d44bc" />
 
@@ -681,13 +686,17 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 ## פורדצורה שפותתחת טיפולי החלפת שמן לרכבים מעל קילומטראז׳ מסויים
 תיאור כללי:
 פרוצדורה זו מיועדת לניהול תהליך התחזוקה המונעת של צי הרכבים באופן אוטומטי, על בסיס רף קילומטראז' מקסימלי המתקבל כפרמטר. הפרוצדורה סורקת את כל הרכבים במערכת, מחשבת את הקילומטראז' המקורב של כל רכב לפי שעות הנסיעה המצטברות שלו ומהירות ממוצעת קבועה, ובמידה והרכב חרג מהרף שהוגדר – המערכת פותחת עבורו פקודת עבודה חדשה להחלפת שמן בטבלת התחזוקה, תוך מניעת כפילויות של טיפולים קיימים
+
 <img width="813" height="541" alt="image" src="https://github.com/user-attachments/assets/b5068592-8e72-4932-a3c1-81a194c96bb5" />
 <img width="906" height="530" alt="image" src="https://github.com/user-attachments/assets/56187002-12f2-43ee-9142-db64117521f1" />
 <img width="787" height="341" alt="image" src="https://github.com/user-attachments/assets/6522d219-5d3d-47ef-9ad9-662fc7ee1c90" />.
 
 תוכנית המפעילה את הפורצדורה -
+
 <img width="883" height="400" alt="image" src="https://github.com/user-attachments/assets/8712ce65-eefd-494b-91b5-51659b2d5bfe" />
+
 התוצאה לאחר הרצתה -
+
 <img width="749" height="129" alt="image" src="https://github.com/user-attachments/assets/b9c0acd2-90ed-4e0a-8db5-5c306480323d" />
 
 הפרוצדורה עושה שימוש באלמנטים המתקדמים הבאים:
