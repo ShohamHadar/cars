@@ -1,4 +1,3 @@
-<img width="512" height="468" alt="image" src="https://github.com/user-attachments/assets/dbe7a62f-0f64-48ce-a7de-9d18ba3c4f22" /># cars
 # דוח פרויקט שלב א' - מערכת ניהול צי רכבים
 
 ## שער
