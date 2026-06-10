@@ -1,0 +1,834 @@
+{
+  "diagramType": 2,
+  "data": {
+    "nodes": [
+      {
+        "id": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+        "type": "Table",
+        "position": {
+          "x": 928.8393835538087,
+          "y": 286.3670776012523
+        },
+        "data": {
+          "label": "DRIVER",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "be9c3774-47d4-4443-8119-177239fcd48c",
+              "name": "DriverID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "0cd8c3b7-4541-4c3c-9a78-86a1465931f5",
+              "name": "FirstName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "b8c51647-9b0d-4aba-b096-c73e08a722e3",
+              "name": "LastName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "20cea954-a6d3-456d-94a3-f234271e5a4d",
+              "name": "Phone",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "6bed7c47-a1b3-4a08-95f5-d2ba48b6b8ef",
+              "name": "LicenseNumber",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "1e9acd60-5807-4acb-8a92-3652b74dd9a5",
+              "name": "LicenseType",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "862c6491-1cbd-4356-b547-3bc2b671ab45",
+              "name": "HireDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "adf06547-8a2a-4ae0-aaac-ba34373f70e8",
+              "name": "city",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2780333c-bfb5-4188-b935-be74ddec5349",
+              "name": "Status",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 249
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+        "type": "Table",
+        "position": {
+          "x": -44.169883702597986,
+          "y": -134.9151565906468
+        },
+        "data": {
+          "label": "VEHICLE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "a7172cfc-9688-48d3-9887-93d99b9d6f59",
+              "name": "VehicleID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "b49fcf7b-20c9-44ac-9909-db2d4a820bb2",
+              "name": "LicensePlate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "e7298c2e-7632-4024-aec2-9697c5f2792b",
+              "name": "VehicleType",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "066a63d4-83cb-40fa-9aa6-e22bf1a1a5c3",
+              "name": "Capacity",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "3bc1048c-d8fa-41dd-ac4f-3ea28a9dff70",
+              "name": "Manufacturer",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "210d6d57-3201-4252-a2aa-c49eae1492b6",
+              "name": "Model",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "63ef9019-dc79-43bd-bd53-b8c5f1c56f8e",
+              "name": "Year",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "72db748b-43af-4df6-8ca1-391665cddd02",
+              "name": "Status",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "cd4ddc3b-63fe-41ce-9495-a14d01a65b0a",
+              "name": "CarColor",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 249
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "c87723ec-798a-4842-9dcb-10f804653052",
+        "type": "Table",
+        "position": {
+          "x": 351.31755979818865,
+          "y": -91.62154258598298
+        },
+        "data": {
+          "label": "TRIP",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "2ab03041-9455-4c5e-92cb-eec674911ca4",
+              "name": "TripID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "1ae64388-329f-4a6e-b751-e158695f6ac0",
+              "name": "DepartureLocation",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "91190183-3a54-48af-ae71-886a17ed1320",
+              "name": "Destination",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "4816740e-635d-49a4-a0f1-d67080621305",
+              "name": "DepartureTime",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "ecc5619d-adcb-4430-bebf-71307e40cf03",
+              "name": "Status",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "34e02ec4-de0b-4677-899d-0bc42c46a965",
+              "name": "DurationHours",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2a4bd029-1ef2-4a99-a0a8-0f83b4994cea",
+              "name": "NumOfPassengers",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "5a70e185-8932-4a48-a3a3-b627410b2888",
+              "name": "Price",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "0efac2c0-56eb-43d4-b9c8-5563005455cc",
+              "name": "paymentMethod",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "a4eb0c25-03dd-48d4-baef-039794bc751f",
+              "name": "fk_DRIVER",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "ddae3bec-60ce-4c5a-b6cd-681674ad8362",
+                "sourceTableId": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+                "columns": [
+                  {
+                    "id": "fk_be9c3774-47d4-4443-8119-177239fcd48c",
+                    "name": "DriverID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "eecaa4eb-1272-4d59-9e71-a38f000d260b",
+              "name": "fk_VEHICLE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6486f270-1884-4037-bea1-907c8c1811e7",
+                "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+                "columns": [
+                  {
+                    "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                    "name": "VehicleID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "b5b9a750-fb73-4328-a662-d66f5349a25e",
+              "name": "fk_CUSTOMER",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "f3920925-d171-4e24-aca7-ce92ccef4199",
+                "sourceTableId": "7fb5dfcd-e481-4cad-a917-8e6457b6db78",
+                "columns": [
+                  {
+                    "id": "fk_0133eb8b-7245-49ed-b9af-18dc1cce1e58",
+                    "name": "Id",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "83185c07-203c-4f62-b208-678a338511e5",
+              "name": "fk_ROUTE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "b4ea36c0-f866-4c7f-b159-80f9006ecfa0",
+                "sourceTableId": "2896fdd5-62ac-494f-aaa8-9c0835bf31d9",
+                "columns": []
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 349
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1897411c-96b6-4753-928b-908e96ff9185",
+        "type": "Table",
+        "position": {
+          "x": -496.54344651783595,
+          "y": 192.07820910147862
+        },
+        "data": {
+          "label": "INSURANCE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "f09ed09d-1380-458e-9b04-08bd98a13fc8",
+              "name": "InsuranceID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "063cdc26-a900-4cbb-94f3-533913650707",
+              "name": "InsuranceCompany",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "98ba9a47-b805-42be-b178-460d115ae29b",
+              "name": "PolicyNumber",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "cead263a-ce52-45f1-85d5-1902e0b9305a",
+              "name": "StartDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "c316094a-2dcb-49f1-bd6f-a57ca688b2ca",
+              "name": "EndDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "88d0056c-77ef-495e-baec-9df32eff0fbf",
+              "name": "Cost",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "75cd8cf1-f288-45ee-a91b-77be9e14af09",
+              "name": "fk_VEHICLE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "dddcaee9-709c-4083-b6dd-7e89e0559971",
+                "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+                "columns": [
+                  {
+                    "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                    "name": "VehicleID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 200
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "98120ba5-4302-43ff-8f44-a73fa714f5c2",
+        "type": "Table",
+        "position": {
+          "x": 338.65598434263984,
+          "y": 341
+        },
+        "data": {
+          "label": "FUELLOG",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "1bb020be-12c9-4ad7-adc3-9026b0b122a2",
+              "name": "FuelLogID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "4582e8d5-9e55-4c3c-97f9-ad2043f6aa69",
+              "name": "FuelLogDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "cef5cb22-2ce1-42b3-9b67-c01b8e4f8706",
+              "name": "FuelAmount",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "1f1c049a-9841-4360-88d3-051b97fc5147",
+              "name": "FuelCost",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "f61d8562-b515-486d-ace5-2675e7108910",
+              "name": "FuelStation",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "6eefeaff-a862-494a-b297-5710c4df75b3",
+              "name": "fk_VEHICLE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "6fb15102-dff3-43dd-bfb3-70d224583a20",
+                "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+                "columns": [
+                  {
+                    "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                    "name": "VehicleID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            },
+            {
+              "id": "c0d7b5e7-7930-4374-9bf1-7ec48a2106fa",
+              "name": "fk_DRIVER",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "8375e152-b59c-4c14-8a6b-bb677dfa73e5",
+                "sourceTableId": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+                "columns": [
+                  {
+                    "id": "fk_be9c3774-47d4-4443-8119-177239fcd48c",
+                    "name": "DriverID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 200
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "8dd08941-26cc-41bf-a6ef-d43d92163045",
+        "type": "Table",
+        "position": {
+          "x": -505.8338105592857,
+          "y": -108.68629157493513
+        },
+        "data": {
+          "label": "MAINTENANCE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "8833722d-88c2-4495-8f7d-488d31432e88",
+              "name": "MaintenanceID",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            },
+            {
+              "id": "022df301-375a-407b-9f78-b0a370c5a383",
+              "name": "MaintenanceDate",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "2d1a4d06-425d-4488-81ee-384b560c33ea",
+              "name": "MaintenanceType",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "4d05a26e-a4d4-45b4-98ec-7f49eaa00b7f",
+              "name": "Cost",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d85feb9a-500f-42ff-a8fd-b42b9bfb4b42",
+              "name": "Notes",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "a712de84-d4eb-41d9-8762-068a1005d34d",
+              "name": "MaintenanceStatus",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "cb09d0e9-22ef-4c54-bdf6-9e1c118ef88d",
+              "name": "fk_VEHICLE",
+              "type": "None",
+              "isForeignKey": true,
+              "foreignKeyProps": {
+                "foreignKeyGroupId": "1eb4593b-5bcb-4542-b1c0-e0b9844f3a69",
+                "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+                "columns": [
+                  {
+                    "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                    "name": "VehicleID",
+                    "type": "INT"
+                  }
+                ]
+              },
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 200
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7fb5dfcd-e481-4cad-a917-8e6457b6db78",
+        "type": "Table",
+        "position": {
+          "x": 964,
+          "y": -88
+        },
+        "data": {
+          "label": "CUSTOMER",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "94fdd197-619e-4024-9160-0fbb2befef45",
+              "name": "Email",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "3d08b2c4-c665-4d40-a90d-43846d26a481",
+              "name": "FullName",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "13e6f74e-8c49-4ea7-95c0-ad179c43e38d",
+              "name": "PhoneNumber",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "0133eb8b-7245-49ed-b9af-18dc1cce1e58",
+              "name": "Id",
+              "type": "INT",
+              "isPrimaryKey": true,
+              "isOptional": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 125
+        },
+        "selected": true,
+        "dragging": false
+      },
+      {
+        "id": "2896fdd5-62ac-494f-aaa8-9c0835bf31d9",
+        "type": "Table",
+        "position": {
+          "x": 970,
+          "y": 99
+        },
+        "data": {
+          "label": "ROUTE",
+          "isConnectable": false,
+          "columns": [
+            {
+              "id": "c1f4dbce-d11e-4091-a0e7-e0404dab0e5f",
+              "name": "destination",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "700bbaa8-2d95-4774-b028-ece9864a6fbc",
+              "name": "Origin",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "d4aab0a0-84ab-49c8-b59b-0fce70288d6a",
+              "name": "DistanceKm",
+              "type": "INT",
+              "isPrimaryKey": false
+            },
+            {
+              "id": "a591e4b6-17b9-4876-835e-6d8f07bc9a77",
+              "name": "EstimatedTravelTime",
+              "type": "INT",
+              "isPrimaryKey": false
+            }
+          ],
+          "numberOfGroups": 0,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 240,
+          "height": 125
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "554850a7-40ee-4df2-8c95-04304ea87b1c->c87723ec-798a-4842-9dcb-10f804653052_ddae3bec-60ce-4c5a-b6cd-681674ad8362",
+        "type": "Relational",
+        "source": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+        "targetHandle": "foreign-key-handle-ddae3bec-60ce-4c5a-b6cd-681674ad8362",
+        "target": "c87723ec-798a-4842-9dcb-10f804653052",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "ddae3bec-60ce-4c5a-b6cd-681674ad8362",
+            "sourceTableId": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+            "columns": [
+              {
+                "id": "fk_be9c3774-47d4-4443-8119-177239fcd48c",
+                "name": "DriverID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6->c87723ec-798a-4842-9dcb-10f804653052_6486f270-1884-4037-bea1-907c8c1811e7",
+        "type": "Relational",
+        "source": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+        "targetHandle": "foreign-key-handle-6486f270-1884-4037-bea1-907c8c1811e7",
+        "target": "c87723ec-798a-4842-9dcb-10f804653052",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6486f270-1884-4037-bea1-907c8c1811e7",
+            "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+            "columns": [
+              {
+                "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                "name": "VehicleID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "7fb5dfcd-e481-4cad-a917-8e6457b6db78->c87723ec-798a-4842-9dcb-10f804653052_f3920925-d171-4e24-aca7-ce92ccef4199",
+        "type": "Relational",
+        "source": "7fb5dfcd-e481-4cad-a917-8e6457b6db78",
+        "targetHandle": "foreign-key-handle-f3920925-d171-4e24-aca7-ce92ccef4199",
+        "target": "c87723ec-798a-4842-9dcb-10f804653052",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "f3920925-d171-4e24-aca7-ce92ccef4199",
+            "sourceTableId": "7fb5dfcd-e481-4cad-a917-8e6457b6db78",
+            "columns": [
+              {
+                "id": "fk_0133eb8b-7245-49ed-b9af-18dc1cce1e58",
+                "name": "Id",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "2896fdd5-62ac-494f-aaa8-9c0835bf31d9->c87723ec-798a-4842-9dcb-10f804653052_b4ea36c0-f866-4c7f-b159-80f9006ecfa0",
+        "type": "Relational",
+        "source": "2896fdd5-62ac-494f-aaa8-9c0835bf31d9",
+        "targetHandle": "foreign-key-handle-b4ea36c0-f866-4c7f-b159-80f9006ecfa0",
+        "target": "c87723ec-798a-4842-9dcb-10f804653052",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "b4ea36c0-f866-4c7f-b159-80f9006ecfa0",
+            "sourceTableId": "2896fdd5-62ac-494f-aaa8-9c0835bf31d9",
+            "columns": []
+          }
+        }
+      },
+      {
+        "id": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6->1897411c-96b6-4753-928b-908e96ff9185_dddcaee9-709c-4083-b6dd-7e89e0559971",
+        "type": "Relational",
+        "source": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+        "targetHandle": "foreign-key-handle-dddcaee9-709c-4083-b6dd-7e89e0559971",
+        "target": "1897411c-96b6-4753-928b-908e96ff9185",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "dddcaee9-709c-4083-b6dd-7e89e0559971",
+            "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+            "columns": [
+              {
+                "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                "name": "VehicleID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6->98120ba5-4302-43ff-8f44-a73fa714f5c2_6fb15102-dff3-43dd-bfb3-70d224583a20",
+        "type": "Relational",
+        "source": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+        "targetHandle": "foreign-key-handle-6fb15102-dff3-43dd-bfb3-70d224583a20",
+        "target": "98120ba5-4302-43ff-8f44-a73fa714f5c2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "6fb15102-dff3-43dd-bfb3-70d224583a20",
+            "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+            "columns": [
+              {
+                "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                "name": "VehicleID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "554850a7-40ee-4df2-8c95-04304ea87b1c->98120ba5-4302-43ff-8f44-a73fa714f5c2_8375e152-b59c-4c14-8a6b-bb677dfa73e5",
+        "type": "Relational",
+        "source": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+        "targetHandle": "foreign-key-handle-8375e152-b59c-4c14-8a6b-bb677dfa73e5",
+        "target": "98120ba5-4302-43ff-8f44-a73fa714f5c2",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "8375e152-b59c-4c14-8a6b-bb677dfa73e5",
+            "sourceTableId": "554850a7-40ee-4df2-8c95-04304ea87b1c",
+            "columns": [
+              {
+                "id": "fk_be9c3774-47d4-4443-8119-177239fcd48c",
+                "name": "DriverID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6->8dd08941-26cc-41bf-a6ef-d43d92163045_1eb4593b-5bcb-4542-b1c0-e0b9844f3a69",
+        "type": "Relational",
+        "source": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+        "targetHandle": "foreign-key-handle-1eb4593b-5bcb-4542-b1c0-e0b9844f3a69",
+        "target": "8dd08941-26cc-41bf-a6ef-d43d92163045",
+        "markerStart": {
+          "type": "arrow"
+        },
+        "data": {
+          "foreignKeyProps": {
+            "foreignKeyGroupId": "1eb4593b-5bcb-4542-b1c0-e0b9844f3a69",
+            "sourceTableId": "b63a88c3-1f7a-4402-b7e9-d55359bf7ab6",
+            "columns": [
+              {
+                "id": "fk_a7172cfc-9688-48d3-9887-93d99b9d6f59",
+                "name": "VehicleID",
+                "type": "INT"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 482.00743456294947,
+      "y": 184.40209249979807,
+      "zoom": 0.5
+    }
+  },
+  "name": "Integration Cars -Relational Schema",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 320932
+  },
+  "id": 470662,
+  "updatedAtTimestamp": 1780047914
+}

@@ -1,0 +1,126 @@
+--הפונקציה ניגשת לטבלת הרכבים ובודקת האם מספר הנוסעים בנסיעה עולה על קיבולת הרכב
+CREATE OR REPLACE FUNCTION check_vehicle_capacity()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_capacity INT;
+BEGIN
+
+    -- שליפת קיבולת הרכב
+    SELECT Capacity
+    INTO v_capacity
+    FROM Vehicle
+    WHERE VehicleID = NEW.VehicleID;
+
+    -- בדיקה שהרכב קיים
+    IF v_capacity IS NULL THEN
+        RAISE EXCEPTION
+        'Vehicle % does not exist',
+        NEW.VehicleID;
+    END IF;
+
+    -- בדיקה שמספר הנוסעים לא עולה על הקיבולת
+    IF NEW.NumOfPassengers > v_capacity THEN
+        RAISE EXCEPTION
+        'Cannot assign % passengers to vehicle %. Maximum capacity is %',
+        NEW.NumOfPassengers,
+        NEW.VehicleID,
+        v_capacity;
+    END IF;
+
+    RETURN NEW;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Error in check_vehicle_capacity: %', SQLERRM;
+        RAISE;
+END;
+$$;
+
+CREATE TRIGGER trg_check_vehicle_capacity
+BEFORE INSERT OR UPDATE
+ON Trip
+FOR EACH ROW
+EXECUTE FUNCTION check_vehicle_capacity();
+
+--בדיקה
+INSERT INTO Trip
+(
+    TripID,
+    DepartureTime,
+    Status,
+    DriverID,
+    VehicleID,
+    Price,
+    NumOfPassengers,
+    DurationHours,
+    Customer_ID,
+    Route_Origin,
+    Route_Destination
+)
+VALUES
+(
+    1000,
+    '2026-06-01 08:00:00',
+    'Scheduled',
+    1,
+    1,
+    200,
+    70,
+    1.5,
+    1,
+    'Jerusalem',
+    'Tel Aviv'
+);
+-- בדיקה נוספת
+UPDATE public.trip
+SET 
+    vehicleid = 1, 
+    departuretime = '2030-01-01 10:00:00'::timestamp
+WHERE tripid = 1;
+
+-------------------------------------------------------------------------------
+-- הפונקציה ניגשת לטבלת הביטוחים ובודקת האם קיימת לרכב פוליסה בתוקף בתאריך הנסיעה
+CREATE OR REPLACE FUNCTION public.check_vehicle_has_valid_insurance()
+RETURNS TRIGGER
+LANGUAGE plpgsql
+AS $$
+DECLARE
+    v_valid_insurance_count INT;
+BEGIN
+    -- בדיקה חלקה: המרה בטוחה של ה-Timestamp ל-Date באמצעות ::date
+    SELECT COUNT(*)
+    INTO v_valid_insurance_count
+    FROM public.insurance i
+    WHERE i.vehicleid = NEW.vehicleid
+      AND NEW.departuretime::date BETWEEN i.startdate AND i.enddate;
+
+    -- אם לא נמצאה פוליסה בתוקף
+    IF v_valid_insurance_count = 0 THEN
+        RAISE EXCEPTION
+        'Cannot assign vehicle % to trip %. Vehicle has no valid insurance on %',
+        NEW.vehicleid,
+        NEW.tripid,
+        NEW.departuretime::date;
+    END IF;
+
+    RETURN NEW;
+END;
+$$;
+
+DROP TRIGGER IF EXISTS trg_check_vehicle_has_valid_insurance ON public.trip;
+
+CREATE TRIGGER trg_check_vehicle_has_valid_insurance
+BEFORE INSERT OR UPDATE OF vehicleid, departuretime
+ON public.trip
+FOR EACH ROW
+EXECUTE FUNCTION public.check_vehicle_has_valid_insurance();
+
+--בדיקה
+UPDATE public.trip
+SET 
+    vehicleid = 1, 
+    numofpassengers = 2,                    
+    departuretime = '2030-01-01 10:00:00'::timestamp -- שנה רחוקה כדי להכשיל את הביטוח
+WHERE tripid = 1;

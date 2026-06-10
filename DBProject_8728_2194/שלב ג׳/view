@@ -1,0 +1,54 @@
+--מבטיםםםם
+
+--מבט לאגף של ניהול נסיעות
+CREATE VIEW View_Operations_Trip_Overview AS
+SELECT 
+    t.tripid,
+    c.fullname AS customer_name,
+    t.departurelocation,
+    t.destination,
+    t.status AS trip_status,
+    v.model AS vehicle_model,
+    v.carcolor
+FROM trip t
+JOIN customer c ON t.customer_id = c.id
+JOIN vehicle1 v ON t.vehicleid = v.vehicleid;
+
+SELECT * FROM View_Operations_Trip_Overview LIMIT 10;
+
+--חיפוש נסיעות שהושלמו של לקוח ספציפי:
+SELECT * FROM View_Operations_Trip_Overview WHERE customer_name = 'Stoddard Abbate' AND trip_status = 'Completed';
+
+--תפוסה לפי רכב
+SELECT vehicle_model, COUNT(tripid) AS total_trips FROM View_Operations_Trip_Overview GROUP BY vehicle_model;
+
+--מבט לאגף ניהול צי רכבים
+CREATE VIEW View_Fleet_Maintenance_Analytics AS
+SELECT 
+    v.vehicleid,
+    v.model,
+    m.maintenancedate,
+    m.cost AS maintenance_cost,
+    m.maintenance_status,
+    COUNT(t.tripid) AS trips_performed
+FROM vehicle1 v
+LEFT JOIN maintenance1 m ON v.vehicleid = m.vehicleid
+LEFT JOIN trip t ON v.vehicleid = t.vehicleid
+GROUP BY v.vehicleid, v.model, m.maintenancedate, m.cost, m.maintenance_status;
+
+
+SELECT * FROM View_Fleet_Maintenance_Analytics LIMIT 10;
+
+
+--השאילתה הזו פשוט מציגה לכל רכב את הדגם שלו, כמה טיפולים הוא עבר וכמה הוא עלה בסך הכל
+SELECT 
+    model, 
+    COUNT(maintenance_status) AS total_maintenance_events,
+    COALESCE(SUM(maintenance_cost), 0) AS total_spent  -- זה יציג 0 במקום NULL
+FROM View_Fleet_Maintenance_Analytics
+GROUP BY model
+ORDER BY total_spent DESC;
+
+--רשימת טיפולים פתוחים (שלא הסתיימו):
+SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maintenance_status != 'Completed';
+

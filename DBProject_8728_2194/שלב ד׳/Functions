@@ -1,0 +1,148 @@
+-- פונקציה שמחשבת את השכר החודשי של נהג
+CREATE OR REPLACE FUNCTION public.fn_calculate_all_drivers_salaries(
+    p_month INT,
+    p_year INT
+) 
+RETURNS TABLE (
+    out_driver_id INT,
+    out_driver_name TEXT, 
+    out_total_hours NUMERIC,
+    out_regular_hours NUMERIC,
+    out_overtime_hours NUMERIC,
+    out_calculated_salary NUMERIC
+) AS $$
+DECLARE
+    v_driver_record RECORD;
+    v_trip_record RECORD;
+    v_driver_total_hours NUMERIC;
+    v_driver_salary NUMERIC;
+    
+    -- התיקון כאן: שימוש ב-firstname ו-lastname בדיוק כמו בטבלה שלך
+    cur_active_drivers CURSOR FOR 
+        SELECT DISTINCT t.driverid, (d.firstname || ' ' || d.lastname) AS driver_full_name
+        FROM public.trip t
+        JOIN public.driver d ON t.driverid = d.licensenumber
+        WHERE EXTRACT(MONTH FROM t.departuretime) = p_month 
+          AND EXTRACT(YEAR FROM t.departuretime) = p_year;
+          
+BEGIN
+    OPEN cur_active_drivers;
+    LOOP
+        FETCH cur_active_drivers INTO v_driver_record;
+        EXIT WHEN NOT FOUND;
+        
+        v_driver_total_hours := 0;
+        v_driver_salary := 0;
+        out_regular_hours := 0;
+        out_overtime_hours := 0;
+
+        FOR v_trip_record IN 
+            SELECT durationhours, status 
+            FROM public.trip 
+            WHERE driverid = v_driver_record.driverid
+              AND EXTRACT(MONTH FROM departuretime) = p_month 
+              AND EXTRACT(YEAR FROM departuretime) = p_year
+        LOOP
+            IF v_trip_record.status = 'Completed' THEN
+                
+                IF v_driver_total_hours < 160 THEN
+                    v_driver_salary := v_driver_salary + (v_trip_record.durationhours * 50);
+                    out_regular_hours := out_regular_hours + v_trip_record.durationhours;
+                ELSE
+                    v_driver_salary := v_driver_salary + (v_trip_record.durationhours * 50 * 1.25);
+                    out_overtime_hours := out_overtime_hours + v_trip_record.durationhours;
+                END IF;
+                
+                v_driver_total_hours := v_driver_total_hours + v_trip_record.durationhours;
+            END IF;
+        END LOOP;
+
+        IF v_driver_total_hours > 0 THEN
+            out_driver_id := v_driver_record.driverid;
+            out_driver_name := v_driver_record.driver_full_name; 
+            out_total_hours := ROUND(v_driver_total_hours, 2);
+            out_regular_hours := ROUND(out_regular_hours, 2);
+            out_overtime_hours := ROUND(out_overtime_hours, 2);
+            out_calculated_salary := ROUND(v_driver_salary, 2);
+            
+            RETURN NEXT;
+        END IF;
+
+    END LOOP;
+    CLOSE cur_active_drivers;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Error in fn_calculate_all_drivers_salaries: %', SQLERRM;
+END;
+$$ LANGUAGE plpgsql;
+
+
+
+DROP FUNCTION IF EXISTS public.fn_get_vehicle_efficiency_report(INT, INT);
+
+CREATE OR REPLACE FUNCTION public.fn_get_vehicle_efficiency_report(
+    p_quarter INT, 
+    p_year INT
+)
+RETURNS refcursor AS $$
+DECLARE
+    v_report_cursor refcursor := 'vehicle_quarterly_efficiency_cursor';
+BEGIN
+    
+    OPEN v_report_cursor FOR
+        SELECT 
+            v.vehicleid,
+            COALESCE(fuel.total_fuel_cost, 0) AS fuel_costs,
+            COALESCE(maint.total_maint_cost, 0) AS maintenance_costs,
+            (COALESCE(fuel.total_fuel_cost, 0) + COALESCE(maint.total_maint_cost, 0)) AS total_quarterly_expenses,
+            COALESCE(trips.total_hours_used, 0) AS total_hours_on_road,
+            
+            CASE 
+                WHEN (COALESCE(fuel.total_fuel_cost, 0) + COALESCE(maint.total_maint_cost, 0)) > 4500 
+                     AND COALESCE(trips.total_hours_used, 0) < 30 THEN 'Critical - Inefficient Quarter'
+                WHEN (COALESCE(fuel.total_fuel_cost, 0) + COALESCE(maint.total_maint_cost, 0)) > 4500 
+                     AND COALESCE(trips.total_hours_used, 0) >= 30 THEN 'High Expenses - High Usage'
+                ELSE 'Efficient / Normal'
+            END AS efficiency_status
+            
+        FROM public.vehicle v
+        
+        -- תת שאילתה 1: הוצאות דלק (מעודכן: fuellogdate, fuelcost)
+        LEFT JOIN (
+            SELECT vehicleid, SUM(fuelcost) AS total_fuel_cost
+            FROM public.fuellog
+            WHERE EXTRACT(QUARTER FROM fuellogdate) = p_quarter AND EXTRACT(YEAR FROM fuellogdate) = p_year
+            GROUP BY vehicleid
+        ) fuel ON v.vehicleid = fuel.vehicleid
+        
+        -- תת שאילתה 2: עלויות טיפולים (מעודכן סופית: maintenancedate, cost לפי צילום המסך!)
+        LEFT JOIN (
+            SELECT vehicleid, SUM(cost) AS total_maint_cost
+            FROM public.maintenance
+            WHERE EXTRACT(QUARTER FROM maintenancedate) = p_quarter AND EXTRACT(YEAR FROM maintenancedate) = p_year
+            GROUP BY vehicleid
+        ) maint ON v.vehicleid = maint.vehicleid
+        
+        -- תת שאילתה 3: שעות נסיעה
+        LEFT JOIN (
+            SELECT vehicleid, SUM(durationhours) AS total_hours_used
+            FROM public.trip
+            WHERE EXTRACT(QUARTER FROM departuretime) = p_quarter AND EXTRACT(YEAR FROM departuretime) = p_year
+              AND status = 'Completed'
+            GROUP BY vehicleid
+        ) trips ON v.vehicleid = trips.vehicleid
+        
+        WHERE fuel.total_fuel_cost IS NOT NULL 
+           OR maint.total_maint_cost IS NOT NULL 
+           OR trips.total_hours_used IS NOT NULL
+        ORDER BY total_quarterly_expenses DESC;
+        
+    RETURN v_report_cursor;
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE NOTICE 'Error in fn_get_vehicle_efficiency_report: %', SQLERRM;
+        RETURN NULL;
+END;
+$$ LANGUAGE plpgsql;

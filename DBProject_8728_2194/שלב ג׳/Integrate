@@ -1,0 +1,242 @@
+-- שינוי שם טבלת הרכבים 
+ALTER TABLE vehicle RENAME TO vehicle1;
+
+-- שינוי שם טבלת הנהגים 
+ALTER TABLE driver RENAME TO driver1;
+
+-- שינוי שם טבלת התחזוקה 
+ALTER TABLE maintenance RENAME TO maintenance1;
+
+-- יצירת טבלת לקוחות 
+CREATE TABLE customer (
+    id INT PRIMARY KEY,
+    fullname VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    phonenumber VARCHAR(20)
+);
+
+-- יצירת טבלת מסלולים 
+CREATE TABLE route (
+    origin VARCHAR(100),
+    destination VARCHAR(100),
+    distancekm INT,
+    estimatedtraveltime INT,
+    PRIMARY KEY (origin, destination)
+);
+
+-- הרחבת טבלת הרכבים
+ALTER TABLE vehicle1 
+ADD COLUMN IF NOT EXISTS model VARCHAR(50),
+ADD COLUMN IF NOT EXISTS carcolor VARCHAR(30),
+ADD COLUMN IF NOT EXISTS capacity INT;
+
+-- הרחבת טבלת הנסיעות
+ALTER TABLE trip 
+ADD COLUMN IF NOT EXISTS customer_id INT,
+ADD COLUMN IF NOT EXISTS route_origin VARCHAR(100),
+ADD COLUMN IF NOT EXISTS route_destination VARCHAR(100);
+
+-- 3. הגדרת קשרי מפתח זר (Foreign Keys) מתוך טבלת ה-trip שלכן אל הטבלאות החדשות שלהן
+-- (זה יעבוד רק אחרי שהגיבוי שלהן כבר בפנים, כיcustomer ו-route חייבות להיות קיימות)
+ALTER TABLE trip
+ADD CONSTRAINT fk_trip_customer FOREIGN KEY (customer_id) REFERENCES customer(id),
+ADD CONSTRAINT fk_trip_route FOREIGN KEY (route_origin, route_destination) REFERENCES route(origin, destination);
+
+
+--אינטגרציית נתוני נהגים
+
+ALTER TABLE driver1 ADD COLUMN IF NOT EXISTS status VARCHAR(20);
+
+CREATE TABLE temp_driver_import (
+    phonenumber VARCHAR(20),
+    status VARCHAR(20),
+    licensenumber INTEGER,
+    fullname VARCHAR(100)
+);
+
+
+UPDATE temp_driver_import
+SET phonenumber = '05' || SUBSTRING(phonenumber, 1, 8);
+
+INSERT INTO driver1 (
+    driverid, firstname, lastname, phone, status, licensenumber, licensetype, hiredate, city
+)
+SELECT 
+    (SELECT COALESCE(MAX(driverid), 0) FROM driver1) + ROW_NUMBER() OVER (),
+    split_part(fullname, ' ', 1),
+    split_part(fullname, ' ', 2),
+    phonenumber,
+    status,
+    licensenumber,
+    (ARRAY['A', 'B', 'C', 'D'])[floor(random() * 4 + 1)],
+    CURRENT_DATE - (random() * 365)::integer,
+    (ARRAY['Tel Aviv', 'Jerusalem', 'Haifa', 'Netivot', 'Beer Sheva'])[floor(random() * 5 + 1)]
+FROM temp_driver_import
+
+DROP TABLE temp_driver_import;
+
+UPDATE driver1
+SET status = (ARRAY['available', 'busy'])[floor(random() * 2 + 1)]
+WHERE status IS NULL;
+
+UPDATE driver1
+SET phone = '05' || LPAD((50000000 + driverid)::text, 8, '0')
+WHERE driverid > 600 -- כאן תכניסי את המספר ממנו מתחילים הנהגים של הקבוצה השנייה
+  AND (phone = '0505000000' OR phone IS NULL);
+
+UPDATE driver1
+SET phone = '05' || LPAD((50000000 + driverid)::text, 8, '0')
+
+
+-- אינטגרציית  מכוניות
+-- 1. יצירת טבלת העזר 
+CREATE TABLE temp_vehicle_import (
+    platenumber VARCHAR(20),
+    model VARCHAR(50),
+    capacity INTEGER,
+    carcolor VARCHAR(30),
+    year INTEGER,
+    status VARCHAR(20)
+);
+
+-- (כאן תבצע את ה-IMPORT של ה-CSV לטבלה temp_vehicle_import)
+
+-- 2. הכנסת הנתונים לטבלה הסופית vehicle1
+INSERT INTO vehicle1 (
+    vehicleid, 
+    licenseplate, 
+    vehicletype, 
+    capacity, 
+    manufacturer, 
+    year, 
+    model, 
+    carcolor
+)
+SELECT 
+    (SELECT COALESCE(MAX(v.vehicleid), 0) FROM public.vehicle1 v) + ROW_NUMBER() OVER (),
+    regexp_replace(t.platenumber, '[^0-9]', '', 'g')::integer,
+    -- שימוש באחד הערכים המורשים על פי ה-CHECK CONSTRAINT
+    (ARRAY['Bus', 'Minibus', 'Van', 'Taxi'])[floor(random() * 4 + 1)],
+    t.capacity,
+    split_part(t.model, ' ', 1), 
+    t.year,
+    t.model,
+    t.carcolor
+FROM temp_vehicle_import t
+
+--בדיקת אילוצים
+SELECT pg_get_constraintdef(oid) 
+FROM pg_constraint 
+WHERE conname = 'chk_vehicle_type';
+
+-- 1. עדכון מודל לכל מה שריק, לפי היצרן שלו
+UPDATE public.vehicle1
+SET model = manufacturer || ' ' || 'Model'
+WHERE model IS NULL;
+
+-- 2. עדכון צבע לכל מה שריק באקראי (מתוך רשימה הגיונית)
+UPDATE public.vehicle1
+SET carcolor = (ARRAY['White', 'Silver', 'Black', 'Blue', 'Red'])[floor(random() * 5 + 1)]
+WHERE carcolor IS NULL;
+
+-- 3. ניקיון
+DROP TABLE temp_vehicle_import;
+
+SELECT * FROM vehicle1
+
+
+--אינטגרציה תחזוקה-
+
+-- 1. יצירת טבלה זמנית שתחזיק את המידע הגולמי מהטבלה הישנה (maintenance)
+CREATE TABLE temp_maintenance_import (
+    maintenancedate DATE,
+    maintenancetype VARCHAR(50),
+    cost INTEGER,
+    description VARCHAR(255),
+    platenumber VARCHAR(20)
+);
+
+-- (כאן תבצעו את ה-Import לקובץ ה-CSV של טבלת ה-maintenance לתוך temp_maintenance_import)
+
+-- 2. העברת הנתונים ל-maintenance1 עם ביצוע JOIN כדי לשייך ל-vehicleid הנכון
+INSERT INTO maintenance1 (
+    maintenanceid,
+    maintenancedate,
+    maintenancetype,
+    cost,
+    notes,
+    vehicleid,
+    maintenance_status
+)
+SELECT 
+    (SELECT COALESCE(MAX(m.maintenanceid), 0) FROM public.maintenance1 m) + ROW_NUMBER() OVER (),
+    t.maintenancedate,
+    t.maintenancetype,
+    t.cost::numeric(10,2), -- המרה לפורמט הנדרש ב-maintenance1
+    t.description,
+    v.vehicleid, -- קישור ל-ID החדש שנוצר בטבלת הרכבים
+    'Completed'  -- ערך דיפולטיבי לסטטוס
+FROM temp_maintenance_import t
+JOIN public.vehicle1 v 
+  ON v.licenseplate = regexp_replace(t.platenumber, '[^0-9]', '', 'g')::integer;
+
+-- 3. ניקוי - מחיקת הטבלה הזמנית
+DROP TABLE temp_maintenance_import;
+
+
+
+--אינטגרציית נתוני נסיעות
+
+CREATE TABLE temp_ride_import (
+    rideid TEXT,
+    orderdate TEXT,
+    starttime TEXT,
+    status TEXT,
+    endtime TEXT, -- השארנו כ-TEXT כדי ש-"NULL" לא יפיל את הייבוא
+    paymentmethod TEXT,
+    licensenumber TEXT,
+    platenumber TEXT,
+    id TEXT,
+    origin TEXT,
+    destination TEXT
+);
+-- דוגמה לשינוי ה-Constraint (זה ידרוס את הקיים):
+ALTER TABLE public.trip DROP CONSTRAINT chk_trip_status;
+ALTER TABLE public.trip ADD CONSTRAINT chk_trip_status 
+CHECK (status IN ('Planned', 'Completed', 'Cancelled', 'Pending')); -- הוסף כאן את 'Pending'
+
+INSERT INTO trip (
+    tripid, departurelocation, destination, departuretime, status, 
+    driverid, vehicleid, price, numofpassengers, durationhours, 
+    customer_id, route_origin, route_destination
+)
+SELECT 
+    20521 + ROW_NUMBER() OVER (),
+    LEFT(COALESCE(t.origin, 'Unknown'), 20),
+    LEFT(COALESCE(t.destination, 'Unknown'), 20),
+    (t.orderdate::date + t.starttime::time)::timestamp,
+    COALESCE(t.status, 'Planned'),
+    d.driverid, -- לא יהיה NULL כי ב-INNER JOIN השורה תיזרק אם אין נהג
+    v.vehicleid, -- לא יהיה NULL כי ב-INNER JOIN השורה תיזרק אם אין רכב
+    100.00,
+    1,
+    1.00,
+    COALESCE(t.id::integer, 0),
+    LEFT(COALESCE(t.origin, 'Unknown'), 100),
+    LEFT(COALESCE(t.destination, 'Unknown'), 100)
+FROM temp_ride_import t
+INNER JOIN public.driver1 d ON t.licensenumber::text = d.licensenumber::text
+INNER JOIN public.vehicle1 v ON regexp_replace(t.platenumber, '[^0-9]', '', 'g')::bigint = v.licenseplate
+WHERE NOT EXISTS (
+    SELECT 1 FROM public.trip tr 
+    WHERE tr.customer_id = t.id::integer
+);
+SELECT * FROM trip
+
+-- 3. ניקוי
+DROP TABLE temp_trip_import;
+
+
+
+
+

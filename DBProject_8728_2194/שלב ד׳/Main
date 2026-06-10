@@ -1,0 +1,45 @@
+-- =========================================================
+-- תוכנית ראשית 1: בדיקת שכר נהגים חודשי
+-- =========================================================
+DO $$
+DECLARE
+    v_salary_row RECORD;
+BEGIN
+    RAISE NOTICE '=== מפעיל דוח שכר חודשי מרוכז לכל הנהגים לחודש 04/2026 ===';
+    
+    -- זימון הפונקציה עבור חודש 4 (אפריל) שנת 2026
+    FOR v_salary_row IN 
+        SELECT * FROM public.fn_calculate_all_drivers_salaries(3, 2026)
+    LOOP
+        -- הדפסת שורה עבור כל נהג שנמצא בדאטה של אפריל
+        RAISE NOTICE 'Driver: % (#%) | Total Hours: % (Reg: %, Overtime: %) | Salary: % NIS',
+            v_salary_row.out_driver_name, 
+            v_salary_row.out_driver_id, 
+            v_salary_row.out_total_hours, 
+            v_salary_row.out_regular_hours, 
+            v_salary_row.out_overtime_hours, 
+            v_salary_row.out_calculated_salary;
+    END LOOP;
+    
+END $$;
+
+-- =======================================================
+-- פתיחת טיפולי החלפת שמן לרכבים שחרגו מהקילומטראז'
+-- =======================================================
+DO $$
+DECLARE
+    v_max_allowed_mileage NUMERIC := 100.00; -- רף הקילומטראז' לבדיקה
+BEGIN
+    RAISE NOTICE '=== מפעיל תוכנית ראשית: בדיקת חריגות תחזוקה לפי % ק"מ ===', v_max_allowed_mileage;
+
+    -- קריאה לפרוצדורה
+    CALL public.close_month_maintenance_mileage(v_max_allowed_mileage);
+
+    RAISE NOTICE '✅ תהליך סגירת החודש בוצע בהצלחה מלאה!';
+
+EXCEPTION
+    WHEN OTHERS THEN
+        -- הגנה במקרה של תקלה לא צפויה בטבלאות
+        RAISE NOTICE '❌ תהליך סגירת החודש נכשל!';
+        RAISE NOTICE 'סיבת הכישלון: %', SQLERRM;
+END $$;
