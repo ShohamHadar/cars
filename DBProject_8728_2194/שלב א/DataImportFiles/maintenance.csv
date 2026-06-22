@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 MaintenanceID,MaintenanceDate,MaintenanceType,Cost,Notes,VehicleID
 21,2024-01-21,Inspection,403,Repair done,367
 22,2024-01-22,Brakes,582,Scheduled maintenance,41
@@ -499,3 +500,506 @@ MaintenanceID,MaintenanceDate,MaintenanceType,Cost,Notes,VehicleID
 518,2024-06-01,Oil Change,469,Replaced parts,494
 519,2024-06-02,Engine,1913,Repair done,344
 520,2024-06-03,Engine,1950,Scheduled maintenance,58
+=======
+MaintenanceID,MaintenanceDate,MaintenanceType,Cost,Notes,VehicleID
+21,2024-01-21,Inspection,403,Repair done,367
+22,2024-01-22,Brakes,582,Scheduled maintenance,41
+23,2024-01-23,Engine,1932,Repair done,213
+24,2024-01-24,Brakes,620,Routine service,3
+25,2024-01-25,Oil Change,456,Replaced parts,506
+26,2024-01-26,Oil Change,661,Routine service,77
+27,2024-01-27,Brakes,829,Repair done,237
+28,2024-01-28,Brakes,635,Routine service,476
+29,2024-01-29,Oil Change,489,General check,41
+30,2024-01-30,Brakes,846,Repair done,321
+31,2024-01-31,Oil Change,448,Routine service,47
+32,2024-02-01,Tires,1039,General check,175
+33,2024-02-02,Brakes,724,Routine service,275
+34,2024-02-03,Brakes,675,Routine service,188
+35,2024-02-04,Engine,1409,General check,468
+36,2024-02-05,Engine,1706,Repair done,490
+37,2024-02-06,Tires,757,Routine service,136
+38,2024-02-07,Tires,753,Scheduled maintenance,427
+39,2024-02-08,Engine,1821,Replaced parts,449
+40,2024-02-09,Inspection,494,Scheduled maintenance,368
+41,2024-02-10,Oil Change,466,Repair done,495
+42,2024-02-11,Oil Change,610,Routine service,452
+43,2024-02-12,Oil Change,533,Routine service,322
+44,2024-02-13,Inspection,595,General check,230
+45,2024-02-14,Inspection,567,Repair done,98
+46,2024-02-15,Tires,946,Repair done,355
+47,2024-02-16,Tires,1129,Routine service,56
+48,2024-02-17,Tires,958,Repair done,481
+49,2024-02-18,Tires,738,General check,504
+50,2024-02-19,Tires,869,Routine service,285
+51,2024-02-20,Inspection,414,Repair done,388
+52,2024-02-21,Tires,740,Repair done,471
+53,2024-02-22,Inspection,529,Repair done,91
+54,2024-02-23,Engine,1323,Repair done,122
+55,2024-02-24,Oil Change,452,Repair done,414
+56,2024-02-25,Oil Change,685,Routine service,1
+57,2024-02-26,Inspection,455,Repair done,212
+58,2024-02-27,Brakes,686,Replaced parts,56
+59,2024-02-28,Engine,1339,General check,485
+60,2024-02-29,Engine,1116,Replaced parts,100
+61,2024-03-01,Oil Change,574,General check,364
+62,2024-03-02,Inspection,567,Routine service,383
+63,2024-03-03,Oil Change,484,Replaced parts,505
+64,2024-03-04,Engine,1109,Scheduled maintenance,261
+65,2024-03-05,Tires,796,Repair done,124
+66,2024-03-06,Tires,934,General check,196
+67,2024-03-07,Oil Change,612,Scheduled maintenance,48
+68,2024-03-08,Oil Change,630,Scheduled maintenance,469
+69,2024-03-09,Inspection,368,Routine service,511
+70,2024-03-10,Inspection,324,Scheduled maintenance,444
+71,2024-03-11,Engine,1946,Scheduled maintenance,182
+72,2024-03-12,Tires,1074,Routine service,132
+73,2024-03-13,Engine,1673,Scheduled maintenance,330
+74,2024-03-14,Engine,1428,General check,255
+75,2024-03-15,Engine,1986,General check,352
+76,2024-03-16,Engine,1824,Replaced parts,137
+77,2024-03-17,Engine,1616,Scheduled maintenance,307
+78,2024-03-18,Brakes,864,Replaced parts,223
+79,2024-03-19,Tires,1019,General check,298
+80,2024-03-20,Tires,1063,Scheduled maintenance,183
+81,2024-03-21,Inspection,465,General check,119
+82,2024-03-22,Inspection,545,Scheduled maintenance,428
+83,2024-03-23,Brakes,716,Scheduled maintenance,14
+84,2024-03-24,Oil Change,412,Replaced parts,391
+85,2024-03-25,Oil Change,428,General check,205
+86,2024-03-26,Tires,846,Replaced parts,257
+87,2024-03-27,Oil Change,551,Scheduled maintenance,209
+88,2024-03-28,Oil Change,583,Routine service,464
+89,2024-03-29,Inspection,587,Scheduled maintenance,230
+90,2024-03-30,Engine,1243,Routine service,295
+91,2024-03-31,Engine,1396,General check,427
+92,2024-04-01,Inspection,327,General check,14
+93,2024-04-02,Tires,1017,Replaced parts,454
+94,2024-04-03,Brakes,886,Replaced parts,202
+95,2024-04-04,Brakes,729,Routine service,182
+96,2024-04-05,Tires,1192,Scheduled maintenance,178
+97,2024-04-06,Oil Change,593,Repair done,42
+98,2024-04-07,Brakes,784,Replaced parts,271
+99,2024-04-08,Tires,999,Routine service,262
+100,2024-04-09,Brakes,738,Routine service,159
+101,2024-04-10,Tires,1175,Scheduled maintenance,331
+102,2024-04-11,Oil Change,554,Scheduled maintenance,503
+103,2024-04-12,Inspection,483,General check,75
+104,2024-04-13,Inspection,412,Scheduled maintenance,189
+105,2024-04-14,Oil Change,658,Repair done,164
+106,2024-04-15,Inspection,574,Routine service,414
+107,2024-04-16,Brakes,613,General check,219
+108,2024-04-17,Brakes,684,Replaced parts,301
+109,2024-04-18,Inspection,571,Scheduled maintenance,487
+110,2024-04-19,Oil Change,458,Repair done,355
+111,2024-04-20,Tires,1163,Routine service,250
+112,2024-04-21,Brakes,695,Repair done,117
+113,2024-04-22,Brakes,776,Routine service,290
+114,2024-04-23,Inspection,491,Repair done,457
+115,2024-04-24,Oil Change,551,General check,198
+116,2024-04-25,Inspection,342,Replaced parts,99
+117,2024-04-26,Inspection,573,Routine service,8
+118,2024-04-27,Tires,1043,Repair done,219
+119,2024-04-28,Oil Change,505,Routine service,446
+120,2024-04-29,Tires,712,General check,471
+121,2024-04-30,Oil Change,444,Routine service,76
+122,2024-05-01,Tires,1106,Scheduled maintenance,258
+123,2024-05-02,Oil Change,694,General check,234
+124,2024-05-03,Engine,1397,Repair done,462
+125,2024-05-04,Engine,1323,Repair done,18
+126,2024-05-05,Oil Change,673,Scheduled maintenance,7
+127,2024-05-06,Oil Change,699,Routine service,47
+128,2024-05-07,Brakes,757,General check,109
+129,2024-05-08,Brakes,810,General check,89
+130,2024-05-09,Engine,1390,Routine service,405
+131,2024-05-10,Engine,1160,Replaced parts,226
+132,2024-05-11,Engine,1815,Replaced parts,303
+133,2024-05-12,Brakes,846,Routine service,383
+134,2024-05-13,Inspection,584,Routine service,145
+135,2024-05-14,Oil Change,402,Scheduled maintenance,404
+136,2024-05-15,Inspection,343,Replaced parts,313
+137,2024-05-16,Brakes,608,Scheduled maintenance,423
+138,2024-05-17,Tires,782,Replaced parts,189
+139,2024-05-18,Inspection,429,Routine service,199
+140,2024-05-19,Tires,1043,Scheduled maintenance,56
+141,2024-05-20,Engine,1660,General check,75
+142,2024-05-21,Oil Change,528,Replaced parts,101
+143,2024-05-22,Inspection,549,General check,339
+144,2024-05-23,Tires,1043,Routine service,241
+145,2024-05-24,Brakes,817,Replaced parts,72
+146,2024-05-25,Brakes,748,General check,462
+147,2024-05-26,Inspection,456,Scheduled maintenance,157
+148,2024-05-27,Inspection,486,Repair done,324
+149,2024-05-28,Tires,702,Replaced parts,321
+150,2024-05-29,Tires,1064,General check,447
+151,2024-05-30,Brakes,568,Repair done,340
+152,2024-05-31,Engine,1456,General check,368
+153,2024-06-01,Engine,1564,Replaced parts,112
+154,2024-06-02,Inspection,341,Replaced parts,288
+155,2024-06-03,Inspection,400,Routine service,270
+156,2024-06-04,Oil Change,409,Routine service,520
+157,2024-06-05,Inspection,596,Scheduled maintenance,415
+158,2024-06-06,Tires,1164,Scheduled maintenance,38
+159,2024-06-07,Brakes,778,Replaced parts,484
+160,2024-06-08,Brakes,700,Scheduled maintenance,229
+161,2024-06-09,Brakes,568,Scheduled maintenance,476
+162,2024-06-10,Inspection,346,General check,407
+163,2024-06-11,Inspection,305,Scheduled maintenance,245
+164,2024-06-12,Tires,1087,Repair done,144
+165,2024-06-13,Tires,791,Repair done,150
+166,2024-06-14,Brakes,520,Repair done,225
+167,2024-06-15,Tires,732,General check,271
+168,2024-06-16,Tires,721,Scheduled maintenance,212
+169,2024-06-17,Brakes,698,Repair done,481
+170,2024-06-18,Oil Change,420,Routine service,332
+171,2024-06-19,Inspection,440,Scheduled maintenance,270
+172,2024-06-20,Inspection,591,Repair done,179
+173,2024-06-21,Engine,1374,Scheduled maintenance,80
+174,2024-06-22,Brakes,692,Scheduled maintenance,229
+175,2024-06-23,Engine,1361,Repair done,354
+176,2024-06-24,Engine,1908,Scheduled maintenance,7
+177,2024-06-25,Tires,925,Replaced parts,170
+178,2024-06-26,Oil Change,663,Replaced parts,288
+179,2024-06-27,Tires,795,General check,162
+180,2024-06-28,Inspection,360,Repair done,236
+181,2024-06-29,Brakes,868,Repair done,117
+182,2024-06-30,Engine,1490,Scheduled maintenance,216
+183,2024-07-01,Tires,1031,Routine service,421
+184,2024-07-02,Tires,722,Scheduled maintenance,131
+185,2024-07-03,Inspection,382,Scheduled maintenance,138
+186,2024-07-04,Oil Change,693,Routine service,151
+187,2024-07-05,Tires,832,Scheduled maintenance,185
+188,2024-07-06,Engine,1613,General check,20
+189,2024-07-07,Oil Change,510,Scheduled maintenance,460
+190,2024-07-08,Engine,1888,Replaced parts,494
+191,2024-07-09,Tires,1125,Scheduled maintenance,421
+192,2024-07-10,Tires,1106,Scheduled maintenance,187
+193,2024-07-11,Inspection,435,General check,172
+194,2024-07-12,Engine,1610,Replaced parts,71
+195,2024-07-13,Engine,1394,Routine service,136
+196,2024-07-14,Oil Change,503,Repair done,517
+197,2024-07-15,Tires,1010,Replaced parts,99
+198,2024-07-16,Engine,1923,Scheduled maintenance,40
+199,2024-07-17,Inspection,360,Repair done,96
+200,2024-07-18,Tires,1161,Repair done,2
+201,2024-07-19,Inspection,515,Routine service,380
+202,2024-07-20,Inspection,519,Repair done,235
+203,2024-07-21,Engine,1358,Repair done,101
+204,2024-07-22,Tires,830,Replaced parts,489
+205,2024-07-23,Oil Change,545,General check,419
+206,2024-07-24,Tires,702,Scheduled maintenance,8
+207,2024-07-25,Inspection,360,Repair done,8
+208,2024-07-26,Tires,1052,Repair done,324
+209,2024-07-27,Brakes,554,Repair done,159
+210,2024-07-28,Inspection,429,Scheduled maintenance,268
+211,2024-07-29,Engine,1578,Scheduled maintenance,375
+212,2024-07-30,Brakes,848,Replaced parts,407
+213,2024-07-31,Engine,1565,Replaced parts,495
+214,2024-08-01,Brakes,786,General check,496
+215,2024-08-02,Brakes,795,Repair done,353
+216,2024-08-03,Tires,1137,Replaced parts,122
+217,2024-08-04,Engine,1801,Routine service,166
+218,2024-08-05,Tires,960,General check,411
+219,2024-08-06,Inspection,326,Repair done,165
+220,2024-08-07,Oil Change,446,Repair done,149
+221,2024-08-08,Inspection,522,Routine service,91
+222,2024-08-09,Brakes,613,Routine service,380
+223,2024-08-10,Inspection,319,Repair done,394
+224,2024-08-11,Inspection,566,Scheduled maintenance,294
+225,2024-08-12,Oil Change,489,Repair done,507
+226,2024-08-13,Oil Change,503,Replaced parts,293
+227,2024-08-14,Oil Change,661,Scheduled maintenance,238
+228,2024-08-15,Tires,1045,General check,37
+229,2024-08-16,Tires,1035,Replaced parts,1
+230,2024-08-17,Oil Change,541,General check,410
+231,2024-08-18,Engine,1415,Scheduled maintenance,206
+232,2024-08-19,Oil Change,435,Scheduled maintenance,93
+233,2024-08-20,Brakes,871,General check,357
+234,2024-08-21,Brakes,615,Repair done,200
+235,2024-08-22,Engine,1588,General check,5
+236,2024-08-23,Tires,908,Routine service,519
+237,2024-08-24,Inspection,337,General check,516
+238,2024-08-25,Brakes,559,Scheduled maintenance,264
+239,2024-08-26,Inspection,428,Repair done,454
+240,2024-08-27,Inspection,547,General check,250
+241,2024-08-28,Engine,1697,Scheduled maintenance,472
+242,2024-08-29,Oil Change,646,General check,120
+243,2024-08-30,Oil Change,595,Replaced parts,226
+244,2024-08-31,Brakes,711,Scheduled maintenance,362
+245,2024-09-01,Inspection,304,Replaced parts,270
+246,2024-09-02,Brakes,547,General check,409
+247,2024-09-03,Oil Change,683,Repair done,183
+248,2024-09-04,Brakes,681,Scheduled maintenance,224
+249,2024-09-05,Brakes,593,Repair done,195
+250,2024-09-06,Tires,820,General check,248
+251,2024-09-07,Tires,817,Replaced parts,208
+252,2024-09-08,Inspection,482,Routine service,160
+253,2024-09-09,Oil Change,440,Scheduled maintenance,505
+254,2024-09-10,Oil Change,677,Repair done,44
+255,2024-09-11,Brakes,817,Repair done,323
+256,2024-09-12,Inspection,440,Replaced parts,503
+257,2024-09-13,Inspection,443,Replaced parts,408
+258,2024-09-14,Inspection,365,Scheduled maintenance,56
+259,2024-09-15,Engine,1489,Scheduled maintenance,34
+260,2024-09-16,Brakes,701,Repair done,179
+261,2024-09-17,Oil Change,665,General check,472
+262,2024-09-18,Oil Change,406,Repair done,216
+263,2024-09-19,Inspection,351,General check,334
+264,2024-09-20,Inspection,432,Scheduled maintenance,192
+265,2024-09-21,Brakes,621,Repair done,276
+266,2024-09-22,Inspection,475,Replaced parts,375
+267,2024-09-23,Engine,1434,Repair done,216
+268,2024-09-24,Brakes,686,General check,411
+269,2024-09-25,Engine,1184,Scheduled maintenance,135
+270,2024-09-26,Tires,1116,General check,103
+271,2024-09-27,Tires,984,Repair done,443
+272,2024-09-28,Tires,774,Repair done,154
+273,2024-09-29,Oil Change,490,Repair done,432
+274,2024-09-30,Tires,1157,Repair done,324
+275,2024-10-01,Brakes,628,Repair done,49
+276,2024-10-02,Oil Change,483,Replaced parts,62
+277,2024-10-03,Brakes,743,Repair done,99
+278,2024-10-04,Brakes,633,General check,370
+279,2024-10-05,Inspection,585,General check,264
+280,2024-10-06,Oil Change,610,General check,125
+281,2024-10-07,Inspection,401,General check,179
+282,2024-10-08,Brakes,666,Repair done,500
+283,2024-10-09,Oil Change,595,Repair done,294
+284,2024-10-10,Tires,1144,General check,172
+285,2024-10-11,Engine,1646,Routine service,415
+286,2024-10-12,Oil Change,482,Replaced parts,352
+287,2024-10-13,Brakes,662,General check,299
+288,2024-10-14,Inspection,502,Repair done,278
+289,2024-10-15,Brakes,882,Repair done,462
+290,2024-10-16,Tires,794,Replaced parts,24
+291,2024-10-17,Tires,1038,Routine service,258
+292,2024-10-18,Tires,785,Routine service,407
+293,2024-10-19,Oil Change,432,Scheduled maintenance,485
+294,2024-10-20,Oil Change,413,Scheduled maintenance,407
+295,2024-10-21,Oil Change,453,Scheduled maintenance,269
+296,2024-10-22,Tires,743,General check,400
+297,2024-10-23,Tires,826,Repair done,291
+298,2024-10-24,Tires,767,Routine service,175
+299,2024-10-25,Oil Change,582,Repair done,334
+300,2024-10-26,Engine,1998,Scheduled maintenance,279
+301,2024-10-27,Engine,1138,Scheduled maintenance,182
+302,2024-10-28,Inspection,533,Scheduled maintenance,446
+303,2024-10-29,Inspection,458,Repair done,356
+304,2024-10-30,Inspection,416,Repair done,92
+305,2024-10-31,Brakes,687,General check,423
+306,2024-11-01,Tires,855,Routine service,11
+307,2024-11-02,Inspection,369,General check,353
+308,2024-11-03,Engine,1547,Repair done,9
+309,2024-11-04,Engine,1306,Repair done,10
+310,2024-11-05,Brakes,805,Routine service,237
+311,2024-11-06,Inspection,491,Repair done,194
+312,2024-11-07,Inspection,523,Replaced parts,405
+313,2024-11-08,Tires,1066,Repair done,400
+314,2024-11-09,Tires,834,Repair done,82
+315,2024-11-10,Tires,964,General check,279
+316,2024-11-11,Inspection,437,Replaced parts,423
+317,2024-11-12,Oil Change,493,General check,140
+318,2024-11-13,Oil Change,633,General check,464
+319,2024-11-14,Inspection,551,General check,193
+320,2024-11-15,Oil Change,477,Scheduled maintenance,51
+321,2024-11-16,Oil Change,495,General check,105
+322,2024-11-17,Brakes,564,Routine service,449
+323,2024-11-18,Tires,746,Routine service,155
+324,2024-11-19,Engine,1222,Repair done,351
+325,2024-11-20,Brakes,755,Repair done,381
+326,2024-11-21,Oil Change,569,Replaced parts,83
+327,2024-11-22,Oil Change,536,Routine service,402
+328,2024-11-23,Inspection,540,Replaced parts,186
+329,2024-11-24,Brakes,695,Routine service,13
+330,2024-11-25,Tires,897,Replaced parts,454
+331,2024-11-26,Oil Change,501,Routine service,472
+332,2024-11-27,Inspection,406,Repair done,485
+333,2024-11-28,Brakes,665,Routine service,163
+334,2024-11-29,Inspection,566,General check,126
+335,2024-11-30,Engine,1653,Replaced parts,306
+336,2024-12-01,Brakes,526,Routine service,224
+337,2024-12-02,Tires,1024,General check,445
+338,2024-12-03,Oil Change,485,Scheduled maintenance,283
+339,2024-12-04,Oil Change,602,Routine service,249
+340,2024-12-05,Oil Change,697,Scheduled maintenance,487
+341,2024-12-06,Tires,890,Replaced parts,92
+342,2024-12-07,Tires,955,Scheduled maintenance,94
+343,2024-12-08,Brakes,888,Routine service,62
+344,2024-12-09,Brakes,830,Scheduled maintenance,158
+345,2024-12-10,Oil Change,464,Replaced parts,500
+346,2024-12-11,Brakes,785,Repair done,356
+347,2024-12-12,Tires,710,General check,387
+348,2024-12-13,Tires,828,Repair done,41
+349,2024-12-14,Engine,1572,Scheduled maintenance,302
+350,2024-12-15,Engine,1194,Scheduled maintenance,192
+351,2024-12-16,Brakes,665,General check,480
+352,2024-12-17,Inspection,583,Routine service,165
+353,2024-12-18,Inspection,379,General check,461
+354,2024-12-19,Brakes,777,Repair done,376
+355,2024-12-20,Oil Change,659,Replaced parts,389
+356,2024-12-21,Oil Change,586,General check,245
+357,2024-12-22,Oil Change,675,Replaced parts,397
+358,2024-12-23,Inspection,554,Scheduled maintenance,158
+359,2024-12-24,Brakes,665,General check,420
+360,2024-12-25,Oil Change,449,Routine service,69
+361,2024-12-26,Tires,791,Replaced parts,33
+362,2024-12-27,Oil Change,648,Routine service,197
+363,2024-12-28,Oil Change,692,Repair done,398
+364,2024-12-29,Inspection,431,General check,51
+365,2024-12-30,Tires,1010,Routine service,73
+366,2024-12-31,Tires,1035,Routine service,504
+367,2025-01-01,Engine,1820,General check,63
+368,2025-01-02,Inspection,512,Routine service,378
+369,2025-01-03,Inspection,436,Routine service,42
+370,2025-01-04,Brakes,539,Scheduled maintenance,222
+371,2025-01-05,Oil Change,451,Scheduled maintenance,237
+372,2025-01-06,Engine,1194,Scheduled maintenance,198
+373,2025-01-07,Tires,991,Scheduled maintenance,184
+374,2025-01-08,Inspection,512,Scheduled maintenance,109
+375,2025-01-09,Brakes,845,Repair done,470
+376,2025-01-10,Oil Change,485,Scheduled maintenance,185
+377,2025-01-11,Engine,1516,Replaced parts,346
+378,2025-01-12,Inspection,526,General check,361
+379,2025-01-13,Inspection,466,Repair done,381
+380,2025-01-14,Engine,1845,Scheduled maintenance,332
+381,2025-01-15,Tires,988,Repair done,220
+382,2025-01-16,Inspection,430,Repair done,369
+383,2025-01-17,Engine,1982,Routine service,407
+384,2025-01-18,Oil Change,545,Scheduled maintenance,17
+385,2025-01-19,Tires,1155,Routine service,310
+386,2024-01-21,Brakes,613,General check,220
+387,2024-01-22,Oil Change,541,Routine service,159
+388,2024-01-23,Oil Change,635,Replaced parts,365
+389,2024-01-24,Tires,835,Scheduled maintenance,376
+390,2024-01-25,Tires,819,General check,263
+391,2024-01-26,Oil Change,692,Scheduled maintenance,410
+392,2024-01-27,Tires,1075,General check,80
+393,2024-01-28,Engine,1177,Scheduled maintenance,500
+394,2024-01-29,Oil Change,553,Scheduled maintenance,39
+395,2024-01-30,Engine,1080,General check,58
+396,2024-01-31,Brakes,722,Routine service,427
+397,2024-02-01,Tires,1082,Repair done,12
+398,2024-02-02,Oil Change,556,General check,43
+399,2024-02-03,Inspection,589,General check,154
+400,2024-02-04,Inspection,413,Routine service,157
+401,2024-02-05,Engine,1994,Scheduled maintenance,457
+402,2024-02-06,Inspection,558,Replaced parts,93
+403,2024-02-07,Engine,1296,Replaced parts,404
+404,2024-02-08,Tires,872,Repair done,85
+405,2024-02-09,Inspection,325,General check,409
+406,2024-02-10,Oil Change,604,Repair done,514
+407,2024-02-11,Tires,1090,Repair done,139
+408,2024-02-12,Inspection,401,Repair done,500
+409,2024-02-13,Inspection,400,Replaced parts,253
+410,2024-02-14,Oil Change,536,General check,441
+411,2024-02-15,Inspection,345,Repair done,116
+412,2024-02-16,Engine,1374,Replaced parts,357
+413,2024-02-17,Brakes,676,General check,25
+414,2024-02-18,Tires,879,Scheduled maintenance,453
+415,2024-02-19,Tires,925,Replaced parts,46
+416,2024-02-20,Tires,1050,Replaced parts,383
+417,2024-02-21,Oil Change,457,Replaced parts,56
+418,2024-02-22,Inspection,375,Routine service,295
+419,2024-02-23,Brakes,855,General check,114
+420,2024-02-24,Engine,1482,General check,24
+421,2024-02-25,Tires,1078,Replaced parts,217
+422,2024-02-26,Inspection,567,Scheduled maintenance,265
+423,2024-02-27,Engine,1637,Routine service,145
+424,2024-02-28,Engine,1596,General check,45
+425,2024-02-29,Tires,730,Replaced parts,291
+426,2024-03-01,Inspection,438,Repair done,55
+427,2024-03-02,Oil Change,434,General check,398
+428,2024-03-03,Brakes,555,General check,20
+429,2024-03-04,Engine,1236,Scheduled maintenance,390
+430,2024-03-05,Oil Change,561,Scheduled maintenance,497
+431,2024-03-06,Inspection,345,Replaced parts,191
+432,2024-03-07,Inspection,534,Routine service,23
+433,2024-03-08,Tires,1172,General check,313
+434,2024-03-09,Engine,1402,Routine service,161
+435,2024-03-10,Brakes,850,General check,361
+436,2024-03-11,Brakes,620,General check,514
+437,2024-03-12,Oil Change,531,Routine service,397
+438,2024-03-13,Inspection,443,Replaced parts,231
+439,2024-03-14,Brakes,701,Routine service,141
+440,2024-03-15,Engine,1533,Repair done,233
+441,2024-03-16,Tires,993,Repair done,157
+442,2024-03-17,Brakes,809,Repair done,338
+443,2024-03-18,Inspection,367,Replaced parts,212
+444,2024-03-19,Inspection,577,Replaced parts,208
+445,2024-03-20,Brakes,852,Repair done,139
+446,2024-03-21,Tires,1035,General check,162
+447,2024-03-22,Oil Change,685,Replaced parts,122
+448,2024-03-23,Brakes,574,General check,31
+449,2024-03-24,Engine,1984,General check,422
+450,2024-03-25,Engine,1763,Replaced parts,281
+451,2024-03-26,Tires,754,Replaced parts,135
+452,2024-03-27,Oil Change,536,Scheduled maintenance,237
+453,2024-03-28,Tires,818,General check,27
+454,2024-03-29,Oil Change,644,Scheduled maintenance,138
+455,2024-03-30,Inspection,540,Replaced parts,383
+456,2024-03-31,Engine,1503,Replaced parts,486
+457,2024-04-01,Tires,798,Routine service,232
+458,2024-04-02,Engine,1782,General check,16
+459,2024-04-03,Engine,1227,Replaced parts,208
+460,2024-04-04,Oil Change,490,Scheduled maintenance,450
+461,2024-04-05,Engine,1704,Repair done,333
+462,2024-04-06,Tires,918,Routine service,415
+463,2024-04-07,Inspection,494,Repair done,321
+464,2024-04-08,Inspection,592,Scheduled maintenance,40
+465,2024-04-09,Oil Change,631,Routine service,468
+466,2024-04-10,Tires,965,Routine service,406
+467,2024-04-11,Inspection,498,Replaced parts,51
+468,2024-04-12,Brakes,725,General check,408
+469,2024-04-13,Brakes,736,Repair done,171
+470,2024-04-14,Brakes,813,Scheduled maintenance,56
+471,2024-04-15,Tires,937,Routine service,463
+472,2024-04-16,Inspection,357,Scheduled maintenance,185
+473,2024-04-17,Inspection,369,Repair done,403
+474,2024-04-18,Brakes,730,Replaced parts,26
+475,2024-04-19,Engine,1604,Repair done,207
+476,2024-04-20,Oil Change,528,Replaced parts,332
+477,2024-04-21,Oil Change,446,Repair done,117
+478,2024-04-22,Brakes,543,Scheduled maintenance,394
+479,2024-04-23,Inspection,381,Scheduled maintenance,388
+480,2024-04-24,Engine,1044,General check,175
+481,2024-04-25,Inspection,376,Replaced parts,167
+482,2024-04-26,Tires,1093,Repair done,53
+483,2024-04-27,Brakes,658,General check,457
+484,2024-04-28,Tires,760,Replaced parts,135
+485,2024-04-29,Oil Change,529,Repair done,13
+486,2024-04-30,Engine,1875,Scheduled maintenance,511
+487,2024-05-01,Oil Change,652,Replaced parts,244
+488,2024-05-02,Inspection,543,Repair done,465
+489,2024-05-03,Engine,1081,Replaced parts,7
+490,2024-05-04,Inspection,442,Routine service,213
+491,2024-05-05,Tires,775,General check,57
+492,2024-05-06,Oil Change,474,Scheduled maintenance,34
+493,2024-05-07,Inspection,452,Routine service,340
+494,2024-05-08,Oil Change,455,Replaced parts,427
+495,2024-05-09,Tires,1044,Scheduled maintenance,292
+496,2024-05-10,Inspection,593,Repair done,182
+497,2024-05-11,Inspection,484,Routine service,37
+498,2024-05-12,Brakes,665,Repair done,378
+499,2024-05-13,Oil Change,618,General check,67
+500,2024-05-14,Engine,1137,General check,125
+501,2024-05-15,Brakes,769,Scheduled maintenance,424
+502,2024-05-16,Tires,1056,Scheduled maintenance,215
+503,2024-05-17,Oil Change,455,Repair done,90
+504,2024-05-18,Inspection,447,Scheduled maintenance,438
+505,2024-05-19,Brakes,632,Replaced parts,363
+506,2024-05-20,Inspection,588,Scheduled maintenance,509
+507,2024-05-21,Engine,1504,Scheduled maintenance,185
+508,2024-05-22,Tires,1062,Replaced parts,298
+509,2024-05-23,Oil Change,460,Repair done,25
+510,2024-05-24,Oil Change,506,Repair done,425
+511,2024-05-25,Oil Change,570,Scheduled maintenance,359
+512,2024-05-26,Tires,705,General check,207
+513,2024-05-27,Brakes,534,General check,316
+514,2024-05-28,Inspection,581,Routine service,332
+515,2024-05-29,Oil Change,570,Repair done,350
+516,2024-05-30,Inspection,314,Replaced parts,180
+517,2024-05-31,Brakes,673,Repair done,491
+518,2024-06-01,Oil Change,469,Replaced parts,494
+519,2024-06-02,Engine,1913,Repair done,344
+520,2024-06-03,Engine,1950,Scheduled maintenance,58
+>>>>>>> 8bfce9e51396a631d875e483467e80cae512bed0

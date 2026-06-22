@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TripID,DepartureLocation,Destination,DepartureTime,Status,DriverID,VehicleID
 21,Nazareth,Jerusalem,2024-01-21 06:00:00,true,282,251
 22,Ashdod,Haifa,2024-01-21 09:00:00,true,90,433
@@ -499,3 +500,506 @@ TripID,DepartureLocation,Destination,DepartureTime,Status,DriverID,VehicleID
 518,Beer Sheva,Nazareth,2024-03-23 09:00:00,false,81,461
 519,Herzliya,Ashdod,2024-03-23 12:00:00,true,196,53
 520,Beer Sheva,Holon,2024-03-23 15:00:00,true,75,193
+=======
+TripID,DepartureLocation,Destination,DepartureTime,Status,DriverID,VehicleID
+21,Nazareth,Jerusalem,2024-01-21 06:00:00,true,282,251
+22,Ashdod,Haifa,2024-01-21 09:00:00,true,90,433
+23,Jerusalem,Tel Aviv,2024-01-21 12:00:00,true,224,239
+24,Tiberias,Safed,2024-01-21 15:00:00,true,204,430
+25,Ashdod,Raanana,2024-01-21 18:00:00,false,7,164
+26,Eilat,Netanya,2024-01-21 21:00:00,false,285,160
+27,Ashdod,Herzliya,2024-01-22 00:00:00,false,105,95
+28,Holon,Jerusalem,2024-01-22 03:00:00,false,353,271
+29,Ashkelon,Tel Aviv,2024-01-22 06:00:00,false,128,388
+30,Tel Aviv,Tiberias,2024-01-22 09:00:00,false,371,197
+31,Eilat,Jerusalem,2024-01-22 12:00:00,true,234,297
+32,Tel Aviv,Bat Yam,2024-01-22 15:00:00,true,104,390
+33,Beer Sheva,Raanana,2024-01-22 18:00:00,false,167,380
+34,Netanya,Nazareth,2024-01-22 21:00:00,false,74,176
+35,Tiberias,Ashkelon,2024-01-23 00:00:00,true,168,474
+36,Holon,Beer Sheva,2024-01-23 03:00:00,true,333,58
+37,Ashdod,Bat Yam,2024-01-23 06:00:00,true,324,411
+38,Beer Sheva,Jerusalem,2024-01-23 09:00:00,true,323,218
+39,Nazareth,Raanana,2024-01-23 12:00:00,false,470,147
+40,Beer Sheva,Haifa,2024-01-23 15:00:00,true,270,439
+41,Bat Yam,Tiberias,2024-01-23 18:00:00,false,371,225
+42,Haifa,Tiberias,2024-01-23 21:00:00,false,94,49
+43,Herzliya,Jerusalem,2024-01-24 00:00:00,true,164,433
+44,Safed,Jerusalem,2024-01-24 03:00:00,false,391,480
+45,Tiberias,Beer Sheva,2024-01-24 06:00:00,true,118,274
+46,Ashkelon,Safed,2024-01-24 09:00:00,false,115,301
+47,Holon,Haifa,2024-01-24 12:00:00,false,4,270
+48,Tiberias,Herzliya,2024-01-24 15:00:00,true,520,109
+49,Herzliya,Safed,2024-01-24 18:00:00,false,520,204
+50,Haifa,Netanya,2024-01-24 21:00:00,true,1,332
+51,Raanana,Tel Aviv,2024-01-25 00:00:00,true,372,315
+52,Ashdod,Tel Aviv,2024-01-25 03:00:00,true,81,88
+53,Eilat,Holon,2024-01-25 06:00:00,true,129,132
+54,Nazareth,Raanana,2024-01-25 09:00:00,true,272,434
+55,Ashdod,Tiberias,2024-01-25 12:00:00,true,320,409
+56,Nazareth,Eilat,2024-01-25 15:00:00,false,449,463
+57,Tel Aviv,Beer Sheva,2024-01-25 18:00:00,true,66,347
+58,Jerusalem,Safed,2024-01-25 21:00:00,true,226,8
+59,Tel Aviv,Ashkelon,2024-01-26 00:00:00,true,235,70
+60,Bat Yam,Tel Aviv,2024-01-26 03:00:00,false,73,244
+61,Beer Sheva,Eilat,2024-01-26 06:00:00,false,220,136
+62,Eilat,Tiberias,2024-01-26 09:00:00,false,249,485
+63,Ashkelon,Netanya,2024-01-26 12:00:00,true,97,100
+64,Nazareth,Holon,2024-01-26 15:00:00,false,434,421
+65,Raanana,Bat Yam,2024-01-26 18:00:00,true,101,63
+66,Holon,Ashkelon,2024-01-26 21:00:00,false,112,255
+67,Ashdod,Nazareth,2024-01-27 00:00:00,false,144,433
+68,Haifa,Ashdod,2024-01-27 03:00:00,false,256,78
+69,Raanana,Herzliya,2024-01-27 06:00:00,true,52,16
+70,Tel Aviv,Herzliya,2024-01-27 09:00:00,true,171,417
+71,Raanana,Holon,2024-01-27 12:00:00,true,411,61
+72,Haifa,Holon,2024-01-27 15:00:00,true,400,272
+73,Bat Yam,Ashkelon,2024-01-27 18:00:00,false,293,434
+74,Eilat,Ashkelon,2024-01-27 21:00:00,false,159,195
+75,Beer Sheva,Nazareth,2024-01-28 00:00:00,true,63,322
+76,Jerusalem,Tel Aviv,2024-01-28 03:00:00,false,515,162
+77,Jerusalem,Tiberias,2024-01-28 06:00:00,true,191,71
+78,Safed,Jerusalem,2024-01-28 09:00:00,true,414,123
+79,Bat Yam,Tiberias,2024-01-28 12:00:00,true,41,84
+80,Holon,Eilat,2024-01-28 15:00:00,false,268,210
+81,Nazareth,Ashkelon,2024-01-28 18:00:00,false,245,272
+82,Holon,Haifa,2024-01-28 21:00:00,false,469,324
+83,Bat Yam,Ashkelon,2024-01-29 00:00:00,true,10,470
+84,Safed,Tiberias,2024-01-29 03:00:00,true,76,219
+85,Tiberias,Beer Sheva,2024-01-29 06:00:00,true,358,71
+86,Bat Yam,Nazareth,2024-01-29 09:00:00,false,292,162
+87,Raanana,Bat Yam,2024-01-29 12:00:00,false,9,307
+88,Bat Yam,Safed,2024-01-29 15:00:00,true,138,271
+89,Tel Aviv,Haifa,2024-01-29 18:00:00,true,279,289
+90,Safed,Nazareth,2024-01-29 21:00:00,false,209,271
+91,Tiberias,Holon,2024-01-30 00:00:00,false,53,95
+92,Nazareth,Holon,2024-01-30 03:00:00,false,46,4
+93,Netanya,Herzliya,2024-01-30 06:00:00,true,269,166
+94,Eilat,Holon,2024-01-30 09:00:00,false,10,115
+95,Tel Aviv,Ashkelon,2024-01-30 12:00:00,true,37,379
+96,Safed,Raanana,2024-01-30 15:00:00,true,441,131
+97,Jerusalem,Ashdod,2024-01-30 18:00:00,false,41,367
+98,Ashdod,Eilat,2024-01-30 21:00:00,true,106,363
+99,Ashkelon,Raanana,2024-01-31 00:00:00,false,159,243
+100,Herzliya,Haifa,2024-01-31 03:00:00,true,423,26
+101,Haifa,Ashkelon,2024-01-31 06:00:00,false,422,255
+102,Beer Sheva,Haifa,2024-01-31 09:00:00,true,392,40
+103,Herzliya,Holon,2024-01-31 12:00:00,true,205,472
+104,Netanya,Beer Sheva,2024-01-31 15:00:00,true,229,25
+105,Nazareth,Beer Sheva,2024-01-31 18:00:00,false,337,286
+106,Herzliya,Jerusalem,2024-01-31 21:00:00,false,360,410
+107,Nazareth,Bat Yam,2024-02-01 00:00:00,false,29,119
+108,Bat Yam,Beer Sheva,2024-02-01 03:00:00,true,272,40
+109,Tel Aviv,Safed,2024-02-01 06:00:00,false,354,322
+110,Holon,Safed,2024-02-01 09:00:00,true,395,195
+111,Beer Sheva,Tel Aviv,2024-02-01 12:00:00,false,2,202
+112,Netanya,Holon,2024-02-01 15:00:00,true,339,322
+113,Nazareth,Bat Yam,2024-02-01 18:00:00,true,308,520
+114,Beer Sheva,Eilat,2024-02-01 21:00:00,false,335,413
+115,Eilat,Beer Sheva,2024-02-02 00:00:00,true,197,431
+116,Nazareth,Holon,2024-02-02 03:00:00,true,309,416
+117,Tiberias,Bat Yam,2024-02-02 06:00:00,true,312,294
+118,Ashdod,Holon,2024-02-02 09:00:00,false,477,453
+119,Raanana,Eilat,2024-02-02 12:00:00,true,485,174
+120,Nazareth,Jerusalem,2024-02-02 15:00:00,false,344,96
+121,Herzliya,Ashkelon,2024-02-02 18:00:00,true,318,231
+122,Ashkelon,Nazareth,2024-02-02 21:00:00,true,26,48
+123,Ashdod,Raanana,2024-02-03 00:00:00,true,467,425
+124,Bat Yam,Safed,2024-02-03 03:00:00,true,394,507
+125,Holon,Nazareth,2024-02-03 06:00:00,true,6,110
+126,Ashkelon,Netanya,2024-02-03 09:00:00,true,181,476
+127,Jerusalem,Tiberias,2024-02-03 12:00:00,true,125,468
+128,Haifa,Herzliya,2024-02-03 15:00:00,false,325,454
+129,Safed,Bat Yam,2024-02-03 18:00:00,false,457,163
+130,Eilat,Bat Yam,2024-02-03 21:00:00,false,461,266
+131,Ashkelon,Nazareth,2024-02-04 00:00:00,false,497,245
+132,Beer Sheva,Raanana,2024-02-04 03:00:00,true,293,241
+133,Beer Sheva,Netanya,2024-02-04 06:00:00,false,83,142
+134,Haifa,Beer Sheva,2024-02-04 09:00:00,false,157,220
+135,Tel Aviv,Holon,2024-02-04 12:00:00,false,339,478
+136,Holon,Tel Aviv,2024-02-04 15:00:00,true,431,399
+137,Bat Yam,Ashkelon,2024-02-04 18:00:00,true,390,489
+138,Jerusalem,Netanya,2024-02-04 21:00:00,false,400,430
+139,Tiberias,Ashkelon,2024-02-05 00:00:00,true,500,225
+140,Beer Sheva,Holon,2024-02-05 03:00:00,false,30,399
+141,Netanya,Eilat,2024-02-05 06:00:00,false,170,479
+142,Bat Yam,Haifa,2024-02-05 09:00:00,true,404,28
+143,Tel Aviv,Eilat,2024-02-05 12:00:00,false,139,473
+144,Haifa,Tel Aviv,2024-02-05 15:00:00,false,389,336
+145,Ashdod,Raanana,2024-02-05 18:00:00,false,346,389
+146,Beer Sheva,Herzliya,2024-02-05 21:00:00,false,259,84
+147,Raanana,Tel Aviv,2024-02-06 00:00:00,true,359,230
+148,Nazareth,Jerusalem,2024-02-06 03:00:00,true,32,254
+149,Ashdod,Bat Yam,2024-02-06 06:00:00,true,157,245
+150,Haifa,Raanana,2024-02-06 09:00:00,true,224,477
+151,Eilat,Beer Sheva,2024-02-06 12:00:00,false,172,118
+152,Ashkelon,Bat Yam,2024-02-06 15:00:00,true,319,111
+153,Safed,Tel Aviv,2024-02-06 18:00:00,false,385,407
+154,Eilat,Nazareth,2024-02-06 21:00:00,true,249,105
+155,Eilat,Herzliya,2024-02-07 00:00:00,false,124,43
+156,Netanya,Tiberias,2024-02-07 03:00:00,false,380,71
+157,Tiberias,Eilat,2024-02-07 06:00:00,false,13,431
+158,Herzliya,Holon,2024-02-07 09:00:00,true,444,371
+159,Nazareth,Bat Yam,2024-02-07 12:00:00,false,157,446
+160,Haifa,Ashkelon,2024-02-07 15:00:00,false,496,477
+161,Holon,Bat Yam,2024-02-07 18:00:00,false,331,252
+162,Herzliya,Jerusalem,2024-02-07 21:00:00,false,462,250
+163,Ashkelon,Holon,2024-02-08 00:00:00,false,345,30
+164,Raanana,Bat Yam,2024-02-08 03:00:00,false,187,500
+165,Ashdod,Netanya,2024-02-08 06:00:00,false,349,287
+166,Bat Yam,Tiberias,2024-02-08 09:00:00,false,11,196
+167,Tel Aviv,Beer Sheva,2024-02-08 12:00:00,false,501,247
+168,Eilat,Holon,2024-02-08 15:00:00,false,459,18
+169,Tel Aviv,Ashdod,2024-02-08 18:00:00,true,415,250
+170,Beer Sheva,Eilat,2024-02-08 21:00:00,false,485,353
+171,Holon,Ashkelon,2024-02-09 00:00:00,false,361,465
+172,Beer Sheva,Ashdod,2024-02-09 03:00:00,false,237,124
+173,Eilat,Nazareth,2024-02-09 06:00:00,false,123,190
+174,Ashdod,Nazareth,2024-02-09 09:00:00,false,284,290
+175,Tel Aviv,Bat Yam,2024-02-09 12:00:00,true,304,233
+176,Netanya,Haifa,2024-02-09 15:00:00,false,15,130
+177,Beer Sheva,Tel Aviv,2024-02-09 18:00:00,true,300,130
+178,Nazareth,Bat Yam,2024-02-09 21:00:00,false,106,13
+179,Safed,Beer Sheva,2024-02-10 00:00:00,false,491,452
+180,Netanya,Haifa,2024-02-10 03:00:00,true,259,490
+181,Tel Aviv,Bat Yam,2024-02-10 06:00:00,true,411,504
+182,Tel Aviv,Safed,2024-02-10 09:00:00,true,156,153
+183,Ashkelon,Tiberias,2024-02-10 12:00:00,false,88,255
+184,Tel Aviv,Tiberias,2024-02-10 15:00:00,false,232,390
+185,Raanana,Holon,2024-02-10 18:00:00,false,440,313
+186,Safed,Tiberias,2024-02-10 21:00:00,true,102,213
+187,Nazareth,Beer Sheva,2024-02-11 00:00:00,false,84,161
+188,Ashdod,Haifa,2024-02-11 03:00:00,true,161,3
+189,Holon,Raanana,2024-02-11 06:00:00,false,299,34
+190,Ashdod,Beer Sheva,2024-02-11 09:00:00,false,465,73
+191,Nazareth,Beer Sheva,2024-02-11 12:00:00,false,203,436
+192,Tel Aviv,Tiberias,2024-02-11 15:00:00,true,153,273
+193,Herzliya,Haifa,2024-02-11 18:00:00,true,62,170
+194,Ashkelon,Beer Sheva,2024-02-11 21:00:00,false,450,128
+195,Raanana,Ashkelon,2024-02-12 00:00:00,false,413,279
+196,Tiberias,Raanana,2024-02-12 03:00:00,false,449,83
+197,Safed,Tel Aviv,2024-02-12 06:00:00,false,331,257
+198,Jerusalem,Haifa,2024-02-12 09:00:00,true,22,276
+199,Safed,Tel Aviv,2024-02-12 12:00:00,true,482,453
+200,Bat Yam,Beer Sheva,2024-02-12 15:00:00,true,447,504
+201,Tel Aviv,Raanana,2024-02-12 18:00:00,false,419,342
+202,Netanya,Eilat,2024-02-12 21:00:00,true,165,338
+203,Holon,Ashkelon,2024-02-13 00:00:00,false,296,411
+204,Herzliya,Ashkelon,2024-02-13 03:00:00,true,466,91
+205,Netanya,Beer Sheva,2024-02-13 06:00:00,false,119,414
+206,Herzliya,Raanana,2024-02-13 09:00:00,true,474,424
+207,Jerusalem,Beer Sheva,2024-02-13 12:00:00,false,511,453
+208,Ashkelon,Tel Aviv,2024-02-13 15:00:00,true,274,135
+209,Bat Yam,Beer Sheva,2024-02-13 18:00:00,false,497,125
+210,Jerusalem,Eilat,2024-02-13 21:00:00,true,163,319
+211,Tiberias,Tel Aviv,2024-02-14 00:00:00,false,96,231
+212,Herzliya,Jerusalem,2024-02-14 03:00:00,false,121,158
+213,Raanana,Ashkelon,2024-02-14 06:00:00,false,280,426
+214,Herzliya,Holon,2024-02-14 09:00:00,false,250,468
+215,Tiberias,Haifa,2024-02-14 12:00:00,false,196,140
+216,Herzliya,Jerusalem,2024-02-14 15:00:00,false,425,349
+217,Bat Yam,Ashkelon,2024-02-14 18:00:00,false,3,290
+218,Eilat,Beer Sheva,2024-02-14 21:00:00,false,153,458
+219,Tiberias,Holon,2024-02-15 00:00:00,false,341,387
+220,Raanana,Ashdod,2024-02-15 03:00:00,true,245,393
+221,Ashdod,Bat Yam,2024-02-15 06:00:00,false,45,326
+222,Eilat,Holon,2024-02-15 09:00:00,false,396,156
+223,Raanana,Tel Aviv,2024-02-15 12:00:00,true,515,340
+224,Herzliya,Jerusalem,2024-02-15 15:00:00,false,103,468
+225,Jerusalem,Ashkelon,2024-02-15 18:00:00,true,420,159
+226,Tel Aviv,Raanana,2024-02-15 21:00:00,false,347,408
+227,Nazareth,Jerusalem,2024-02-16 00:00:00,false,390,325
+228,Nazareth,Ashkelon,2024-02-16 03:00:00,false,37,71
+229,Ashdod,Eilat,2024-02-16 06:00:00,false,233,93
+230,Holon,Jerusalem,2024-02-16 09:00:00,true,455,171
+231,Eilat,Beer Sheva,2024-02-16 12:00:00,true,48,333
+232,Ashkelon,Tel Aviv,2024-02-16 15:00:00,false,368,384
+233,Holon,Haifa,2024-02-16 18:00:00,true,422,185
+234,Haifa,Nazareth,2024-02-16 21:00:00,true,392,247
+235,Raanana,Safed,2024-02-17 00:00:00,true,238,473
+236,Nazareth,Ashdod,2024-02-17 03:00:00,false,262,10
+237,Bat Yam,Ashkelon,2024-02-17 06:00:00,false,295,162
+238,Tel Aviv,Raanana,2024-02-17 09:00:00,false,307,435
+239,Eilat,Beer Sheva,2024-02-17 12:00:00,false,310,204
+240,Holon,Bat Yam,2024-02-17 15:00:00,false,110,243
+241,Holon,Safed,2024-02-17 18:00:00,false,303,303
+242,Jerusalem,Bat Yam,2024-02-17 21:00:00,false,282,9
+243,Safed,Bat Yam,2024-02-18 00:00:00,true,509,294
+244,Ashkelon,Herzliya,2024-02-18 03:00:00,true,361,225
+245,Nazareth,Beer Sheva,2024-02-18 06:00:00,false,141,100
+246,Bat Yam,Safed,2024-02-18 09:00:00,true,317,452
+247,Jerusalem,Safed,2024-02-18 12:00:00,false,135,93
+248,Bat Yam,Beer Sheva,2024-02-18 15:00:00,false,426,180
+249,Ashdod,Haifa,2024-02-18 18:00:00,false,514,280
+250,Herzliya,Haifa,2024-02-18 21:00:00,false,494,303
+251,Eilat,Bat Yam,2024-02-19 00:00:00,false,118,480
+252,Tel Aviv,Nazareth,2024-02-19 03:00:00,true,407,375
+253,Tel Aviv,Herzliya,2024-02-19 06:00:00,false,15,271
+254,Tiberias,Jerusalem,2024-02-19 09:00:00,false,378,269
+255,Safed,Netanya,2024-02-19 12:00:00,false,111,240
+256,Raanana,Tel Aviv,2024-02-19 15:00:00,false,227,65
+257,Nazareth,Bat Yam,2024-02-19 18:00:00,false,310,419
+258,Tel Aviv,Nazareth,2024-02-19 21:00:00,true,39,312
+259,Raanana,Jerusalem,2024-02-20 00:00:00,true,241,139
+260,Holon,Raanana,2024-02-20 03:00:00,false,430,159
+261,Bat Yam,Netanya,2024-02-20 06:00:00,true,502,418
+262,Beer Sheva,Tel Aviv,2024-02-20 09:00:00,false,223,455
+263,Raanana,Nazareth,2024-02-20 12:00:00,false,102,377
+264,Tiberias,Eilat,2024-02-20 15:00:00,false,63,408
+265,Beer Sheva,Nazareth,2024-02-20 18:00:00,true,466,94
+266,Nazareth,Beer Sheva,2024-02-20 21:00:00,true,52,342
+267,Ashdod,Haifa,2024-02-21 00:00:00,true,71,213
+268,Safed,Nazareth,2024-02-21 03:00:00,true,337,152
+269,Ashkelon,Tiberias,2024-02-21 06:00:00,true,284,149
+270,Haifa,Tiberias,2024-02-21 09:00:00,false,179,113
+271,Nazareth,Bat Yam,2024-02-21 12:00:00,true,135,16
+272,Netanya,Herzliya,2024-02-21 15:00:00,true,332,17
+273,Haifa,Ashdod,2024-02-21 18:00:00,true,130,432
+274,Tiberias,Jerusalem,2024-02-21 21:00:00,true,488,460
+275,Ashkelon,Ashdod,2024-02-22 00:00:00,true,463,516
+276,Ashdod,Safed,2024-02-22 03:00:00,true,309,470
+277,Nazareth,Tel Aviv,2024-02-22 06:00:00,true,491,412
+278,Holon,Eilat,2024-02-22 09:00:00,true,503,455
+279,Tel Aviv,Haifa,2024-02-22 12:00:00,false,152,68
+280,Haifa,Ashdod,2024-02-22 15:00:00,false,391,302
+281,Raanana,Tiberias,2024-02-22 18:00:00,false,102,118
+282,Herzliya,Safed,2024-02-22 21:00:00,true,441,463
+283,Bat Yam,Nazareth,2024-02-23 00:00:00,false,348,465
+284,Holon,Netanya,2024-02-23 03:00:00,true,321,438
+285,Netanya,Eilat,2024-02-23 06:00:00,false,384,157
+286,Nazareth,Raanana,2024-02-23 09:00:00,true,94,88
+287,Tel Aviv,Holon,2024-02-23 12:00:00,true,382,134
+288,Tiberias,Tel Aviv,2024-02-23 15:00:00,false,126,421
+289,Netanya,Bat Yam,2024-02-23 18:00:00,false,53,295
+290,Safed,Beer Sheva,2024-02-23 21:00:00,false,107,520
+291,Ashdod,Haifa,2024-02-24 00:00:00,false,230,111
+292,Netanya,Bat Yam,2024-02-24 03:00:00,false,118,286
+293,Safed,Nazareth,2024-02-24 06:00:00,false,27,274
+294,Jerusalem,Nazareth,2024-02-24 09:00:00,false,317,348
+295,Netanya,Tel Aviv,2024-02-24 12:00:00,true,147,411
+296,Tel Aviv,Nazareth,2024-02-24 15:00:00,true,94,221
+297,Holon,Netanya,2024-02-24 18:00:00,false,350,162
+298,Netanya,Beer Sheva,2024-02-24 21:00:00,false,87,54
+299,Haifa,Nazareth,2024-02-25 00:00:00,true,84,279
+300,Raanana,Eilat,2024-02-25 03:00:00,false,498,453
+301,Holon,Beer Sheva,2024-02-25 06:00:00,true,117,354
+302,Holon,Jerusalem,2024-02-25 09:00:00,false,499,316
+303,Jerusalem,Beer Sheva,2024-02-25 12:00:00,false,57,8
+304,Ashdod,Beer Sheva,2024-02-25 15:00:00,true,141,262
+305,Beer Sheva,Netanya,2024-02-25 18:00:00,true,8,510
+306,Eilat,Netanya,2024-02-25 21:00:00,true,133,390
+307,Tiberias,Ashkelon,2024-02-26 00:00:00,true,513,363
+308,Tel Aviv,Holon,2024-02-26 03:00:00,true,447,20
+309,Raanana,Jerusalem,2024-02-26 06:00:00,false,440,415
+310,Eilat,Safed,2024-02-26 09:00:00,false,297,118
+311,Holon,Tel Aviv,2024-02-26 12:00:00,false,176,472
+312,Herzliya,Eilat,2024-02-26 15:00:00,false,91,448
+313,Herzliya,Jerusalem,2024-02-26 18:00:00,true,447,411
+314,Tiberias,Jerusalem,2024-02-26 21:00:00,false,318,348
+315,Ashdod,Netanya,2024-02-27 00:00:00,true,79,117
+316,Tiberias,Raanana,2024-02-27 03:00:00,true,358,360
+317,Eilat,Bat Yam,2024-02-27 06:00:00,true,242,106
+318,Haifa,Ashdod,2024-02-27 09:00:00,true,178,157
+319,Ashkelon,Herzliya,2024-02-27 12:00:00,true,182,506
+320,Raanana,Herzliya,2024-02-27 15:00:00,false,331,324
+321,Haifa,Raanana,2024-02-27 18:00:00,true,481,453
+322,Nazareth,Ashdod,2024-02-27 21:00:00,false,58,361
+323,Tiberias,Jerusalem,2024-02-28 00:00:00,false,473,463
+324,Jerusalem,Tel Aviv,2024-02-28 03:00:00,false,294,79
+325,Nazareth,Bat Yam,2024-02-28 06:00:00,true,520,394
+326,Raanana,Safed,2024-02-28 09:00:00,true,461,193
+327,Netanya,Safed,2024-02-28 12:00:00,false,514,155
+328,Jerusalem,Raanana,2024-02-28 15:00:00,true,352,87
+329,Tiberias,Eilat,2024-02-28 18:00:00,true,41,254
+330,Eilat,Holon,2024-02-28 21:00:00,false,163,373
+331,Netanya,Beer Sheva,2024-02-29 00:00:00,false,419,347
+332,Nazareth,Safed,2024-02-29 03:00:00,true,343,68
+333,Netanya,Jerusalem,2024-02-29 06:00:00,false,291,259
+334,Eilat,Bat Yam,2024-02-29 09:00:00,true,342,84
+335,Safed,Eilat,2024-02-29 12:00:00,true,359,318
+336,Nazareth,Ashkelon,2024-02-29 15:00:00,false,133,87
+337,Beer Sheva,Tiberias,2024-02-29 18:00:00,false,337,131
+338,Nazareth,Ashkelon,2024-02-29 21:00:00,true,434,371
+339,Jerusalem,Netanya,2024-03-01 00:00:00,false,185,220
+340,Netanya,Herzliya,2024-03-01 03:00:00,false,197,232
+341,Haifa,Nazareth,2024-03-01 06:00:00,true,303,104
+342,Tiberias,Herzliya,2024-03-01 09:00:00,true,345,135
+343,Safed,Netanya,2024-03-01 12:00:00,true,167,186
+344,Herzliya,Eilat,2024-03-01 15:00:00,true,449,45
+345,Holon,Ashdod,2024-03-01 18:00:00,true,455,292
+346,Ashkelon,Eilat,2024-03-01 21:00:00,false,240,245
+347,Beer Sheva,Herzliya,2024-03-02 00:00:00,false,199,377
+348,Nazareth,Safed,2024-03-02 03:00:00,false,473,289
+349,Ashkelon,Netanya,2024-03-02 06:00:00,false,166,205
+350,Ashkelon,Tiberias,2024-03-02 09:00:00,true,257,54
+351,Nazareth,Raanana,2024-03-02 12:00:00,false,106,128
+352,Beer Sheva,Jerusalem,2024-03-02 15:00:00,true,280,461
+353,Bat Yam,Raanana,2024-03-02 18:00:00,true,448,94
+354,Bat Yam,Nazareth,2024-03-02 21:00:00,false,358,28
+355,Holon,Tel Aviv,2024-03-03 00:00:00,false,515,383
+356,Ashdod,Holon,2024-03-03 03:00:00,true,384,230
+357,Jerusalem,Netanya,2024-03-03 06:00:00,true,344,150
+358,Haifa,Tel Aviv,2024-03-03 09:00:00,false,484,143
+359,Ashkelon,Eilat,2024-03-03 12:00:00,false,460,6
+360,Bat Yam,Jerusalem,2024-03-03 15:00:00,true,263,221
+361,Herzliya,Haifa,2024-03-03 18:00:00,false,114,296
+362,Ashdod,Beer Sheva,2024-03-03 21:00:00,true,49,245
+363,Holon,Eilat,2024-03-04 00:00:00,false,65,114
+364,Herzliya,Holon,2024-03-04 03:00:00,true,248,148
+365,Beer Sheva,Holon,2024-03-04 06:00:00,true,362,247
+366,Safed,Netanya,2024-03-04 09:00:00,true,88,370
+367,Tel Aviv,Tiberias,2024-03-04 12:00:00,true,400,482
+368,Jerusalem,Eilat,2024-03-04 15:00:00,false,383,260
+369,Eilat,Tel Aviv,2024-03-04 18:00:00,false,70,354
+370,Ashdod,Ashkelon,2024-03-04 21:00:00,true,341,137
+371,Jerusalem,Netanya,2024-03-05 00:00:00,false,180,476
+372,Eilat,Holon,2024-03-05 03:00:00,true,139,65
+373,Eilat,Herzliya,2024-03-05 06:00:00,false,38,301
+374,Ashdod,Tel Aviv,2024-03-05 09:00:00,true,43,324
+375,Bat Yam,Beer Sheva,2024-03-05 12:00:00,false,485,260
+376,Jerusalem,Herzliya,2024-03-05 15:00:00,true,293,366
+377,Herzliya,Ashkelon,2024-03-05 18:00:00,true,340,280
+378,Tel Aviv,Herzliya,2024-03-05 21:00:00,false,448,410
+379,Eilat,Holon,2024-03-06 00:00:00,false,348,192
+380,Raanana,Ashkelon,2024-03-06 03:00:00,false,377,274
+381,Ashkelon,Jerusalem,2024-03-06 06:00:00,false,81,441
+382,Safed,Bat Yam,2024-03-06 09:00:00,true,301,329
+383,Tel Aviv,Haifa,2024-03-06 12:00:00,false,303,314
+384,Raanana,Safed,2024-03-06 15:00:00,false,171,455
+385,Netanya,Raanana,2024-03-06 18:00:00,true,362,446
+386,Beer Sheva,Eilat,2024-03-06 21:00:00,true,77,416
+387,Netanya,Tiberias,2024-03-07 00:00:00,true,32,147
+388,Herzliya,Tiberias,2024-03-07 03:00:00,false,36,130
+389,Tel Aviv,Beer Sheva,2024-03-07 06:00:00,false,371,393
+390,Safed,Tel Aviv,2024-03-07 09:00:00,true,461,380
+391,Netanya,Raanana,2024-03-07 12:00:00,true,141,376
+392,Holon,Ashdod,2024-03-07 15:00:00,false,256,117
+393,Jerusalem,Ashkelon,2024-03-07 18:00:00,true,512,397
+394,Bat Yam,Raanana,2024-03-07 21:00:00,true,269,267
+395,Eilat,Holon,2024-03-08 00:00:00,true,293,503
+396,Ashdod,Jerusalem,2024-03-08 03:00:00,true,76,463
+397,Haifa,Ashkelon,2024-03-08 06:00:00,false,90,328
+398,Nazareth,Netanya,2024-03-08 09:00:00,true,298,308
+399,Herzliya,Haifa,2024-03-08 12:00:00,true,371,230
+400,Tel Aviv,Beer Sheva,2024-03-08 15:00:00,true,243,506
+401,Jerusalem,Netanya,2024-03-08 18:00:00,false,479,133
+402,Safed,Jerusalem,2024-03-08 21:00:00,true,317,408
+403,Eilat,Ashkelon,2024-03-09 00:00:00,false,421,420
+404,Herzliya,Tiberias,2024-03-09 03:00:00,true,129,325
+405,Nazareth,Jerusalem,2024-03-09 06:00:00,false,478,353
+406,Haifa,Bat Yam,2024-03-09 09:00:00,true,133,444
+407,Tiberias,Bat Yam,2024-03-09 12:00:00,true,128,157
+408,Beer Sheva,Haifa,2024-03-09 15:00:00,true,331,231
+409,Netanya,Tiberias,2024-03-09 18:00:00,false,81,257
+410,Ashdod,Eilat,2024-03-09 21:00:00,false,129,311
+411,Safed,Raanana,2024-03-10 00:00:00,true,515,173
+412,Safed,Tiberias,2024-03-10 03:00:00,true,176,346
+413,Herzliya,Tiberias,2024-03-10 06:00:00,true,30,84
+414,Jerusalem,Eilat,2024-03-10 09:00:00,false,216,427
+415,Safed,Eilat,2024-03-10 12:00:00,true,510,297
+416,Nazareth,Ashdod,2024-03-10 15:00:00,false,251,416
+417,Beer Sheva,Raanana,2024-03-10 18:00:00,true,62,162
+418,Raanana,Netanya,2024-03-10 21:00:00,false,476,209
+419,Netanya,Safed,2024-03-11 00:00:00,true,321,327
+420,Eilat,Bat Yam,2024-03-11 03:00:00,false,409,134
+421,Ashkelon,Ashdod,2024-03-11 06:00:00,true,327,248
+422,Raanana,Jerusalem,2024-03-11 09:00:00,false,461,254
+423,Haifa,Jerusalem,2024-03-11 12:00:00,true,298,394
+424,Herzliya,Tiberias,2024-03-11 15:00:00,false,255,164
+425,Herzliya,Ashdod,2024-03-11 18:00:00,false,195,164
+426,Raanana,Tiberias,2024-03-11 21:00:00,false,511,316
+427,Raanana,Tel Aviv,2024-03-12 00:00:00,true,403,518
+428,Raanana,Nazareth,2024-03-12 03:00:00,true,362,50
+429,Jerusalem,Ashdod,2024-03-12 06:00:00,false,482,293
+430,Tiberias,Tel Aviv,2024-03-12 09:00:00,true,442,138
+431,Bat Yam,Beer Sheva,2024-03-12 12:00:00,false,413,375
+432,Jerusalem,Holon,2024-03-12 15:00:00,true,200,372
+433,Tiberias,Beer Sheva,2024-03-12 18:00:00,true,396,517
+434,Raanana,Herzliya,2024-03-12 21:00:00,false,122,132
+435,Tel Aviv,Holon,2024-03-13 00:00:00,false,348,375
+436,Ashkelon,Haifa,2024-03-13 03:00:00,true,412,513
+437,Jerusalem,Tel Aviv,2024-03-13 06:00:00,true,141,342
+438,Ashkelon,Holon,2024-03-13 09:00:00,false,153,144
+439,Netanya,Safed,2024-03-13 12:00:00,false,167,403
+440,Safed,Ashkelon,2024-03-13 15:00:00,false,345,520
+441,Herzliya,Raanana,2024-03-13 18:00:00,false,307,487
+442,Herzliya,Tel Aviv,2024-03-13 21:00:00,false,340,113
+443,Holon,Safed,2024-03-14 00:00:00,false,28,486
+444,Beer Sheva,Eilat,2024-03-14 03:00:00,true,53,492
+445,Haifa,Tiberias,2024-03-14 06:00:00,false,152,249
+446,Jerusalem,Safed,2024-03-14 09:00:00,true,196,20
+447,Raanana,Ashdod,2024-03-14 12:00:00,false,156,423
+448,Eilat,Nazareth,2024-03-14 15:00:00,false,514,483
+449,Herzliya,Bat Yam,2024-03-14 18:00:00,true,142,213
+450,Tiberias,Ashdod,2024-03-14 21:00:00,false,386,322
+451,Haifa,Raanana,2024-03-15 00:00:00,false,363,271
+452,Safed,Holon,2024-03-15 03:00:00,true,253,286
+453,Tiberias,Beer Sheva,2024-03-15 06:00:00,true,305,296
+454,Eilat,Nazareth,2024-03-15 09:00:00,false,325,492
+455,Netanya,Tiberias,2024-03-15 12:00:00,false,295,125
+456,Safed,Eilat,2024-03-15 15:00:00,false,405,354
+457,Ashkelon,Herzliya,2024-03-15 18:00:00,true,298,44
+458,Beer Sheva,Ashkelon,2024-03-15 21:00:00,true,355,453
+459,Nazareth,Ashdod,2024-03-16 00:00:00,false,220,207
+460,Herzliya,Raanana,2024-03-16 03:00:00,false,279,141
+461,Tel Aviv,Safed,2024-03-16 06:00:00,true,249,52
+462,Nazareth,Tiberias,2024-03-16 09:00:00,true,239,54
+463,Tel Aviv,Holon,2024-03-16 12:00:00,false,484,103
+464,Nazareth,Herzliya,2024-03-16 15:00:00,true,6,162
+465,Holon,Eilat,2024-03-16 18:00:00,false,489,205
+466,Ashkelon,Beer Sheva,2024-03-16 21:00:00,false,293,61
+467,Bat Yam,Ashkelon,2024-03-17 00:00:00,true,238,39
+468,Bat Yam,Haifa,2024-03-17 03:00:00,false,181,38
+469,Herzliya,Netanya,2024-03-17 06:00:00,false,191,297
+470,Bat Yam,Tel Aviv,2024-03-17 09:00:00,true,306,110
+471,Bat Yam,Ashdod,2024-03-17 12:00:00,false,466,506
+472,Bat Yam,Haifa,2024-03-17 15:00:00,false,280,198
+473,Ashkelon,Jerusalem,2024-03-17 18:00:00,false,167,470
+474,Nazareth,Ashdod,2024-03-17 21:00:00,true,15,346
+475,Ashkelon,Beer Sheva,2024-03-18 00:00:00,true,180,416
+476,Herzliya,Netanya,2024-03-18 03:00:00,false,89,411
+477,Nazareth,Jerusalem,2024-03-18 06:00:00,true,144,489
+478,Netanya,Nazareth,2024-03-18 09:00:00,true,268,393
+479,Ashdod,Raanana,2024-03-18 12:00:00,false,338,310
+480,Safed,Ashkelon,2024-03-18 15:00:00,true,268,369
+481,Eilat,Nazareth,2024-03-18 18:00:00,true,122,477
+482,Beer Sheva,Haifa,2024-03-18 21:00:00,false,515,319
+483,Eilat,Jerusalem,2024-03-19 00:00:00,false,377,227
+484,Ashdod,Haifa,2024-03-19 03:00:00,false,157,466
+485,Eilat,Tiberias,2024-03-19 06:00:00,false,426,483
+486,Ashkelon,Raanana,2024-03-19 09:00:00,true,254,84
+487,Tiberias,Holon,2024-03-19 12:00:00,false,80,115
+488,Jerusalem,Bat Yam,2024-03-19 15:00:00,true,154,169
+489,Netanya,Bat Yam,2024-03-19 18:00:00,false,120,211
+490,Eilat,Tiberias,2024-03-19 21:00:00,false,94,457
+491,Ashkelon,Tel Aviv,2024-03-20 00:00:00,false,136,426
+492,Raanana,Safed,2024-03-20 03:00:00,true,474,316
+493,Eilat,Tel Aviv,2024-03-20 06:00:00,false,261,4
+494,Eilat,Nazareth,2024-03-20 09:00:00,true,47,434
+495,Netanya,Ashkelon,2024-03-20 12:00:00,true,62,71
+496,Bat Yam,Holon,2024-03-20 15:00:00,true,294,419
+497,Haifa,Herzliya,2024-03-20 18:00:00,true,431,384
+498,Bat Yam,Netanya,2024-03-20 21:00:00,false,387,385
+499,Tel Aviv,Eilat,2024-03-21 00:00:00,true,357,122
+500,Haifa,Tiberias,2024-03-21 03:00:00,false,131,229
+501,Herzliya,Tel Aviv,2024-03-21 06:00:00,true,306,475
+502,Nazareth,Ashkelon,2024-03-21 09:00:00,false,389,236
+503,Ashdod,Raanana,2024-03-21 12:00:00,false,159,283
+504,Ashdod,Ashkelon,2024-03-21 15:00:00,true,33,430
+505,Safed,Herzliya,2024-03-21 18:00:00,true,247,212
+506,Tel Aviv,Haifa,2024-03-21 21:00:00,true,458,50
+507,Ashdod,Ashkelon,2024-03-22 00:00:00,true,412,450
+508,Ashdod,Tiberias,2024-03-22 03:00:00,true,58,144
+509,Tiberias,Beer Sheva,2024-03-22 06:00:00,true,327,329
+510,Ashdod,Beer Sheva,2024-03-22 09:00:00,true,227,424
+511,Beer Sheva,Ashdod,2024-03-22 12:00:00,true,180,438
+512,Tiberias,Holon,2024-03-22 15:00:00,true,353,391
+513,Ashkelon,Raanana,2024-03-22 18:00:00,false,427,419
+514,Haifa,Ashdod,2024-03-22 21:00:00,false,189,485
+515,Ashdod,Bat Yam,2024-03-23 00:00:00,true,308,148
+516,Ashkelon,Holon,2024-03-23 03:00:00,true,423,427
+517,Tiberias,Raanana,2024-03-23 06:00:00,true,398,249
+518,Beer Sheva,Nazareth,2024-03-23 09:00:00,false,81,461
+519,Herzliya,Ashdod,2024-03-23 12:00:00,true,196,53
+520,Beer Sheva,Holon,2024-03-23 15:00:00,true,75,193
+>>>>>>> 8bfce9e51396a631d875e483467e80cae512bed0
