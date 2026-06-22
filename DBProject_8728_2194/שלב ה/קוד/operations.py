@@ -14,11 +14,13 @@ class OperationsWindow(ctk.CTkToplevel):
         self.tabview.pack(fill="both", expand=True, padx=20, pady=20)
         
         self.tab_salaries = self.tabview.add("Driver Salaries")
-        self.tab_efficiency = self.tabview.add("Vehicle")
+        self.tab_efficiency = self.tabview.add("Vehicle Efficiency")
+        self.tab_close_month = self.tabview.add("Close Month Maintanance")
 
         self.build_salaries_tab()
         self.build_efficiency_tab()
-        self.build_assign_tab()
+        # self.build_assign_tab() - מחקתי את הקריאה הזו כי היא לא הייתה מוגדרת והייתה קורסת
+        self.build_close_month_tab()
 
     # ==============================================================
     # 1. פונקציית שכר הנהגים
@@ -72,7 +74,7 @@ class OperationsWindow(ctk.CTkToplevel):
         self.entry_q_year.pack(side="left", padx=5)
         self.entry_q_year.insert(0, "2026")
 
-        ctk.CTkButton(top_frame, text="Run Report", command=self.run_efficiency, fg_color="#17a2b8").pack(side="left", padx=20)
+        ctk.CTkButton(top_frame, text="Run Efficiency Report", command=self.run_efficiency, fg_color="#17a2b8").pack(side="left", padx=20)
 
         self.tree_efficiency = ttk.Treeview(self.tab_efficiency, show='headings')
         self.tree_efficiency.pack(fill='both', expand=True, pady=10)

@@ -147,15 +147,15 @@ class CRUDWindow(ctk.CTkToplevel):
         form.title(f"{mode} {self.entity_name}")
         form.geometry("400x550")
         
-        # --- תיקון הפוקוס וההיררכיה כדי שהחלון לא יברח אחורה ---
-        form.transient(self)   # מגדיר שהחלון שייך ל-CRUDWindow ולא יכול לרדת מתחתיו
-        form.lift()            # מקפיץ את החלון לקדמת המסך
-        form.grab_set()        # נועל את שאר הממשק עד שהחלון הזה ייסגר
+        form.transient(self)   
+        form.lift()            
+        form.grab_set()        
 
         ctk.CTkLabel(form, text=f"{mode} {self.entity_name}", font=("Arial", 18, "bold")).pack(pady=15)
         
         scroll_frame = ctk.CTkScrollableFrame(form)
-        scroll_frame.pack(fill="both", expand=True, padx=15, yard=10)
+        # התיקון הקריטי: yard=10 שונה ל- pady=10 כדי שהחלון לא יישבר
+        scroll_frame.pack(fill="both", expand=True, padx=15, pady=10)
 
         entries = {}
         for i, field in enumerate(self.cfg["fields"]):
@@ -170,6 +170,9 @@ class CRUDWindow(ctk.CTkToplevel):
 
         def save():
             try:
+                # הפיכת מחרוזת ריקה או רווחים ל-None בצורה בטוחה
+                values = [entries[f].get().strip() if entries[f].get().strip() != "" else None for f in self.cfg["fields"]]
+                
                 if mode == "ADD":
                     if self.entity_name in self.AUTO_INCREMENT_TABLES:
                         generated_id = self.get_next_id()
@@ -178,13 +181,11 @@ class CRUDWindow(ctk.CTkToplevel):
                             return
                         
                         final_fields = [self.cfg["pk"]] + self.cfg["fields"]
-                        final_values = [generated_id] + [entries[f].get() if entries[f].get() != "" else None for f in self.cfg["fields"]]
+                        final_values = [generated_id] + values
                         db.insert_record_db(self.cfg["table"], final_fields, final_values)
                     else:
-                        values = [entries[f].get() if entries[f].get() != "" else None for f in self.cfg["fields"]]
                         db.insert_record_db(self.cfg["table"], self.cfg["fields"], values)
                 else:
-                    values = [entries[f].get() if entries[f].get() != "" else None for f in self.cfg["fields"]]
                     db.update_record_db(self.cfg["table"], self.cfg["pk"], pk_val, self.cfg["fields"], values)
                 
                 messagebox.showinfo("Success", "Database updated successfully.")
