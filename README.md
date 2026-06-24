@@ -592,6 +592,9 @@ https://ai.studio/apps/a75accd8-0129-4ba7-8b8c-3a59a5ceec80
 ## מבטים:
 ## מבט לניהול נסיעות - View_Operations_Trip_Overview:
 מבט זה משמש כמרכז בקרה תפעולי. הוא מבצע JOIN בין הנסיעות (trip), הלקוחות (customer) והרכבים (vehicle1) כדי להציג בטבלה אחת את כל המידע הרלוונטי לכל נסיעה – מהלקוח ועד לרכב המשובץ. הוא הופך את המידע המבוזר בטבלאות שונות לדו"ח קריא וברור עבור מנהלי התפעול
+
+<img width="622" height="346" alt="image" src="https://github.com/user-attachments/assets/6081ed63-e64a-42f4-a92f-3330448b65de" />
+
 SELECT * FROM View_Operations_Trip_Overview LIMIT 10;
 
 <img width="1256" height="366" alt="image" src="https://github.com/user-attachments/assets/aa03f21e-b4d8-482e-a44e-af781b68493c" />
@@ -607,8 +610,13 @@ SELECT vehicle_model, COUNT(tripid) AS total_trips FROM View_Operations_Trip_Ove
 שאילתה זו מבצעת אגרגציה (GROUP BY) לפי דגם הרכב וסופרת את כמות הנסיעות הכוללת לכל דגם, מה שעוזר להבין אילו דגמים בצי הם הפעילים ביותר.
 <img width="436" height="530" alt="image" src="https://github.com/user-attachments/assets/c1e6708a-24f7-487c-a3d8-5efb80668e96" />
 
+<img width="1281" height="146" alt="image" src="https://github.com/user-attachments/assets/f4f919e8-dfe8-4cc3-b2ca-c7c220db6721" />
+
+
 ## מבט לניהול צי ותחזוקה - View_Fleet_Maintenance_Analytics:
 מבט זה מקשר בין הרכבים (vehicle1) לבין היסטוריית התחזוקה (maintenance1) ונתוני הנסיעות (trip). הוא מספק מדדים תפעוליים לכל רכב, כגון עלויות תחזוקה, תאריכי טיפולים וספירת נסיעות שבוצעו, ומאפשר ניתוח ביצועים מקיף של כל כלי רכב בצי.
+<img width="876" height="340" alt="image" src="https://github.com/user-attachments/assets/2733d347-21d2-4a78-8f7a-bbbb7f586b64" />
+
 SELECT * FROM View_Fleet_Maintenance_Analytics LIMIT 10;
 <img width="1041" height="579" alt="image" src="https://github.com/user-attachments/assets/bdb230a9-8d2a-4cc8-8d54-561adc3a41a3" />
 
@@ -628,6 +636,9 @@ ORDER BY total_spent DESC;
 שאילתה זו מסננת מהמבט רכבים שסטטוס התחזוקה שלהם אינו 'Completed', ומציגה את הדגם והעלות המיוחסת לאותו טיפול. המטרה היא להציף דחיפות תפעולית ולטפל ברכבים שעדיין דורשים התייחסות טכנית.
 SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maintenance_status != 'Completed';
 <img width="455" height="571" alt="image" src="https://github.com/user-attachments/assets/a06c8f30-b654-4320-bdf0-381242062ae1" />
+
+<img width="1228" height="300" alt="image" src="https://github.com/user-attachments/assets/3ea59670-52fb-4168-a492-ea85e8e8e67e" />
+
 
 
 ## שלב ד׳:
