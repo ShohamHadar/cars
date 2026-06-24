@@ -608,6 +608,7 @@ SELECT * FROM View_Operations_Trip_Overview WHERE customer_name = 'Stoddard Abba
 SELECT vehicle_model, COUNT(tripid) AS total_trips FROM View_Operations_Trip_Overview GROUP BY vehicle_model;
 ## תפוסה לפי רכב:
 שאילתה זו מבצעת אגרגציה (GROUP BY) לפי דגם הרכב וסופרת את כמות הנסיעות הכוללת לכל דגם, מה שעוזר להבין אילו דגמים בצי הם הפעילים ביותר.
+
 <img width="436" height="530" alt="image" src="https://github.com/user-attachments/assets/c1e6708a-24f7-487c-a3d8-5efb80668e96" />
 
 <img width="1281" height="146" alt="image" src="https://github.com/user-attachments/assets/f4f919e8-dfe8-4cc3-b2ca-c7c220db6721" />
@@ -615,6 +616,7 @@ SELECT vehicle_model, COUNT(tripid) AS total_trips FROM View_Operations_Trip_Ove
 
 ## מבט לניהול צי ותחזוקה - View_Fleet_Maintenance_Analytics:
 מבט זה מקשר בין הרכבים (vehicle1) לבין היסטוריית התחזוקה (maintenance1) ונתוני הנסיעות (trip). הוא מספק מדדים תפעוליים לכל רכב, כגון עלויות תחזוקה, תאריכי טיפולים וספירת נסיעות שבוצעו, ומאפשר ניתוח ביצועים מקיף של כל כלי רכב בצי.
+
 <img width="876" height="340" alt="image" src="https://github.com/user-attachments/assets/2733d347-21d2-4a78-8f7a-bbbb7f586b64" />
 
 SELECT * FROM View_Fleet_Maintenance_Analytics LIMIT 10;
