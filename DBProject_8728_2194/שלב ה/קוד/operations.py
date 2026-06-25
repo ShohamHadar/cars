@@ -19,7 +19,7 @@ class OperationsWindow(ctk.CTkToplevel):
 
         self.build_salaries_tab()
         self.build_efficiency_tab()
-        # self.build_assign_tab() - מחקתי את הקריאה הזו כי היא לא הייתה מוגדרת והייתה קורסת
+        # self.build_assign_tab() 
         self.build_close_month_tab()
 
     # ==============================================================

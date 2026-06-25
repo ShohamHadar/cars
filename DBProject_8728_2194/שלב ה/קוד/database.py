@@ -1,12 +1,14 @@
 import psycopg2
+import os
+
 from psycopg2 import Error
 
 def get_db_connection():
     return psycopg2.connect(
-        host="localhost",
-        database="level4",
-        user="shoham",
-        password="shoham"
+        host=os.getenv("DB_HOST", "localhost"),
+        database=os.getenv("DB_NAME_SECRET", "level4"),
+        user=os.getenv("DB_USER_SECRET", "shoham"),
+        password=os.getenv("DB_PASSWORD_SECRET", "shoham")
     )
 
 def fetch_detailed_data(entity_name):

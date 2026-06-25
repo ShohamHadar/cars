@@ -1,7 +1,6 @@
+version: '3.8'
+
 services:
-  # -------------------------
-  # PostgreSQL Database
-  # -------------------------
   db:
     image: postgres:latest
     container_name: PostgreSQL_DB
@@ -18,9 +17,6 @@ services:
     networks:
       - cars_network
 
-  # -------------------------
-  # pgAdmin
-  # -------------------------
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadminApp
@@ -37,13 +33,10 @@ services:
     networks:
       - cars_network
 
-# -------------------------
-# Volumes
-# -------------------------
+  
 volumes:
   postgres_data:
   pgadmin_data:
-
 
 networks:
   cars_network:
