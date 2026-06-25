@@ -841,23 +841,15 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 
 ### הוראות הפעלה של האפליקציה
 
-**1. דרישות קדם**
+הפרויקט משתמש ב-Docker להרצת בסיס הנתונים (PostgreSQL ו-pgAdmin).
 
-* **סביבת עבודה:** ודאו כי Python 3.x מותקן על המחשב.
-* **התקנת ספריות:** פתחו את הטרמינל (CMD) והריצו את הפקודה: `pip install customtkinter psycopg2`.
-* **מסד נתונים:** ודאו ששרת PostgreSQL פעיל, ועדכנו בקובץ `database.py` את פרטי ההתחברות (host, user, password, database).
-
-**2. הכנת הסביבה**
-
-* פתחו את תיקיית הפרויקט ב-VS Code.
-* ודאו שכל קבצי ה-Python (`main.py`, `database.py`, `operations.py`, `reports.py`) נמצאים באותה התיקייה.
-
-**3. הרצת המערכת**
-
-* פתחו טרמינל בתוך VS Code בתוך תיקיית הפרויקט.
-* הריצו את הפקודה: `python main.py`.
-
-**4. הוראות שימוש במערכת**
+### שלבי הרצה:
+1. ודאו ש-Docker Desktop פתוח.
+2. הריצו בטרמינל: `docker-compose up -d`
+3. לאחר מכן, הריצו את האפליקציה ישירות דרך ה-IDE (למשל VS Code) על ידי הרצת הקובץ: 
+   `DBProject_8728_2194/שלב ה/קוד/main.py`
+*
+**. הוראות שימוש במערכת**
 
 * **ניווט:** עם עליית התוכנה יוצג ה-Dashboard. השתמשו בתפריט הצידי למעבר בין הטבלאות.
 * **פעולות CRUD:**
@@ -870,7 +862,7 @@ SELECT model, maintenance_cost FROM View_Fleet_Maintenance_Analytics WHERE maint
 * **דוחות ושאילתות:** היכנסו ל-"Reports & Analysis", בחרו דוח, סננו לפי הצורך ולחצו על "Execute & Analyze".
 * **פעולות מורכבות:** היכנסו ל-"System Operations", הזינו פרמטרים נדרשים (כגון חודש/שנה) והפעילו את הפרוצדורה הרלוונטית.
 
-**5. דגשים טכניים**
+**. דגשים טכניים**
 
 * **תצוגת נתונים:** המערכת משתמשת ב-JOIN להצגת שמות קריאים במקום מזהים מספריים.
 * **פתרון תקלות:** במקרה של שגיאת התחברות, ודאו ששרת ה-PostgreSQL פועל ב-localhost ושהגדרתם את שם מסד הנתונים כ-`level4`.
